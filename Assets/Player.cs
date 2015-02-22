@@ -3,7 +3,10 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-	int MyVar;
+	int RequestResource_1;
+	int RequestResource_2;
+	int RequestResource_3;
+
 	int resource_1;
 	int resource_2;
 	int resource_3;
@@ -20,23 +23,53 @@ public class Player : MonoBehaviour
 	void CityRequest()
 	{
 		Debug.Log("working1");
-		int RequestResource_1 = rnd.Next(0, 7);
-		int RequestResource_2 = rnd.Next(0, 7);
-		int RequestResource_3 = rnd.Next(0, 7);
-		if(RequestResource_1 > 4)
+		int RandomResource_1 = rnd.Next(0, 7);
+		int RandomResource_2 = rnd.Next(0, 7);
+		int RandomResource_3 = rnd.Next(0, 7);
+		if(RandomResource_1 > 4)
 		{
-			if(RequestResource_1 == 5)
+			if(RandomResource_1 == 5)
 			{
-				MyVar = 1;
+				RequestResource_1 = 1;
 			}
-			else if(RequestResource_1 == 6)
+			else if(RandomResource_1 == 6)
 			{
-				MyVar = 2;
+				RequestResource_1 = 2;
 			}	
 		}
 		else
 		{
-			MyVar = 0;
+			RequestResource_1 = 0;
+		}
+		if(RandomResource_2 > 4)
+		{
+			if(RandomResource_2 == 5)
+			{
+				RequestResource_2 = 1;
+			}
+			else if(RandomResource_2 == 6)
+			{
+				RequestResource_2 = 2;
+			}	
+		}
+		else
+		{
+			RequestResource_2 = 0;
+		}
+		if(RandomResource_3 > 4)
+		{
+			if(RandomResource_3 == 5)
+			{
+				RequestResource_3 = 1;
+			}
+			else if(RandomResource_3== 6)
+			{
+				RequestResource_3 = 2;
+			}	
+		}
+		else
+		{
+			RequestResource_3 = 0;
 		}
 	}
 	void CastRay()
@@ -89,6 +122,8 @@ public class Player : MonoBehaviour
 		GUI.Label (new Rect (0,16,100,50), "Vlees " + resource_2);
 		GUI.Label (new Rect (0,32,100,50), "Water " + resource_3);
 
-		GUI.Label (new Rect (0,64,100,50), "city 1 wants Graan " + MyVar);
+		GUI.Label (new Rect (0,64,200,50), "city 1 wants Graan " + RequestResource_1);
+		GUI.Label (new Rect (0,96,200,50), "city 1 wants Vlees " + RequestResource_2);
+		GUI.Label (new Rect (0,128,200,50), "city 1 wants Water " + RequestResource_3);
 	}
 }
