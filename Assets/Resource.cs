@@ -3,6 +3,15 @@ using System.Collections;
 
 public class Resource : MonoBehaviour {
 
+	public enum Grondstof
+	{
+		Graan,
+		Vlees,
+		Water
+	}
+	
+	public Grondstof ResourceType;
+
 	// Use this for initialization
 	void Start () {
 
@@ -12,6 +21,7 @@ public class Resource : MonoBehaviour {
 	void Update () {
 
 	}
+
 	void OnGUI ()
 	{
 		Vector2 boxPosition = Camera.main.WorldToScreenPoint(this.gameObject.transform.position);
@@ -19,20 +29,19 @@ public class Resource : MonoBehaviour {
 		//boxPosition.x = Screen.width - boxPosition.x;
 		//boxPosition.y = Screen.height - boxPosition.y;
 
-		
 		GUIStyle ResourceName = new GUIStyle();
 		ResourceName.alignment = TextAnchor.UpperCenter;
-		ResourceName.normal.textColor = Color.white;
+		ResourceName.normal.textColor = Color.cyan;
 
-		if(this.gameObject.name == "Resource_1")
+		if(ResourceType == Grondstof.Graan)
 		{
 			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-25,80,50),"Graan",ResourceName);
 		}
-		if(this.gameObject.name == "Resource_2")
+		if(ResourceType == Grondstof.Vlees)
 		{
 			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-25,80,50),"Vlees",ResourceName);
 		}
-		if(this.gameObject.name == "Resource_3")
+		if(ResourceType == Grondstof.Water)
 		{
 			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-25,80,50),"Water",ResourceName);
 		}

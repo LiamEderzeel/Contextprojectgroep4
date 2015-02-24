@@ -19,7 +19,6 @@ public class City : MonoBehaviour {
 	public static int City3RequestResource_2;
 	public static int City3RequestResource_3;
 
-
 	//public GUIStyle style;
 
 	// Use this for initialization
