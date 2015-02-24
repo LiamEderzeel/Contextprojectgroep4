@@ -87,16 +87,16 @@ public class City : MonoBehaviour {
 		if(this.gameObject.name == "City_1")
 		{
 			City1RequestResource_1 = RequestResource_1;
-			City1RequestResource_1 = RequestResource_2;
-			City1RequestResource_1 = RequestResource_3;
-		} else if(this.gameObject.name == "City_2") {
-			City1RequestResource_2 = RequestResource_1;
 			City1RequestResource_2 = RequestResource_2;
-			City1RequestResource_2 = RequestResource_3;
-		} else if(this.gameObject.name == "City_3") {
-			City1RequestResource_3 = RequestResource_1;
-			City1RequestResource_3 = RequestResource_2;
 			City1RequestResource_3 = RequestResource_3;
+		} else if(this.gameObject.name == "City_2") {
+			City2RequestResource_1 = RequestResource_1;
+			City2RequestResource_2 = RequestResource_2;
+			City2RequestResource_3 = RequestResource_3;
+		} else if(this.gameObject.name == "City_3") {
+			City3RequestResource_1 = RequestResource_1;
+			City3RequestResource_2 = RequestResource_2;
+			City3RequestResource_3 = RequestResource_3;
 		}
 	}
 	void OnGUI ()

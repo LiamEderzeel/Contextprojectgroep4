@@ -75,9 +75,9 @@ public class Player : MonoBehaviour
 				{
 					resource_3 = resource_3 - City.City2RequestResource_3;
 				}
-				City.City2RequestResource_1 = 0;
-				City.City2RequestResource_2 = 0;
-				City.City2RequestResource_3 = 0;
+				//City.City2RequestResource_1 = 0;
+				//City.City2RequestResource_2 = 0;
+				//City.City2RequestResource_3 = 0;
 			}
 			else if (hit.collider.name == "City_3")
 			{
@@ -93,9 +93,9 @@ public class Player : MonoBehaviour
 				{
 					resource_3 = resource_3 - City.City3RequestResource_3;
 				}
-				City.City3RequestResource_1 = 0;
-				City.City3RequestResource_2 = 0;
-				City.City3RequestResource_3 = 0;
+				//City.City3RequestResource_1 = 0;
+				//City.City3RequestResource_2 = 0;
+				//City.City3RequestResource_3 = 0;
 			}
 		}
 	}
