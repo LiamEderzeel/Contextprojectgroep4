@@ -15,8 +15,6 @@ public class Player : MonoBehaviour
 		resource_1 = 0;
 		resource_2 = 0;
 		resource_3 = 0;
-
-		
 	}	
 	
 	void CastRay()
@@ -107,6 +105,7 @@ public class Player : MonoBehaviour
 			CastRay();
 		}
 	}
+
 	void OnGUI ()
 	{
 		GUIStyle Resouces = new GUIStyle();
