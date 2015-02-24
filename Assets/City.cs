@@ -6,6 +6,7 @@ public class City : MonoBehaviour {
 	int RequestResource_2;
 	int RequestResource_3;
 
+
 	public static int City1RequestResource_1;
 	public static int City1RequestResource_2;
 	public static int City1RequestResource_3;
@@ -33,7 +34,6 @@ public class City : MonoBehaviour {
 
 	void CityRequest()
 	{
-		Debug.Log("working1");
 		int RandomResource_1 = Random.Range(0,7);
 		int RandomResource_2 = Random.Range(0,7);
 		int RandomResource_3 = Random.Range(0,7);
@@ -103,10 +103,11 @@ public class City : MonoBehaviour {
 	{
 		Vector2 boxPosition = Camera.main.WorldToScreenPoint(this.gameObject.transform.position);
 
-		boxPosition.x = Screen.width - boxPosition.x;
-		boxPosition.y = Screen.height - boxPosition.y;
+		//boxPosition.x = Screen.width - boxPosition.x;
+		//boxPosition.y = Screen.height - boxPosition.y;
 
-		
+		var rect = new Rect(boxPosition.x, Screen.height - boxPosition.y, Screen.width, Screen.height);
+
 		GUIStyle CityName = new GUIStyle();
 		CityName.alignment = TextAnchor.UpperCenter;
 		CityName.normal.textColor = Color.white;
@@ -117,28 +118,28 @@ public class City : MonoBehaviour {
 
 		if(this.gameObject.name == "City_1")
 		{
-			GUI.Label (new Rect (boxPosition.x-40,boxPosition.y-25,80,50),"Amsterdam",CityName);
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-25,80,50),"Amsterdam",CityName);
 		}
 		if(this.gameObject.name == "City_2")
 		{
-			GUI.Label (new Rect (boxPosition.x-40,boxPosition.y-25,80,50),"Rotterdam",CityName);
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-25,80,50),"Rotterdam",CityName);
 		}
 		if(this.gameObject.name == "City_3")
 		{
-			GUI.Label (new Rect (boxPosition.x-40,boxPosition.y-25,80,50),"Utrecht",CityName);
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-25,80,50),"Utrecht",CityName);
 		}
 
 		if (RequestResource_1 != 0)
 		{
-			GUI.Label (new Rect (boxPosition.x-40,boxPosition.y,80,20),"Graan " + RequestResource_1,CityRequest);
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"Graan " + RequestResource_1,CityRequest);
 		}
 		if (RequestResource_2 != 0)
 		{
-			GUI.Label (new Rect (boxPosition.x-40,boxPosition.y+16,80,20),"Vlees " + RequestResource_2,CityRequest);
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+32,80,20),"Vlees " + RequestResource_2,CityRequest);
 		}
 		if (RequestResource_3 != 0)
 		{
-			GUI.Label (new Rect (boxPosition.x-40,boxPosition.y+32,80,20),"Water " + RequestResource_3,CityRequest);
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+48,80,20),"Water " + RequestResource_3,CityRequest);
 		}
 	}
 }
