@@ -40,11 +40,16 @@ public class City : MonoBehaviour {
 
 			//cityName == KnownCities.Amsterdam
 			
-			if(Player.resource_1 >= rGraan.Tekort && Player.resource_2 >= rVlees.Tekort && Player.resource_3 >= rWater.Tekort)
+			if(Player.resource_1 >= HitCity.rGraan.Tekort && Player.resource_2 >= HitCity.rVlees.Tekort && Player.resource_3 >= HitCity.rWater.Tekort)
 			{
-				Player.resource_1 -= rGraan.Tekort;
-				Player.resource_2 -= rVlees.Tekort;
-				Player.resource_3 -= rWater.Tekort;
+				Player.resource_1 -= HitCity.rGraan.Tekort;
+				Player.resource_2 -= HitCity.rVlees.Tekort;
+				Player.resource_3 -= HitCity.rWater.Tekort;
+
+				HitCity.rGraan.Tekort = 0;
+				HitCity.rVlees.Tekort = 0;
+				HitCity.rWater.Tekort = 0;
+
 				//todo resources ook echt van steden afhalen in plaats van player
 
 			}
@@ -91,11 +96,11 @@ public class City : MonoBehaviour {
 		g_CityRequest.normal.textColor = Color.white;
 
 		if(cityName == KnownCities.Amsterdam)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-25,80,50),"Amsterdam",g_CityName);
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-50,80,50),"Amsterdam",g_CityName);
 		else if(cityName == KnownCities.Rotterdam)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-25,80,50),"Rotterdam",g_CityName);
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-50,80,50),"Rotterdam",g_CityName);
 		else if(cityName == KnownCities.Utrecht)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-25,80,50),"Utrecht",g_CityName);
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-50,80,50),"Utrecht",g_CityName);
 
 		//if (rGraan.Tekort != 0)
 		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"t Graan: " + rGraan.Tekort, g_CityRequest);

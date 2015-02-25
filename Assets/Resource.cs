@@ -29,15 +29,15 @@ public class Resource : MonoBehaviour {
 
 		if(ResourceType == Grondstof.Graan)
 		{
-			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-25,80,50),"Graan",ResourceName);
+			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Graan",ResourceName);
 		}
 		if(ResourceType == Grondstof.Vlees)
 		{
-			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-25,80,50),"Vlees",ResourceName);
+			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Vlees",ResourceName);
 		}
 		if(ResourceType == Grondstof.Water)
 		{
-			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-25,80,50),"Water",ResourceName);
+			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Water",ResourceName);
 		}
 	}
 }
