@@ -2,22 +2,19 @@
 using System.Collections;
 
 public class City : MonoBehaviour {
-	int RequestResource_1;
-	int RequestResource_2;
-	int RequestResource_3;
 
+	public ResourceCount rGraan = new ResourceCount();
+	public ResourceCount rVlees = new ResourceCount();
+	public ResourceCount rWater = new ResourceCount();
 
-	public static int City1RequestResource_1;
-	public static int City1RequestResource_2;
-	public static int City1RequestResource_3;
+	public enum KnownCities 
+	{
+		Amsterdam,
+		Rotterdam,
+		Utrecht
+	}
 
-	public static int City2RequestResource_1;
-	public static int City2RequestResource_2;
-	public static int City2RequestResource_3;
-
-	public static int City3RequestResource_1;
-	public static int City3RequestResource_2;
-	public static int City3RequestResource_3;
+	public KnownCities cityName; //naam die je uitkiest als je een city GameObject maakt.
 
 	//public GUIStyle style;
 
@@ -33,71 +30,20 @@ public class City : MonoBehaviour {
 
 	void CityRequest()
 	{
-		int RandomResource_1 = Random.Range(0,7);
-		int RandomResource_2 = Random.Range(0,7);
-		int RandomResource_3 = Random.Range(0,7);
-		
-		if(RandomResource_1 > 4)
-		{
-			if(RandomResource_1 == 5)
-			{
-				RequestResource_1 = 1;
-			}
-			else if(RandomResource_1 == 6)
-			{
-				RequestResource_1 = 2;
-			}	
-		}
-		else
-		{
-			RequestResource_1 = 0;
-		}
-		if(RandomResource_2 > 4)
-		{
-			if(RandomResource_2 == 5)
-			{
-				RequestResource_2 = 1;
-			}
-			else if(RandomResource_2 == 6)
-			{
-				RequestResource_2 = 2;
-			}	
-		}
-		else
-		{
-			RequestResource_2 = 0;
-		}
-		if(RandomResource_3 > 4)
-		{
-			if(RandomResource_3 == 5)
-			{
-				RequestResource_3 = 1;
-			}
-			else if(RandomResource_3== 6)
-			{
-				RequestResource_3 = 2;
-			}	
-		}
-		else
-		{
-			RequestResource_3 = 0;
-		}
-
-		if(this.gameObject.name == "City_1")
-		{
-			City1RequestResource_1 = RequestResource_1;
-			City1RequestResource_1 = RequestResource_2;
-			City1RequestResource_1 = RequestResource_3;
-		} else if(this.gameObject.name == "City_2") {
-			City1RequestResource_2 = RequestResource_1;
-			City1RequestResource_2 = RequestResource_2;
-			City1RequestResource_2 = RequestResource_3;
-		} else if(this.gameObject.name == "City_3") {
-			City1RequestResource_3 = RequestResource_1;
-			City1RequestResource_3 = RequestResource_2;
-			City1RequestResource_3 = RequestResource_3;
-		}
+		rGraan = GenerateResource ();
+		rVlees = GenerateResource ();
+		rWater = GenerateResource ();
 	}
+
+	public ResourceCount GenerateResource()
+	{
+		ResourceCount rc = new ResourceCount ();
+		int rr = Random.Range (0, 7);
+		if(rr > 4)
+			rc.Tekort = rr - 2;
+		return rc;
+	}
+
 	void OnGUI ()
 	{
 		Vector2 boxPosition = Camera.main.WorldToScreenPoint(this.gameObject.transform.position);
@@ -115,30 +61,32 @@ public class City : MonoBehaviour {
 		CityRequest.alignment = TextAnchor.MiddleCenter;
 		CityRequest.normal.textColor = Color.white;
 
-		if(this.gameObject.name == "City_1")
+		if(cityName == KnownCities.Amsterdam)
 		{
 			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-25,80,50),"Amsterdam",CityName);
 		}
-		if(this.gameObject.name == "City_2")
+		if(cityName == KnownCities.Rotterdam)
 		{
 			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-25,80,50),"Rotterdam",CityName);
 		}
-		if(this.gameObject.name == "City_3")
+		if(cityName == KnownCities.Utrecht)
 		{
 			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-25,80,50),"Utrecht",CityName);
 		}
 
-		if (RequestResource_1 != 0)
-		{
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"Graan " + RequestResource_1,CityRequest);
-		}
-		if (RequestResource_2 != 0)
-		{
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+32,80,20),"Vlees " + RequestResource_2,CityRequest);
-		}
-		if (RequestResource_3 != 0)
-		{
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+48,80,20),"Water " + RequestResource_3,CityRequest);
-		}
+		if (rGraan.Tekort != 0)
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"Graan " + rGraan.Tekort ,CityRequest);
+
+		if (rVlees.Tekort != 0)
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+32,80,20),"Vlees " + rVlees.Tekort,CityRequest);
+
+		if (rWater.Tekort != 0)
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+48,80,20),"Water " + rWater.Tekort,CityRequest);
 	}
+}
+
+public struct ResourceCount
+{
+	public int Overschot;
+	public int Tekort;
 }
