@@ -26,9 +26,6 @@ public class Resource : MonoBehaviour {
 	{
 		Vector2 boxPosition = Camera.main.WorldToScreenPoint(this.gameObject.transform.position);
 
-		//boxPosition.x = Screen.width - boxPosition.x;
-		//boxPosition.y = Screen.height - boxPosition.y;
-
 		GUIStyle ResourceName = new GUIStyle();
 		ResourceName.alignment = TextAnchor.UpperCenter;
 		ResourceName.normal.textColor = Color.cyan;

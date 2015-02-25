@@ -81,11 +81,6 @@ public class City : MonoBehaviour {
 	{
 		Vector2 boxPosition = Camera.main.WorldToScreenPoint(this.gameObject.transform.position);
 
-		//boxPosition.x = Screen.width - boxPosition.x;
-		//boxPosition.y = Screen.height - boxPosition.y;
-
-		var rect = new Rect(boxPosition.x, Screen.height - boxPosition.y, Screen.width, Screen.height);
-
 		GUIStyle CityName = new GUIStyle();
 		CityName.alignment = TextAnchor.UpperCenter;
 		CityName.normal.textColor = Color.white;
