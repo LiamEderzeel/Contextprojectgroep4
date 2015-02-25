@@ -13,16 +13,12 @@ public class City : MonoBehaviour {
 		Rotterdam,
 		Utrecht
 	}
-
 	public KnownCities cityName; //naam die je uitkiest als je een city GameObject maakt.
-
-	//public GUIStyle style;
 
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating("CityRequest", 5.0f, 5.0f);
 	}
-	
 	// Update is called once per frame
 	void CastRay()
 	{
@@ -36,18 +32,13 @@ public class City : MonoBehaviour {
 
 			//Substracting the resources when clicked on city with request.
 
-			if(Player.resource_1 > 0 && rGraan.Tekort > 0)
+			cityName == KnownCities.Amsterdam
+			
+			if(Player.resource_1 >= rGraan.Tekort && Player.resource_2 >= rVlees.Tekort && Player.resource_3 >= rWater.Tekort)
 			{
 				Player.resource_1 = Player.resource_1 - rGraan.Tekort;
-			}
-			if(Player.resource_2 > 0 && rVlees.Tekort > 0)
-			{
 				Player.resource_2 = Player.resource_2 - rVlees.Tekort;
-			}
-			if(Player.resource_3 > 0 && rWater.Tekort > 0)
-			{
 				Player.resource_3 = Player.resource_3 - rWater.Tekort;
-
 			}
 		}
 	}
@@ -59,15 +50,12 @@ public class City : MonoBehaviour {
 			CastRay();
 		}
 	}
-
 	void CityRequest()
 	{
 		rGraan = GenerateResource ();
 		rVlees = GenerateResource ();
 		rWater = GenerateResource ();
 	}
-
-
 	public ResourceCount GenerateResource()
 	{
 		ResourceCount rc = new ResourceCount ();
@@ -76,7 +64,6 @@ public class City : MonoBehaviour {
 		rc.Tekort = rr - 2;
 		return rc;
 	}
-
 	void OnGUI ()
 	{
 		Vector2 boxPosition = Camera.main.WorldToScreenPoint(this.gameObject.transform.position);
@@ -112,7 +99,6 @@ public class City : MonoBehaviour {
 		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+48,80,20),"Water " + rWater.Tekort,CityRequest);
 	}
 }
-
 public struct ResourceCount
 {
 	public int Overschot;

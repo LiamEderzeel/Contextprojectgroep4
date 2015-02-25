@@ -9,19 +9,16 @@ public class Resource : MonoBehaviour {
 		Vlees,
 		Water
 	}
-	
 	public Grondstof ResourceType;
 
 	// Use this for initialization
 	void Start () {
 
 	}
-	
 	// Update is called once per frame
 	void Update () {
 
 	}
-
 	void OnGUI ()
 	{
 		Vector2 boxPosition = Camera.main.WorldToScreenPoint(this.gameObject.transform.position);
