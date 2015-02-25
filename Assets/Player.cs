@@ -23,21 +23,19 @@ public class Player : MonoBehaviour
 		RaycastHit hit;
 		if (Physics.Raycast(ray, out hit, 100))
 		{
+			Resource HitGrondstof = hit.collider.GetComponent<Resource>();
+			if (HitGrondstof == null)
+				return;
+
 			//Debug.DrawLine(ray.origin, hit.point);
 			Debug.Log("Hit object: " + hit.collider.name);
-			if(hit.collider.name == "Resource_1")
-			{
+			if (HitGrondstof.ResourceType == Resource.Grondstof.Graan)
 				resource_1 ++;
-			}
-			else if (hit.collider.name == "Resource_2")
-			{
+			else if (HitGrondstof.ResourceType == Resource.Grondstof.Vlees)
 				resource_2 ++;
-			}
-			else if (hit.collider.name == "Resource_3")
-			{
+			else if (HitGrondstof.ResourceType == Resource.Grondstof.Water)
 				resource_3 ++;
-			}
-
+/*
 			if(hit.collider.name == "City_1")
 			{
 				if(resource_1 > 0 && City.City1RequestResource_1 > 0)
@@ -95,6 +93,7 @@ public class Player : MonoBehaviour
 				//City.City3RequestResource_2 = 0;
 				//City.City3RequestResource_3 = 0;
 			}
+			*/
 		}
 	}
 	void Update ()
@@ -115,5 +114,6 @@ public class Player : MonoBehaviour
 		GUI.Label (new Rect (0,0,60,50), "Graan " + resource_1,Resouces);
 		GUI.Label (new Rect (80,0,60,50), "Vlees " + resource_2,Resouces);
 		GUI.Label (new Rect (160,0,60,50), "Water " + resource_3,Resouces);
+
 	}
 }
