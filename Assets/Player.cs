@@ -5,9 +5,9 @@ public class Player : MonoBehaviour
 {
 	
 
-	int resource_1;
-	int resource_2;
-	int resource_3;
+	public static int resource_1;
+	public static int resource_2;
+	public static int resource_3;
 
 	// Use this for initialization
 	void Start ()

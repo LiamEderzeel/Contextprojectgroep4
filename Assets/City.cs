@@ -24,8 +24,40 @@ public class City : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void CastRay()
+	{
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit hit;
+		if (Physics.Raycast(ray, out hit, 100))
+		{
+			City HitCity = hit.collider.GetComponent<City>();
+			if (HitCity == null)
+			return;
 
+			//Substracting the resources when clicked on city with request.
+
+			if(Player.resource_1 > 0 && rGraan.Tekort > 0)
+			{
+				Player.resource_1 = Player.resource_1 - rGraan.Tekort;
+			}
+			if(Player.resource_2 > 0 && rVlees.Tekort > 0)
+			{
+				Player.resource_2 = Player.resource_2 - rVlees.Tekort;
+			}
+			if(Player.resource_3 > 0 && rWater.Tekort > 0)
+			{
+				Player.resource_3 = Player.resource_3 - rWater.Tekort;
+
+			}
+		}
+	}
+	void Update ()
+	{
+		if (Input.GetMouseButtonDown(0))
+		{
+			//Debug.Log("Pressed left click, casting ray.");
+			CastRay();
+		}
 	}
 
 	void CityRequest()
@@ -41,7 +73,7 @@ public class City : MonoBehaviour {
 		ResourceCount rc = new ResourceCount ();
 		int rr = Random.Range (0, 7);
 		if(rr > 4)
-			rc.Tekort = rr - 2;
+		rc.Tekort = rr - 2;
 		return rc;
 	}
 
@@ -76,13 +108,13 @@ public class City : MonoBehaviour {
 		}
 
 		if (rGraan.Tekort != 0)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"Graan " + rGraan.Tekort ,CityRequest);
+		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"Graan " + rGraan.Tekort ,CityRequest);
 
 		if (rVlees.Tekort != 0)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+32,80,20),"Vlees " + rVlees.Tekort,CityRequest);
+		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+32,80,20),"Vlees " + rVlees.Tekort,CityRequest);
 
 		if (rWater.Tekort != 0)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+48,80,20),"Water " + rWater.Tekort,CityRequest);
+		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+48,80,20),"Water " + rWater.Tekort,CityRequest);
 	}
 }
 
