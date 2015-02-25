@@ -73,7 +73,6 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
-    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &76641543
 GameObject:
@@ -238,6 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb87094c5d53a466490cba815379916e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityName: 0
 --- !u!1 &750301168
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb87094c5d53a466490cba815379916e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityName: 0
 --- !u!114 &884331258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,6 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb87094c5d53a466490cba815379916e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityName: 0
 --- !u!1 &998481960
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb87094c5d53a466490cba815379916e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityName: 0
 --- !u!1 &1828621678
 GameObject:
   m_ObjectHideFlags: 0
