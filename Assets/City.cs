@@ -7,6 +7,8 @@ public class City : MonoBehaviour {
 	public ResourceCount rVlees = new ResourceCount();
 	public ResourceCount rWater = new ResourceCount();
 
+	public int CityHP;
+
 	public enum KnownCities 
 	{
 		Amsterdam,
@@ -15,14 +17,14 @@ public class City : MonoBehaviour {
 	}
 	public KnownCities cityName; //naam die je uitkiest als je een city GameObject maakt.
 
-
 	void Start () {
 		//random getal aan startresources
 		rGraan = GenerateResource ();
 		rVlees = GenerateResource ();
 		rWater = GenerateResource ();
-		
-		InvokeRepeating("CityRequest", 5.0f, 5.0f);
+		CityHP = 100;
+
+		//InvokeRepeating("CityRequest", 5.0f, 5.0f);
 	}
 
 	//raycast voor klikevent van de steden, controleert of de player genoeg resources heeft en pleegt dan ruilhandel
@@ -55,6 +57,9 @@ public class City : MonoBehaviour {
 			}
 		}
 	}
+
+	float time = 0;
+	float timehp = 0;
 	void Update ()
 	{
 		if (Input.GetMouseButtonDown(0))
@@ -62,7 +67,24 @@ public class City : MonoBehaviour {
 			//Debug.Log("Pressed left click, casting ray.");
 			CastRay();
 		}
+		if (rGraan.Tekort == 0 && rVlees.Tekort == 0 && rWater.Tekort == 0) {
+			time += Time.deltaTime * 1;
+		} else {
+			timehp += Time.deltaTime * 1;
+		}
+
+		if (time > 10) {
+			time = 0;
+			CityRequest();
+			timehp = 0;
+		}
+		if (timehp > 2) {
+			CityHP --;
+			timehp = 0;
+			time = 0;
+		}
 	}
+
 	void CityRequest()
 	{
 		rGraan.Tekort += AddResourceTekort ();
@@ -102,14 +124,20 @@ public class City : MonoBehaviour {
 		else if(cityName == KnownCities.Utrecht)
 			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-50,80,50),"Utrecht",g_CityName);
 
-		//if (rGraan.Tekort != 0)
-		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"t Graan: " + rGraan.Tekort, g_CityRequest);
-		//if (rVlees.Tekort != 0)
-		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+32,80,20),"t Vlees: " + rVlees.Tekort, g_CityRequest);
-		//if (rWater.Tekort != 0)
-		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+48,80,20),"t Water: " + rWater.Tekort, g_CityRequest);
+		if (rGraan.Tekort != 0)
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"t Graan: " + rGraan.Tekort, g_CityRequest);
+		if (rVlees.Tekort != 0)
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+32,80,20),"t Vlees: " + rVlees.Tekort, g_CityRequest);
+		if (rWater.Tekort != 0)
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+48,80,20),"t Water: " + rWater.Tekort, g_CityRequest);
+
+		g_CityRequest.normal.textColor = Color.red;
+		if (CityHP != 100)
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+64,80,20),"HP: " + CityHP, g_CityRequest);
+
 	}
 }
+
 public struct ResourceCount
 {
 	public int Overschot;

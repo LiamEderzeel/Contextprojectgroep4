@@ -28,16 +28,19 @@ public class Resource : MonoBehaviour {
 		ResourceName.normal.textColor = Color.cyan;
 
 		if(ResourceType == Grondstof.Graan)
-		{
 			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Graan",ResourceName);
-		}
-		if(ResourceType == Grondstof.Vlees)
-		{
+		else if(ResourceType == Grondstof.Vlees)
 			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Vlees",ResourceName);
-		}
-		if(ResourceType == Grondstof.Water)
-		{
+		else if(ResourceType == Grondstof.Water)
 			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Water",ResourceName);
-		}
+	}
+
+	void OnMouseDown() {
+		if (ResourceType == Grondstof.Graan)
+			Player.resource_1 += 50;
+		else if (ResourceType == Grondstof.Vlees)
+			Player.resource_2 += 50;
+		else if (ResourceType == Grondstof.Water)
+			Player.resource_3 += 50;
 	}
 }

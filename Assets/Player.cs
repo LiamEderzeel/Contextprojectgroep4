@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-	
 
 	public static int resource_1;
 	public static int resource_2;
@@ -16,7 +15,8 @@ public class Player : MonoBehaviour
 		resource_2 = 0;
 		resource_3 = 0;
 	}	
-	
+
+	//raycaster voor resource adding.
 	void CastRay()
 	{
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
