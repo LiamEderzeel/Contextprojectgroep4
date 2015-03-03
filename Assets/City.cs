@@ -92,13 +92,12 @@ public class City : MonoBehaviour {
 			{
 				counterRequesting = 0;
 				counterRequestingThreshold = counterRequestingThresholdNew();
-				//hp eraf halen
+				if (CityHP - 5 >= 0)
+					CityHP -= 5;
 			}
 
-			/* PSEUDO
-			 * if (hp == 0)
-			 * 		gameover = true;
-			 */
+			if (CityHP == 0)
+				Player.GameOver = true;
 
 			//we hoeven alleen te pollen voor deze waarde, het daadwerkelijke terugtellen gebeurt vanuit de player.
 			bool isCitySatisfied = rGraan.Tekort == 0 && rVlees.Tekort == 0 && rWater.Tekort == 0;

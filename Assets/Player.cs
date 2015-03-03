@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 	public static int resource_1;
 	public static int resource_2;
 	public static int resource_3;
+	public static bool GameOver = false;
 
 	// Use this for initialization
 	void Start ()
@@ -48,13 +49,17 @@ public class Player : MonoBehaviour
 
 	void OnGUI ()
 	{
-		GUIStyle Resouces = new GUIStyle();
-		Resouces.alignment = TextAnchor.UpperLeft;
-		Resouces.normal.textColor = Color.white;
+		GUIStyle pGui = new GUIStyle();
+		pGui.alignment = TextAnchor.UpperLeft;
+		pGui.normal.textColor = Color.white;
 
-		GUI.Label (new Rect (0,0,60,50), "Graan " + resource_1,Resouces);
-		GUI.Label (new Rect (80,0,60,50), "Vlees " + resource_2,Resouces);
-		GUI.Label (new Rect (160,0,60,50), "Water " + resource_3,Resouces);
+		GUI.Label (new Rect (0, 0, 60, 50), "Graan " + resource_1, pGui);
+		GUI.Label (new Rect (80, 0, 60, 50), "Vlees " + resource_2, pGui);
+		GUI.Label (new Rect (160, 0, 60, 50), "Water " + resource_3, pGui);
 
+		if (GameOver) {
+			pGui.normal.textColor = Color.red;
+			GUI.Label (new Rect (Screen.width / 2, Screen.height / 4, 60, 50), "GAMEOVER", pGui);
+		}
 	}
 }

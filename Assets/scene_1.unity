@@ -424,8 +424,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb87094c5d53a466490cba815379916e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CityHP: 0
   cityName: 0
+  cityState: 0
+  CityHP: 0
 --- !u!23 &694027446
 Renderer:
   m_ObjectHideFlags: 0
@@ -715,8 +716,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb87094c5d53a466490cba815379916e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CityHP: 0
   cityName: 1
+  cityState: 0
+  CityHP: 0
 --- !u!23 &1960115953
 Renderer:
   m_ObjectHideFlags: 0
@@ -950,8 +952,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb87094c5d53a466490cba815379916e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CityHP: 0
   cityName: 2
+  cityState: 0
+  CityHP: 0
 --- !u!23 &2019750137
 Renderer:
   m_ObjectHideFlags: 0
