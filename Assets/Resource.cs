@@ -10,18 +10,17 @@ public class Resource : MonoBehaviour {
 		Water
 	}
 	public Grondstof ResourceType;
-	private bool ResourceRequested = false;
-	private ResourceGenerator rg = new ResourceGenerator();
+	private bool ResourceRequested;
+	private ResourceGenerator rg;
 	// Use this for initialization
 	void Start () {
-		
+		ResourceRequested = false;
+		rg = new ResourceGenerator ();
 	}
 	// Update is called once per frame
 	void Update () {
-
 		if (!rg.Done && ResourceRequested) {
 			rg.Tick ();
-			Debug.Log("tick");
 		}
 		else if (rg.Done && ResourceRequested) {
 			ResourceRequested = false;
@@ -32,7 +31,6 @@ public class Resource : MonoBehaviour {
 			else if (ResourceType == Grondstof.Water)
 				Player.resource_3 += rg.Amount;
 		}
-
 	}
 	
 	void OnGUI ()
@@ -57,8 +55,10 @@ public class Resource : MonoBehaviour {
 	
 	void OnMouseDown() {
 		//kick timer aan
-		ResourceRequested = true;
-		rg = new ResourceGenerator ();
+		if (!rg.Done) {
+			ResourceRequested = true;
+			rg = new ResourceGenerator ();
+		}
 	}
 }
 
