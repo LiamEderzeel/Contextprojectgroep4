@@ -3,12 +3,13 @@ using System.Collections;
 
 public class City : MonoBehaviour {
 
+#region Properties
+
 	public ResourceCount rGraan = new ResourceCount();
 	public ResourceCount rVlees = new ResourceCount();
 	public ResourceCount rWater = new ResourceCount();
 
-	public int CityHP;
-
+	//namen en identifiers voor de steden, als twee stedendezelfde naam hebben is het niet zeker welke van de twee de code zal kiezen
 	public enum KnownCities 
 	{
 		Amsterdam,
@@ -16,6 +17,35 @@ public class City : MonoBehaviour {
 		Utrecht
 	}
 	public KnownCities cityName; //naam die je uitkiest als je een city GameObject maakt.
+	
+	//enum die de staten aangeeft waar een stad zich in kan verkeren.
+	public enum CityState
+	{
+		Idle,
+		Requesting,
+		Revolting
+	}
+	public CityState cityState;
+
+	//Als de stad niets nodig heeft
+	float counterIdle = 0;
+	float counterIdleThreshold;
+	float counterIdleThresholdNew()
+	{
+		return Random.Range (5, 15);
+	}
+
+	//Als de stad iets nodig heeft
+	//tellers zijn in principe voor het teruglopen van de HP
+	float counterRequesting = 0;
+	float counterRequestingThreshold;
+	float counterRequestingThresholdNew()
+	{
+		return Random.Range (1, 5);
+	}
+	public int CityHP;
+
+#endregion
 
 	void Start () {
 		//random getal aan startresources
@@ -24,66 +54,63 @@ public class City : MonoBehaviour {
 		rWater = GenerateResource ();
 		CityHP = 100;
 
-		//InvokeRepeating("CityRequest", 5.0f, 5.0f);
+		counterIdleThreshold = counterIdleThresholdNew ();
+		counterRequestingThreshold = counterRequestingThresholdNew ();
+		cityState = CityState.Idle;
 	}
 
-	//raycast voor klikevent van de steden, controleert of de player genoeg resources heeft en pleegt dan ruilhandel
-	void CastRay()
+	/// <summary>
+	/// Update this instance. Bevat alle subroutines voor de afzonderlijke citystates
+	/// </summary>
+	void Update ()
 	{
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		RaycastHit hit;
-		if (Physics.Raycast(ray, out hit, 100))
-		{
-			City HitCity = hit.collider.GetComponent<City>();
-			if (HitCity == null)
-			return;
+		//mousedown event
+		if (Input.GetMouseButtonDown(0))
+			CastRay();
+		
+		if (cityState == CityState.Idle) { //of cityState == CityState.Idle;
+			counterIdle += Time.deltaTime * 1; //1 per seconde
 
-			//Substracting the resources when clicked on city with request.
+			if (counterIdle > counterIdleThreshold) {
+				counterIdle = 0;
+				counterIdleThreshold = counterIdleThresholdNew();
+				
+				//do stuff
+				cityState = CityState.Requesting;
+				CityRequest();
+				//melden!
+			}
+		}
 
-			//cityName == KnownCities.Amsterdam
-			
-			if(Player.resource_1 >= HitCity.rGraan.Tekort && Player.resource_2 >= HitCity.rVlees.Tekort && Player.resource_3 >= HitCity.rWater.Tekort)
+		if (cityState == CityState.Requesting) {
+			//tellen en zorgen dat HP terugloopt
+			/*
+			 * vanuit hier ruilhandel plegen, als roep niet beantwoord wordt terugvallen naar state 1
+			 * */
+			counterRequesting += Time.deltaTime * 1; //1 per seconde
+			if (counterRequesting > counterRequestingThreshold)
 			{
-				Player.resource_1 -= HitCity.rGraan.Tekort;
-				Player.resource_2 -= HitCity.rVlees.Tekort;
-				Player.resource_3 -= HitCity.rWater.Tekort;
+				counterRequesting = 0;
+				counterRequestingThreshold = counterRequestingThresholdNew();
+				//hp eraf halen
+			}
 
-				HitCity.rGraan.Tekort = 0;
-				HitCity.rVlees.Tekort = 0;
-				HitCity.rWater.Tekort = 0;
+			/* PSEUDO
+			 * if (hp == 0)
+			 * 		gameover = true;
+			 */
 
-				//todo resources ook echt van steden afhalen in plaats van player
-
+			//we hoeven alleen te pollen voor deze waarde, het daadwerkelijke terugtellen gebeurt vanuit de player.
+			bool isCitySatisfied = rGraan.Tekort == 0 && rVlees.Tekort == 0 && rWater.Tekort == 0;
+			if (isCitySatisfied) {
+				counterIdle = 0;
+				counterIdleThreshold = counterIdleThresholdNew();
+				cityState = CityState.Idle;
 			}
 		}
 	}
 
-	float time = 0;
-	float timehp = 0;
-	void Update ()
-	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			//Debug.Log("Pressed left click, casting ray.");
-			CastRay();
-		}
-		if (rGraan.Tekort == 0 && rVlees.Tekort == 0 && rWater.Tekort == 0) {
-			time += Time.deltaTime * 1;
-		} else {
-			timehp += Time.deltaTime * 1;
-		}
-
-		if (time > 10) {
-			time = 0;
-			CityRequest();
-			timehp = 0;
-		}
-		if (timehp > 2) {
-			CityHP --;
-			timehp = 0;
-			time = 0;
-		}
-	}
+#region Requests
 
 	void CityRequest()
 	{
@@ -91,6 +118,7 @@ public class City : MonoBehaviour {
 		rVlees.Tekort += AddResourceTekort ();
 		rWater.Tekort += AddResourceTekort ();
 	}
+
 	public ResourceCount GenerateResource()
 	{
 		ResourceCount rc = new ResourceCount ();
@@ -104,6 +132,8 @@ public class City : MonoBehaviour {
 		int rr = Random.Range (0, 5);
 		return rr;
 	}
+
+#endregion
 
 	void OnGUI ()
 	{
@@ -136,6 +166,39 @@ public class City : MonoBehaviour {
 			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+64,80,20),"HP: " + CityHP, g_CityRequest);
 
 	}
+
+	//raycast voor klikevent van de steden, controleert of de player genoeg resources heeft en pleegt dan ruilhandel
+	void CastRay()
+	{
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit hit;
+		if (Physics.Raycast(ray, out hit, 100))
+		{
+			City HitCity = hit.collider.GetComponent<City>();
+			if (HitCity == null)
+				return;
+			
+			//Substracting the resources when clicked on city with request.
+			
+			//cityName == KnownCities.Amsterdam
+			
+			if(Player.resource_1 >= HitCity.rGraan.Tekort && Player.resource_2 >= HitCity.rVlees.Tekort && Player.resource_3 >= HitCity.rWater.Tekort)
+			{
+				Player.resource_1 -= HitCity.rGraan.Tekort;
+				Player.resource_2 -= HitCity.rVlees.Tekort;
+				Player.resource_3 -= HitCity.rWater.Tekort;
+				
+				HitCity.rGraan.Tekort = 0;
+				HitCity.rVlees.Tekort = 0;
+				HitCity.rWater.Tekort = 0;
+				
+				//todo resources ook echt van steden afhalen in plaats van player
+				
+			}
+		}
+	}
+
+
 }
 
 public struct ResourceCount
