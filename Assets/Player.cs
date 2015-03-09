@@ -30,11 +30,11 @@ public class Player : MonoBehaviour
 
 			//Debug.DrawLine(ray.origin, hit.point);
 			Debug.Log("Hit object: " + hit.collider.name);
-			if (HitGrondstof.ResourceType == Resource.Grondstof.Graan)
+			if (HitGrondstof.ResourceType == Resource.Grondstof.Voedsel)
 				resource_1 ++;
-			else if (HitGrondstof.ResourceType == Resource.Grondstof.Vlees)
+			else if (HitGrondstof.ResourceType == Resource.Grondstof.Textiel)
 				resource_2 ++;
-			else if (HitGrondstof.ResourceType == Resource.Grondstof.Water)
+			else if (HitGrondstof.ResourceType == Resource.Grondstof.Steenkool)
 				resource_3 ++;
 		}
 	}

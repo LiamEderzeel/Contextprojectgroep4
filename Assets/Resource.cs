@@ -5,9 +5,9 @@ public class Resource : MonoBehaviour {
 	
 	public enum Grondstof
 	{
-		Graan,
-		Vlees,
-		Water
+		Voedsel,
+		Textiel,
+		Steenkool
 	}
 	public Grondstof ResourceType;
 	private bool ResourceRequested;
@@ -24,11 +24,11 @@ public class Resource : MonoBehaviour {
 		}
 		else if (rg.Done && ResourceRequested) {
 			ResourceRequested = false;
-			if (ResourceType == Grondstof.Graan)
+			if (ResourceType == Grondstof.Voedsel)
 				Player.resource_1 += rg.Amount;
-			else if (ResourceType == Grondstof.Vlees)
+			else if (ResourceType == Grondstof.Textiel)
 				Player.resource_2 += rg.Amount;
-			else if (ResourceType == Grondstof.Water)
+			else if (ResourceType == Grondstof.Steenkool)
 				Player.resource_3 += rg.Amount;
 		}
 	}
@@ -41,11 +41,11 @@ public class Resource : MonoBehaviour {
 		ResourceName.alignment = TextAnchor.UpperCenter;
 		ResourceName.normal.textColor = Color.cyan;
 		
-		if(ResourceType == Grondstof.Graan)
+		if(ResourceType == Grondstof.Voedsel)
 			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Graan",ResourceName);
-		else if(ResourceType == Grondstof.Vlees)
+		else if(ResourceType == Grondstof.Textiel)
 			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Vlees",ResourceName);
-		else if(ResourceType == Grondstof.Water)
+		else if(ResourceType == Grondstof.Steenkool)
 			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Water",ResourceName);
 		
 		if (ResourceRequested) {

@@ -73,7 +73,6 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
-    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1001 &67808484
 Prefab:
@@ -181,7 +180,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bb37852e9b70b41f0bfcc34c6fd9cca2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c81a5d983e1d4d9d96e295b04d2feeb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &76641547
 Transform:
@@ -259,7 +258,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e743a991544e4bca831abca24bc6ee1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e967b84db61a40eaa9241e3cdd58344, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &150701419
 MonoBehaviour:
@@ -391,7 +390,7 @@ Prefab:
     - target: {fileID: 21200000, guid: c8477ee7278f34f89ad90d3cac858f8b, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: bb37852e9b70b41f0bfcc34c6fd9cca2,
+      objectReference: {fileID: 21300000, guid: 2c81a5d983e1d4d9d96e295b04d2feeb,
         type: 3}
     - target: {fileID: 11400000, guid: c8477ee7278f34f89ad90d3cac858f8b, type: 2}
       propertyPath: ResourceType
@@ -445,7 +444,7 @@ Prefab:
     - target: {fileID: 21200000, guid: c8477ee7278f34f89ad90d3cac858f8b, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4e743a991544e4bca831abca24bc6ee1,
+      objectReference: {fileID: 21300000, guid: 5e967b84db61a40eaa9241e3cdd58344,
         type: 3}
     - target: {fileID: 11400000, guid: c8477ee7278f34f89ad90d3cac858f8b, type: 2}
       propertyPath: ResourceType
@@ -957,7 +956,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0b277a3c8b8474838b2215045270e418, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 791495b41c0ca4ae5bd0249e485e115f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1995961673
 MonoBehaviour:
@@ -1193,6 +1192,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: c8477ee7278f34f89ad90d3cac858f8b, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 791495b41c0ca4ae5bd0249e485e115f,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8477ee7278f34f89ad90d3cac858f8b, type: 2}
   m_RootGameObject: {fileID: 1995961670}
