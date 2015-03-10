@@ -81,8 +81,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb87094c5d53a466490cba815379916e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CityHP: 0
   cityName: 0
+  cityState: 0
+  CityHP: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
