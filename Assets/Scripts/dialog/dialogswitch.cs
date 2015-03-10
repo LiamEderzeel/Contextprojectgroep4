@@ -17,8 +17,8 @@ public class dialogswitch : MonoBehaviour {
 	//op welke plek de dialog speelt
 	private int dialogIndex = 0;
 
-
-	public AudioClip ac;
+	public AudioClip audioLow;
+	public AudioClip audioHigh;
 
 	// Use this for initialization
 	void Start ()
@@ -29,8 +29,8 @@ public class dialogswitch : MonoBehaviour {
 		aRight.GetComponent<Image> ().sprite = ActorRight;
 		text_line = ActorText [dialogIndex];
 
-		audio.clip = ac;
 		audio.loop = true;
+		setAudioPitch(dialogIndex);
 		audio.Play ();
 		text_scrolling = true;
 	}
@@ -70,11 +70,20 @@ public class dialogswitch : MonoBehaviour {
 			dialogIndex++;
 			//laden van tekst in een tijdelijke string.
 			text_line = ActorText [dialogIndex];
+
+			setAudioPitch(dialogIndex);
 			audio.Play ();
 		}
 
 
 	}
 
+	void setAudioPitch(int i)
+	{
+		if (ActorPitch [i] == 1)
+			audio.clip = audioHigh;
+		else if (ActorPitch [i] == 0)
+			audio.clip = audioLow;
+	}
 
 }
