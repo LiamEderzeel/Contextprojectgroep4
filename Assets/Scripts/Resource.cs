@@ -65,7 +65,7 @@ public class Resource : MonoBehaviour {
 public class ResourceGenerator {
 	
 	float count = 0;
-	float count_t = 10;
+	float count_t = 3;
 	
 	public ResourceGenerator()
 	{

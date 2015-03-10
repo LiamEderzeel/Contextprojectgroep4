@@ -9,9 +9,25 @@ public class Player : MonoBehaviour
 	public static int resource_3;
 	public static bool GameOver = false;
 
+	public enum gameState
+	{
+		Tile,
+		Instructions,
+		Ingame,
+		Dialog,
+		Gameover,
+		Credits
+	};
+
+	public static gameState GameState;
+
 	// Use this for initialization
 	void Start ()
 	{
+		//entry point for application
+
+		GameState = gameState.Tile;
+
 		resource_1 = 0;
 		resource_2 = 0;
 		resource_3 = 0;
