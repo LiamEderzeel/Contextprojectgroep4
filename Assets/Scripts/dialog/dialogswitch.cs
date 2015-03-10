@@ -4,7 +4,7 @@ using System.Collections;
 public class dialogswitch : MonoBehaviour {
 
 	//dialog actors
-	private Sprite ActorLeft;
+	public Sprite ActorLeft;
 	public Sprite ActorRight;
 
 	//collection of strings that the actors need to speak
@@ -29,7 +29,7 @@ public class dialogswitch : MonoBehaviour {
 	void Start ()
 	{
 
-		ActorLeft = Resources.Load<Sprite> ("Sprites/voedsel");
+		//snippet ActorLeft = Resources.Load<Sprite> ("Sprites/voedsel");
 
 		aLeft = transform.FindChild ("actorLeft").gameObject;
 		aRight = transform.FindChild ("actorRight").gameObject;
@@ -43,14 +43,16 @@ public class dialogswitch : MonoBehaviour {
 		text_line = ActorText [dialogIndex];
 	}
 
+	//text scrolling values.
 	bool text_scrolling = false;
 	float text_index = 0f;
-	string text_line;
-	string text_temp;
+	string text_line; //tijdelijke complete tekstregel
+	string text_temp; //afgeknipte regel die door de gui wordt weergeven.
 
 	// Update is called once per frame
 	void Update ()
 	{
+		//laat de dialoogtekst scrollen.
 		if (text_scrolling) {
 			if (text_index <= text_line.Length) {
 				text_temp = text_line.Substring (0, (int)text_index);
@@ -61,7 +63,7 @@ public class dialogswitch : MonoBehaviour {
 			}
 		}
 	}
-	bool b = false;
+	//bool b = false;
 
 	void OnMouseDown()
 	{
@@ -80,16 +82,21 @@ public class dialogswitch : MonoBehaviour {
 	void OnGUI ()
 	{
 		//if (s.activeSelf) {
-			Vector2 boxPosition = Camera.main.WorldToScreenPoint (this.gameObject.transform.position);
-			GUIStyle ResourceName = new GUIStyle ();
-			ResourceName.alignment = TextAnchor.UpperCenter;
-			ResourceName.normal.textColor = Color.cyan;
-			ResourceName.wordWrap = true;
+		//Vector2 boxPosition = Camera.main.WorldToScreenPoint (this.gameObject.transform.position);
+		GUIStyle dT = new GUIStyle ();
+		dT.alignment = TextAnchor.UpperLeft;
+		dT.normal.textColor = Color.cyan;
+		dT.wordWrap = true;
 			
-			//tekenen van de gui box
-			GUI.DrawTexture(new Rect (50, Screen.height - 100, Screen.width - 100, 50), boxTexture, ScaleMode.StretchToFill, true, 10.0F);
-			//tekenen van de gui text
-		GUI.Box (new Rect (50, Screen.height - 100, Screen.width - 100, 50), text_temp, ResourceName);
+		//tekenen van de gui box
+		GameObject g = GameObject.Find ("tralala");
+		RectTransform rt = g.GetComponent<RectTransform> ();
+
+		rt.localPosition = new Vector3 (0, -160);
+
+		//GUI.DrawTexture (r, boxTexture, ScaleMode.ScaleToFit, true, 0);
+		//tekenen van de gui text
+		//GUI.Box (new Rect (50, Screen.height - 100, Screen.width - 100, 50), text_temp, dT);
 		//}
 	}
 }
