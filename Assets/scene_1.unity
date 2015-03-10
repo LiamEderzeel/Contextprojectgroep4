@@ -617,7 +617,7 @@ GameObject:
   - 222: {fileID: 546907855}
   - 114: {fileID: 546907854}
   m_Layer: 5
-  m_Name: Text
+  m_Name: dialogText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -879,6 +879,8 @@ GameObject:
   - 223: {fileID: 722663948}
   - 114: {fileID: 722663947}
   - 114: {fileID: 722663946}
+  - 114: {fileID: 722663949}
+  - 114: {fileID: 722663950}
   m_Layer: 5
   m_Name: CanvasDialog
   m_TagString: Untagged
@@ -960,6 +962,56 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &722663949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 722663944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e3e3b6b4eaa3c42ad8e1760ed35148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActorLeft: {fileID: 21300000, guid: 85b774751844a344daf048ad5344b676, type: 3}
+  ActorRight: {fileID: 21300000, guid: 1f921c475c92753459db585ff1a9db37, type: 3}
+  ActorText:
+  - dit is de begintekst
+  - dit is een erg lange lap tekst die kan testen of het scrollebn lekker werkt.
+  - dit is een stuk tekst
+  - ik zal deze tekst maar niet in caps typen
+  - test
+  ActorPitch: 0000000000000000000000000000000000000000
+--- !u!114 &722663950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 722663944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 722663949}
+          m_MethodName: incrementDialog
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+              Culture=neutral, PublicKeyToken=null
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &750301168
 GameObject:
   m_ObjectHideFlags: 0

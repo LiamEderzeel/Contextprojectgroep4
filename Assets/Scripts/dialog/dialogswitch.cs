@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class dialogswitch : MonoBehaviour {
@@ -31,16 +32,17 @@ public class dialogswitch : MonoBehaviour {
 
 		//snippet ActorLeft = Resources.Load<Sprite> ("Sprites/voedsel");
 
-		aLeft = transform.FindChild ("actorLeft").gameObject;
+		/*aLeft = transform.FindChild ("actorLeft").gameObject;
 		aRight = transform.FindChild ("actorRight").gameObject;
 		aLeft.GetComponent<SpriteRenderer> ().sprite = ActorLeft;
 		aRight.GetComponent<SpriteRenderer> ().sprite = ActorRight;
 
-
+*/
 		boxTexture = Resources.Load<Texture> ("Sprites/dialog/textframe");
 
 		s = GameObject.Find ("dialogoverlay");
 		text_line = ActorText [dialogIndex];
+		text_scrolling = true;
 	}
 
 	//text scrolling values.
@@ -62,11 +64,15 @@ public class dialogswitch : MonoBehaviour {
 				text_scrolling = false;
 			}
 		}
+
+		GameObject g = GameObject.Find ("dialogText");
+		g.GetComponent<Text>().text = text_temp;
 	}
 	//bool b = false;
 
-	void OnMouseDown()
+	public void incrementDialog()
 	{
+		Debug.Log ("hoi");
 		//s.renderer.enabled = !s.renderer.enabled;
 		//s.SetActive (b);
 		//b = !b;
@@ -79,24 +85,5 @@ public class dialogswitch : MonoBehaviour {
 		}
 	}
 
-	void OnGUI ()
-	{
-		//if (s.activeSelf) {
-		//Vector2 boxPosition = Camera.main.WorldToScreenPoint (this.gameObject.transform.position);
-		GUIStyle dT = new GUIStyle ();
-		dT.alignment = TextAnchor.UpperLeft;
-		dT.normal.textColor = Color.cyan;
-		dT.wordWrap = true;
-			
-		//tekenen van de gui box
-		GameObject g = GameObject.Find ("tralala");
-		RectTransform rt = g.GetComponent<RectTransform> ();
 
-		rt.localPosition = new Vector3 (0, -160);
-
-		//GUI.DrawTexture (r, boxTexture, ScaleMode.ScaleToFit, true, 0);
-		//tekenen van de gui text
-		//GUI.Box (new Rect (50, Screen.height - 100, Screen.width - 100, 50), text_temp, dT);
-		//}
-	}
 }
