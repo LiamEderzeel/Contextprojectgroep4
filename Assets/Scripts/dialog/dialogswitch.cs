@@ -32,12 +32,12 @@ public class dialogswitch : MonoBehaviour {
 
 		//snippet ActorLeft = Resources.Load<Sprite> ("Sprites/voedsel");
 
-		/*aLeft = transform.FindChild ("actorLeft").gameObject;
+		aLeft = transform.FindChild ("actorLeft").gameObject;
 		aRight = transform.FindChild ("actorRight").gameObject;
-		aLeft.GetComponent<SpriteRenderer> ().sprite = ActorLeft;
-		aRight.GetComponent<SpriteRenderer> ().sprite = ActorRight;
+		aLeft.GetComponent<Image> ().sprite = ActorLeft;
+		aRight.GetComponent<Image> ().sprite = ActorRight;
 
-*/
+
 		boxTexture = Resources.Load<Texture> ("Sprites/dialog/textframe");
 
 		s = GameObject.Find ("dialogoverlay");
