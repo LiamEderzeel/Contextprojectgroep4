@@ -7,41 +7,31 @@ public class dialogswitch : MonoBehaviour {
 	//dialog actors
 	public Sprite ActorLeft;
 	public Sprite ActorRight;
-
 	//collection of strings that the actors need to speak
 	public string[] ActorText;
-
 	//1 is high, 0 is low.
 	public int[] ActorPitch;
-
-
 	private GameObject aLeft;
 	private GameObject aRight;
 
-
-
-	GameObject s;
-	private Texture boxTexture;
-
-
+	//op welke plek de dialog speelt
 	private int dialogIndex = 0;
+
+
+	public AudioClip ac;
 
 	// Use this for initialization
 	void Start ()
 	{
-
-		//snippet ActorLeft = Resources.Load<Sprite> ("Sprites/voedsel");
-
 		aLeft = transform.FindChild ("actorLeft").gameObject;
 		aRight = transform.FindChild ("actorRight").gameObject;
 		aLeft.GetComponent<Image> ().sprite = ActorLeft;
 		aRight.GetComponent<Image> ().sprite = ActorRight;
-
-
-		boxTexture = Resources.Load<Texture> ("Sprites/dialog/textframe");
-
-		s = GameObject.Find ("dialogoverlay");
 		text_line = ActorText [dialogIndex];
+
+		audio.clip = ac;
+		audio.loop = true;
+		audio.Play ();
 		text_scrolling = true;
 	}
 
@@ -62,27 +52,28 @@ public class dialogswitch : MonoBehaviour {
 			} else {
 				text_index = 0;
 				text_scrolling = false;
+
+				//knip audio off
+				audio.Stop ();
 			}
 		}
 
 		GameObject g = GameObject.Find ("dialogText");
 		g.GetComponent<Text>().text = text_temp;
 	}
-	//bool b = false;
 
+	//schuift de dialogregels een op
 	public void incrementDialog()
 	{
-		Debug.Log ("hoi");
-		//s.renderer.enabled = !s.renderer.enabled;
-		//s.SetActive (b);
-		//b = !b;
-
 		if (!text_scrolling && dialogIndex + 1 < ActorText.Length) {
 			text_scrolling = true;
 			dialogIndex++;
 			//laden van tekst in een tijdelijke string.
-			text_line = ActorText [dialogIndex]; 
+			text_line = ActorText [dialogIndex];
+			audio.Play ();
 		}
+
+
 	}
 
 
