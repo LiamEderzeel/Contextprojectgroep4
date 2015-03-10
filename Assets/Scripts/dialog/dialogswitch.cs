@@ -40,13 +40,26 @@ public class dialogswitch : MonoBehaviour {
 		boxTexture = Resources.Load<Texture> ("Sprites/dialog/textframe");
 
 		s = GameObject.Find ("dialogoverlay");
+		text_line = ActorText [dialogIndex];
 	}
-	
+
+	bool text_scrolling = false;
+	float text_index = 0f;
+	string text_line;
+	string text_temp;
+
 	// Update is called once per frame
 	void Update ()
 	{
-
-
+		if (text_scrolling) {
+			if (text_index <= text_line.Length) {
+				text_temp = text_line.Substring (0, (int)text_index);
+				text_index ++;
+			} else {
+				text_index = 0;
+				text_scrolling = false;
+			}
+		}
 	}
 	bool b = false;
 
@@ -56,8 +69,12 @@ public class dialogswitch : MonoBehaviour {
 		//s.SetActive (b);
 		//b = !b;
 
-		if (dialogIndex + 1 < ActorText.Length)
+		if (!text_scrolling && dialogIndex + 1 < ActorText.Length) {
+			text_scrolling = true;
 			dialogIndex++;
+			//laden van tekst in een tijdelijke string.
+			text_line = ActorText [dialogIndex]; 
+		}
 	}
 
 	void OnGUI ()
@@ -68,10 +85,11 @@ public class dialogswitch : MonoBehaviour {
 			ResourceName.alignment = TextAnchor.UpperCenter;
 			ResourceName.normal.textColor = Color.cyan;
 			ResourceName.wordWrap = true;
-
-		GUI.DrawTexture(new Rect (50, Screen.height - 100, Screen.width - 100, 50), boxTexture, ScaleMode.StretchToFill, true, 10.0F);
-
-			GUI.Box (new Rect (50, Screen.height - 100, Screen.width - 100, 50), ActorText[dialogIndex], ResourceName);
+			
+			//tekenen van de gui box
+			GUI.DrawTexture(new Rect (50, Screen.height - 100, Screen.width - 100, 50), boxTexture, ScaleMode.StretchToFill, true, 10.0F);
+			//tekenen van de gui text
+		GUI.Box (new Rect (50, Screen.height - 100, Screen.width - 100, 50), text_temp, ResourceName);
 		//}
 	}
 }
