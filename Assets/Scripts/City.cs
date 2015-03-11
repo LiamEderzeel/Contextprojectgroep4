@@ -151,15 +151,17 @@ public class City : MonoBehaviour {
 			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-50,80,50),"Utrecht",g_CityName);
 
 
+		
+		if (rc.Tekort != 0) {
+			if (rc.TekortType == Player.Grondstof.Voedsel)
+				GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 16, 80, 20), "Voedsel: ", g_CityRequest);
+			else if (rc.TekortType == Player.Grondstof.Steenkool)
+				GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 16, 80, 20), "Steenkool: ", g_CityRequest);
+			else if (rc.TekortType == Player.Grondstof.Textiel)
+				GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 16, 80, 20), "Textiel: ", g_CityRequest);
 
-		if (rc.TekortType == Player.Grondstof.Voedsel)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"Voedsel: ", g_CityRequest);
-		else if (rc.TekortType == Player.Grondstof.Steenkool)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"Steenkool: ", g_CityRequest);
-		else if (rc.TekortType == Player.Grondstof.Textiel)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"Textiel: ", g_CityRequest);
-		if (rc.Tekort != 0)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+32,80,20), rc.Tekort.ToString(), g_CityRequest);
+			GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 32, 80, 20), rc.Tekort.ToString (), g_CityRequest);
+		}
 
 		g_CityRequest.normal.textColor = Color.red;
 		if (CityHP != 100)
@@ -170,6 +172,8 @@ public class City : MonoBehaviour {
 	//raycast voor klikevent van de steden, controleert of de player genoeg resources heeft en pleegt dan ruilhandel
 	void CastRay()
 	{
+		Debug.Log ("rest");
+
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
 		if (Physics.Raycast(ray, out hit, 100))
@@ -179,17 +183,17 @@ public class City : MonoBehaviour {
 				return;
 			
 			//Substracting the resources when clicked on city with request.
-			if(rc.TekortType == Player.Grondstof.Voedsel && Player.resource_1 < HitCity.rc.Tekort)
+			if(rc.TekortType == Player.Grondstof.Voedsel && Player.resource_1 > HitCity.rc.Tekort)
 			{
 				Player.resource_1 -= HitCity.rc.Tekort;
 				HitCity.rc.Tekort = 0;
 			}
-			else if(rc.TekortType == Player.Grondstof.Textiel && Player.resource_2 < HitCity.rc.Tekort)
+			else if(rc.TekortType == Player.Grondstof.Textiel && Player.resource_2 > HitCity.rc.Tekort)
 			{
 				Player.resource_2 -= HitCity.rc.Tekort;
 				HitCity.rc.Tekort = 0;
 			}
-			else if(rc.TekortType == Player.Grondstof.Steenkool && Player.resource_3 < HitCity.rc.Tekort)
+			else if(rc.TekortType == Player.Grondstof.Steenkool && Player.resource_3 > HitCity.rc.Tekort)
 			{
 				Player.resource_3 -= HitCity.rc.Tekort;
 				HitCity.rc.Tekort = 0;
