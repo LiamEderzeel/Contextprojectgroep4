@@ -179,9 +179,6 @@ public class City : MonoBehaviour {
 				return;
 			
 			//Substracting the resources when clicked on city with request.
-			
-			//cityName == KnownCities.Amsterdam
-
 			if(rc.TekortType == Player.Grondstof.Voedsel && Player.resource_1 < HitCity.rc.Tekort)
 			{
 				Player.resource_1 -= HitCity.rc.Tekort;

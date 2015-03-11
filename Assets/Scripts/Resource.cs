@@ -37,11 +37,11 @@ public class Resource : MonoBehaviour {
 		ResourceName.normal.textColor = Color.cyan;
 		
 		if(ResourceType == Player.Grondstof.Voedsel)
-			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Graan",ResourceName);
+			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Voedsel",ResourceName);
 		else if(ResourceType == Player.Grondstof.Textiel)
-			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Vlees",ResourceName);
+			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Textiel",ResourceName);
 		else if(ResourceType == Player.Grondstof.Steenkool)
-			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Water",ResourceName);
+			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Steenkool",ResourceName);
 		
 		if (ResourceRequested) {
 			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+50, 80, 50), "Percent: "+rg.PercentageDone, ResourceName);

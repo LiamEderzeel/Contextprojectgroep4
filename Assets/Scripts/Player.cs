@@ -77,9 +77,9 @@ public class Player : MonoBehaviour
 		pGui.normal.textColor = Color.white;
 		pGui.fontSize = Screen.height / 20;
 
-		GUI.Label (new Rect (0, 0, 60, 50), "Graan " + resource_1, pGui);
-		GUI.Label (new Rect (80, 0, 60, 50), "Vlees " + resource_2, pGui);
-		GUI.Label (new Rect (160, 0, 60, 50), "Water " + resource_3, pGui);
+		GUI.Label (new Rect (0, 0, 60, 50), "Voedsel " + resource_1, pGui);
+		GUI.Label (new Rect (80, 0, 60, 50), "Textiel " + resource_2, pGui);
+		GUI.Label (new Rect (160, 0, 60, 50), "Steenkool " + resource_3, pGui);
 
 		if (GameOver) {
 			pGui.normal.textColor = Color.red;
