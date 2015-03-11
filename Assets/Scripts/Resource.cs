@@ -55,7 +55,7 @@ public class Resource : MonoBehaviour {
 	
 	void OnMouseDown() {
 		//kick timer aan
-		if (!rg.Done) {
+		if (!ResourceRequested) {
 			ResourceRequested = true;
 			rg = new ResourceGenerator ();
 		}
