@@ -4,9 +4,9 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
 
-	public static int resource_1;
-	public static int resource_2;
-	public static int resource_3;
+	public static int resource_1; //voedsel
+	public static int resource_2; //textiel
+	public static int resource_3; //steenkool
 	public static bool GameOver = false;
 
 	public enum gameState
@@ -20,6 +20,13 @@ public class Player : MonoBehaviour
 	};
 
 	public static gameState GameState;
+
+	public enum Grondstof
+	{
+		Voedsel = 1,
+		Textiel = 2,
+		Steenkool = 3
+	}
 
 	// Use this for initialization
 	void Start ()
@@ -46,11 +53,11 @@ public class Player : MonoBehaviour
 
 			//Debug.DrawLine(ray.origin, hit.point);
 			Debug.Log("Hit object: " + hit.collider.name);
-			if (HitGrondstof.ResourceType == Resource.Grondstof.Voedsel)
+			if (HitGrondstof.ResourceType == Grondstof.Voedsel)
 				resource_1 ++;
-			else if (HitGrondstof.ResourceType == Resource.Grondstof.Textiel)
+			else if (HitGrondstof.ResourceType == Grondstof.Textiel)
 				resource_2 ++;
-			else if (HitGrondstof.ResourceType == Resource.Grondstof.Steenkool)
+			else if (HitGrondstof.ResourceType == Grondstof.Steenkool)
 				resource_3 ++;
 		}
 	}

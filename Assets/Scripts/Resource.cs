@@ -3,13 +3,8 @@ using System.Collections;
 
 public class Resource : MonoBehaviour {
 	
-	public enum Grondstof
-	{
-		Voedsel,
-		Textiel,
-		Steenkool
-	}
-	public Grondstof ResourceType;
+
+	public Player.Grondstof ResourceType;
 	private bool ResourceRequested;
 	private ResourceGenerator rg;
 	// Use this for initialization
@@ -24,11 +19,11 @@ public class Resource : MonoBehaviour {
 		}
 		else if (rg.Done && ResourceRequested) {
 			ResourceRequested = false;
-			if (ResourceType == Grondstof.Voedsel)
+			if (ResourceType == Player.Grondstof.Voedsel)
 				Player.resource_1 += rg.Amount;
-			else if (ResourceType == Grondstof.Textiel)
+			else if (ResourceType == Player.Grondstof.Textiel)
 				Player.resource_2 += rg.Amount;
-			else if (ResourceType == Grondstof.Steenkool)
+			else if (ResourceType == Player.Grondstof.Steenkool)
 				Player.resource_3 += rg.Amount;
 		}
 	}
@@ -41,11 +36,11 @@ public class Resource : MonoBehaviour {
 		ResourceName.alignment = TextAnchor.UpperCenter;
 		ResourceName.normal.textColor = Color.cyan;
 		
-		if(ResourceType == Grondstof.Voedsel)
+		if(ResourceType == Player.Grondstof.Voedsel)
 			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Graan",ResourceName);
-		else if(ResourceType == Grondstof.Textiel)
+		else if(ResourceType == Player.Grondstof.Textiel)
 			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Vlees",ResourceName);
-		else if(ResourceType == Grondstof.Steenkool)
+		else if(ResourceType == Player.Grondstof.Steenkool)
 			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Water",ResourceName);
 		
 		if (ResourceRequested) {

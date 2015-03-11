@@ -5,9 +5,7 @@ public class City : MonoBehaviour {
 
 #region Properties
 
-	public ResourceCount rGraan = new ResourceCount();
-	public ResourceCount rVlees = new ResourceCount();
-	public ResourceCount rWater = new ResourceCount();
+	public ResourceCount rc;
 
 	//namen en identifiers voor de steden, als twee stedendezelfde naam hebben is het niet zeker welke van de twee de code zal kiezen
 	public enum KnownCities 
@@ -48,12 +46,7 @@ public class City : MonoBehaviour {
 #endregion
 
 	void Start () {
-		//random getal aan startresources
-		rGraan = GenerateResource ();
-		rVlees = GenerateResource ();
-		rWater = GenerateResource ();
 		CityHP = 100;
-
 		counterIdleThreshold = counterIdleThresholdNew ();
 		counterRequestingThreshold = counterRequestingThresholdNew ();
 		cityState = CityState.Idle;
@@ -100,7 +93,7 @@ public class City : MonoBehaviour {
 				Player.GameOver = true;
 
 			//we hoeven alleen te pollen voor deze waarde, het daadwerkelijke terugtellen gebeurt vanuit de player.
-			bool isCitySatisfied = rGraan.Tekort == 0 && rVlees.Tekort == 0 && rWater.Tekort == 0;
+			bool isCitySatisfied = rc.Tekort == 0;
 			if (isCitySatisfied) {
 				counterIdle = 0;
 				counterIdleThreshold = counterIdleThresholdNew();
@@ -113,9 +106,13 @@ public class City : MonoBehaviour {
 
 	void CityRequest()
 	{
-		rGraan.Tekort += AddResourceTekort ();
-		rVlees.Tekort += AddResourceTekort ();
-		rWater.Tekort += AddResourceTekort ();
+		int r;
+		r = (int)Random.Range (1, 3);
+		rc.TekortType = (Player.Grondstof)r;
+		rc.Tekort += AddResourceTekort ();
+		r = (int)Random.Range (1, 3);
+		rc.OverschotType = (Player.Grondstof)r;
+		rc.Overschot += AddResourceTekort ();
 	}
 
 	public ResourceCount GenerateResource()
@@ -153,12 +150,16 @@ public class City : MonoBehaviour {
 		else if(cityName == KnownCities.Utrecht)
 			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-50,80,50),"Utrecht",g_CityName);
 
-		if (rGraan.Tekort != 0)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"t Graan: " + rGraan.Tekort, g_CityRequest);
-		if (rVlees.Tekort != 0)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+32,80,20),"t Vlees: " + rVlees.Tekort, g_CityRequest);
-		if (rWater.Tekort != 0)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+48,80,20),"t Water: " + rWater.Tekort, g_CityRequest);
+
+
+		if (rc.TekortType == Player.Grondstof.Voedsel)
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"Voedsel: ", g_CityRequest);
+		else if (rc.TekortType == Player.Grondstof.Steenkool)
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"Steenkool: ", g_CityRequest);
+		else if (rc.TekortType == Player.Grondstof.Textiel)
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+16,80,20),"Textiel: ", g_CityRequest);
+		if (rc.Tekort != 0)
+			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+32,80,20), rc.Tekort.ToString(), g_CityRequest);
 
 		g_CityRequest.normal.textColor = Color.red;
 		if (CityHP != 100)
@@ -180,20 +181,23 @@ public class City : MonoBehaviour {
 			//Substracting the resources when clicked on city with request.
 			
 			//cityName == KnownCities.Amsterdam
-			
-			if(Player.resource_1 >= HitCity.rGraan.Tekort && Player.resource_2 >= HitCity.rVlees.Tekort && Player.resource_3 >= HitCity.rWater.Tekort)
+
+			if(rc.TekortType == Player.Grondstof.Voedsel && Player.resource_1 < HitCity.rc.Tekort)
 			{
-				Player.resource_1 -= HitCity.rGraan.Tekort;
-				Player.resource_2 -= HitCity.rVlees.Tekort;
-				Player.resource_3 -= HitCity.rWater.Tekort;
-				
-				HitCity.rGraan.Tekort = 0;
-				HitCity.rVlees.Tekort = 0;
-				HitCity.rWater.Tekort = 0;
-				
-				//todo resources ook echt van steden afhalen in plaats van player
-				
+				Player.resource_1 -= HitCity.rc.Tekort;
+				HitCity.rc.Tekort = 0;
 			}
+			else if(rc.TekortType == Player.Grondstof.Textiel && Player.resource_2 < HitCity.rc.Tekort)
+			{
+				Player.resource_2 -= HitCity.rc.Tekort;
+				HitCity.rc.Tekort = 0;
+			}
+			else if(rc.TekortType == Player.Grondstof.Steenkool && Player.resource_3 < HitCity.rc.Tekort)
+			{
+				Player.resource_3 -= HitCity.rc.Tekort;
+				HitCity.rc.Tekort = 0;
+			}
+
 		}
 	}
 
@@ -203,5 +207,7 @@ public class City : MonoBehaviour {
 public struct ResourceCount
 {
 	public int Overschot;
+	public Player.Grondstof OverschotType;
 	public int Tekort;
+	public Player.Grondstof TekortType;
 }
