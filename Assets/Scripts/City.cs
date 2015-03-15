@@ -3,9 +3,11 @@ using System.Collections;
 
 public class City : MonoBehaviour {
 
-#region Properties
+
+	#region Properties
 
 	public ResourceCount rc;
+	public bool riot = false;
 
 	//namen en identifiers voor de steden, als twee stedendezelfde naam hebben is het niet zeker welke van de twee de code zal kiezen
 	public enum KnownCities 
@@ -43,13 +45,14 @@ public class City : MonoBehaviour {
 	}
 	public int CityHP;
 
-#endregion
+	#endregion
 
 	void Start () {
 		CityHP = 100;
 		counterIdleThreshold = counterIdleThresholdNew ();
 		counterRequestingThreshold = counterRequestingThresholdNew ();
 		cityState = CityState.Idle;
+		
 	}
 
 	/// <summary>
@@ -59,7 +62,7 @@ public class City : MonoBehaviour {
 	{
 		//mousedown event
 		if (Input.GetMouseButtonDown(0))
-			CastRay();
+		CastRay();
 		
 		if (cityState == CityState.Idle) { //of cityState == CityState.Idle;
 			counterIdle += Time.deltaTime * 1; //1 per seconde
@@ -86,12 +89,17 @@ public class City : MonoBehaviour {
 				counterRequesting = 0;
 				counterRequestingThreshold = counterRequestingThresholdNew();
 				if (CityHP - 5 >= 0)
-					CityHP -= 5;
+				CityHP -= 50;
 			}
 
 			if (CityHP == 0)
-				Player.GameOver = true;
+			Player.GameOver = true;
 
+			if(riot == false) {
+				spawnRiot();
+				riot = true;
+			}
+						
 			//we hoeven alleen te pollen voor deze waarde, het daadwerkelijke terugtellen gebeurt vanuit de player.
 			bool isCitySatisfied = rc.Tekort == 0;
 			if (isCitySatisfied) {
@@ -101,8 +109,17 @@ public class City : MonoBehaviour {
 			}
 		}
 	}
+	void spawnRiot () {
+		
+		//GameObject instance = Instantiate(Resources.Load("Riot")) as GameObject;
 
-#region Requests
+		Vector3 newPosition = this.gameObject.transform.position;
+		Quaternion newRotation = Quaternion.identity;
+		GameObject textObject = (GameObject)Instantiate(Resources.Load("Riot"), newPosition, newRotation);
+		print("works");
+	}
+
+	#region Requests
 
 	void CityRequest()
 	{
@@ -129,7 +146,7 @@ public class City : MonoBehaviour {
 		return rr;
 	}
 
-#endregion
+	#endregion
 
 	void OnGUI ()
 	{
@@ -144,28 +161,28 @@ public class City : MonoBehaviour {
 		g_CityRequest.normal.textColor = Color.white;
 
 		if(cityName == KnownCities.Amsterdam)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-50,80,50),"Amsterdam",g_CityName);
+		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-50,80,50),"Amsterdam",g_CityName);
 		else if(cityName == KnownCities.Rotterdam)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-50,80,50),"Rotterdam",g_CityName);
+		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-50,80,50),"Rotterdam",g_CityName);
 		else if(cityName == KnownCities.Utrecht)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-50,80,50),"Utrecht",g_CityName);
+		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-50,80,50),"Utrecht",g_CityName);
 
 
 		
 		if (rc.Tekort != 0) {
 			if (rc.TekortType == Player.Grondstof.Voedsel)
-				GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 16, 80, 20), "Voedsel: ", g_CityRequest);
+			GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 16, 80, 20), "Voedsel: ", g_CityRequest);
 			else if (rc.TekortType == Player.Grondstof.Steenkool)
-				GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 16, 80, 20), "Steenkool: ", g_CityRequest);
+			GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 16, 80, 20), "Steenkool: ", g_CityRequest);
 			else if (rc.TekortType == Player.Grondstof.Textiel)
-				GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 16, 80, 20), "Textiel: ", g_CityRequest);
+			GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 16, 80, 20), "Textiel: ", g_CityRequest);
 
 			GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 32, 80, 20), rc.Tekort.ToString (), g_CityRequest);
 		}
 
 		g_CityRequest.normal.textColor = Color.red;
 		if (CityHP != 100)
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+64,80,20),"HP: " + CityHP, g_CityRequest);
+		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+64,80,20),"HP: " + CityHP, g_CityRequest);
 
 	}
 
@@ -180,7 +197,7 @@ public class City : MonoBehaviour {
 		{
 			City HitCity = hit.collider.GetComponent<City>();
 			if (HitCity == null)
-				return;
+			return;
 			
 			//Substracting the resources when clicked on city with request.
 			if(rc.TekortType == Player.Grondstof.Voedsel && Player.resource_1 > HitCity.rc.Tekort)
