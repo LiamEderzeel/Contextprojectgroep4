@@ -8,13 +8,11 @@ public class Riot : MonoBehaviour {
 	private float pos;
 	private float speed = 0.5f;
 
-
 	// Use this for initialization
 	void Start () {
 		//GameObject.Find("startPosotion").transform.position
 		startPosition = this.gameObject.transform.position;
-		endPosition = GameObject.Find("Player").transform.position;
-		
+		endPosition = GameObject.Find("Player").transform.position;		
 	}
 	
 	// Update is called once per frame

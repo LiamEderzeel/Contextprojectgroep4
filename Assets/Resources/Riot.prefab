@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 472156}
   - 212: {fileID: 21272156}
   - 114: {fileID: 11479510}
+  - 95: {fileID: 9562536}
   m_Layer: 0
   m_Name: Riot
   m_TagString: Untagged
@@ -24,11 +25,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5.55000019}
+  m_LocalPosition: {x: 13.4700003, y: 0, z: -5.55000019}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!95 &9562536
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172156}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dfa90d7442e5a496e826e7b9dd034090, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11479510
 MonoBehaviour:
   m_ObjectHideFlags: 1
