@@ -134,10 +134,10 @@ public class City : MonoBehaviour {
 
 		//zorgen dat het overschoet niet gelijk kan zijn aan het tekort.
 		//dus: zolang r2 en r gelijk zijn, verzin maar iets nieuws voor r2.
-		while (r2 == r)
+		while (r2 == r) {
 			r2 = (int)Random.Range (1, 3);
-
-		rc.OverschotType = (Player.Grondstof)r;
+		}
+		rc.OverschotType = (Player.Grondstof)r2;
 		rc.Overschot += AddResourceTekort ();
 	}
 
@@ -197,7 +197,7 @@ public class City : MonoBehaviour {
 			else if (rc.OverschotType == Player.Grondstof.Textiel)
 				GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 48, 80, 20), "Textiel: ", g_CityRequest);
 			
-			GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 64, 80, 20), rc.Tekort.ToString (), g_CityRequest);
+			GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 64, 80, 20), rc.Overschot.ToString (), g_CityRequest);
 		}
 
 		g_CityRequest.normal.textColor = Color.red;
@@ -236,6 +236,22 @@ public class City : MonoBehaviour {
 				HitCity.rc.Tekort = 0;
 			}
 
+			//Adding the resources when clicked on city with too much of a resource.
+			if(rc.OverschotType == Player.Grondstof.Voedsel)
+			{
+				Player.resource_1 += HitCity.rc.Overschot;
+				HitCity.rc.Overschot = 0;
+			}
+			else if(rc.OverschotType == Player.Grondstof.Textiel)
+			{
+				Player.resource_2 += HitCity.rc.Overschot;
+				HitCity.rc.Overschot = 0;
+			}
+			else if(rc.OverschotType == Player.Grondstof.Steenkool)
+			{
+				Player.resource_3 += HitCity.rc.Overschot;
+				HitCity.rc.Overschot = 0;
+			}
 		}
 	}
 
