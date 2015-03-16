@@ -218,40 +218,50 @@ public class City : MonoBehaviour {
 			City HitCity = hit.collider.GetComponent<City>();
 			if (HitCity == null)
 			return;
-			
+
+			/*dit stuk code hieronder moeten we echt even netjes maken.*/
+			bool ruilen = false;
 			//Substracting the resources when clicked on city with request.
 			if(rc.TekortType == Player.Grondstof.Voedsel && Player.resource_1 > HitCity.rc.Tekort)
 			{
 				Player.resource_1 -= HitCity.rc.Tekort;
 				HitCity.rc.Tekort = 0;
+				ruilen = true;
 			}
 			else if(rc.TekortType == Player.Grondstof.Textiel && Player.resource_2 > HitCity.rc.Tekort)
 			{
 				Player.resource_2 -= HitCity.rc.Tekort;
 				HitCity.rc.Tekort = 0;
+				ruilen = true;
 			}
 			else if(rc.TekortType == Player.Grondstof.Steenkool && Player.resource_3 > HitCity.rc.Tekort)
 			{
 				Player.resource_3 -= HitCity.rc.Tekort;
 				HitCity.rc.Tekort = 0;
+				ruilen = true;
 			}
 
-			//Adding the resources when clicked on city with too much of a resource.
-			if(rc.OverschotType == Player.Grondstof.Voedsel)
+			if (ruilen)
 			{
-				Player.resource_1 += HitCity.rc.Overschot;
-				HitCity.rc.Overschot = 0;
+				//Adding the resources when clicked on city with too much of a resource.
+				if(rc.OverschotType == Player.Grondstof.Voedsel)
+				{
+					Player.resource_1 += HitCity.rc.Overschot;
+					HitCity.rc.Overschot = 0;
+				}
+				else if(rc.OverschotType == Player.Grondstof.Textiel)
+				{
+					Player.resource_2 += HitCity.rc.Overschot;
+					HitCity.rc.Overschot = 0;
+				}
+				else if(rc.OverschotType == Player.Grondstof.Steenkool)
+				{
+					Player.resource_3 += HitCity.rc.Overschot;
+					HitCity.rc.Overschot = 0;
+				}
+				ruilen = false;
 			}
-			else if(rc.OverschotType == Player.Grondstof.Textiel)
-			{
-				Player.resource_2 += HitCity.rc.Overschot;
-				HitCity.rc.Overschot = 0;
-			}
-			else if(rc.OverschotType == Player.Grondstof.Steenkool)
-			{
-				Player.resource_3 += HitCity.rc.Overschot;
-				HitCity.rc.Overschot = 0;
-			}
+
 		}
 	}
 
