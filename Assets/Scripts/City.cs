@@ -23,7 +23,7 @@ public class City : MonoBehaviour {
 	{
 		Idle,
 		Requesting,
-		Revolting
+		Rioting
 	}
 	public CityState cityState;
 
@@ -89,17 +89,18 @@ public class City : MonoBehaviour {
 				counterRequesting = 0;
 				counterRequestingThreshold = counterRequestingThresholdNew();
 				if (CityHP - 5 >= 0)
-				CityHP -= 50;
+				CityHP -= 5;
 			}
 
 			if (CityHP == 0)
-			Player.GameOver = true;
-
-			if(riot == false) {
+			{
+				//dan is er een kans dat er een riot komt.
+				cityState = CityState.Rioting;
 				spawnRiot();
-				riot = true;
+
+				//Player.GameOver = true;
 			}
-						
+
 			//we hoeven alleen te pollen voor deze waarde, het daadwerkelijke terugtellen gebeurt vanuit de player.
 			bool isCitySatisfied = rc.Tekort == 0;
 			if (isCitySatisfied) {
@@ -109,6 +110,7 @@ public class City : MonoBehaviour {
 			}
 		}
 	}
+
 	void spawnRiot () {
 		
 		//GameObject instance = Instantiate(Resources.Load("Riot")) as GameObject;
@@ -124,10 +126,17 @@ public class City : MonoBehaviour {
 	void CityRequest()
 	{
 		int r;
+		int r2;
 		r = (int)Random.Range (1, 3);
 		rc.TekortType = (Player.Grondstof)r;
 		rc.Tekort += AddResourceTekort ();
-		r = (int)Random.Range (1, 3);
+		r2 = (int)Random.Range (1, 3);
+
+		//zorgen dat het overschoet niet gelijk kan zijn aan het tekort.
+		//dus: zolang r2 en r gelijk zijn, verzin maar iets nieuws voor r2.
+		while (r2 == r)
+			r2 = (int)Random.Range (1, 3);
+
 		rc.OverschotType = (Player.Grondstof)r;
 		rc.Overschot += AddResourceTekort ();
 	}
@@ -180,9 +189,20 @@ public class City : MonoBehaviour {
 			GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 32, 80, 20), rc.Tekort.ToString (), g_CityRequest);
 		}
 
+		if (rc.Overschot != 0) {
+			if (rc.OverschotType == Player.Grondstof.Voedsel)
+				GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 48, 80, 20), "Voedsel: ", g_CityRequest);
+			else if (rc.OverschotType == Player.Grondstof.Steenkool)
+				GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 48, 80, 20), "Steenkool: ", g_CityRequest);
+			else if (rc.OverschotType == Player.Grondstof.Textiel)
+				GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 48, 80, 20), "Textiel: ", g_CityRequest);
+			
+			GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 64, 80, 20), rc.Tekort.ToString (), g_CityRequest);
+		}
+
 		g_CityRequest.normal.textColor = Color.red;
 		if (CityHP != 100)
-		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+64,80,20),"HP: " + CityHP, g_CityRequest);
+		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+72,80,20),"HP: " + CityHP, g_CityRequest);
 
 	}
 
