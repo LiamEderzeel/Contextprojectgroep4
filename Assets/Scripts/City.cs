@@ -112,13 +112,10 @@ public class City : MonoBehaviour {
 	}
 
 	void spawnRiot () {
-		
 		//GameObject instance = Instantiate(Resources.Load("Riot")) as GameObject;
-
 		Vector3 newPosition = this.gameObject.transform.position;
 		Quaternion newRotation = Quaternion.identity;
 		GameObject textObject = (GameObject)Instantiate(Resources.Load("Riot"), newPosition, newRotation);
-		print("works");
 	}
 
 	#region Requests
@@ -176,8 +173,7 @@ public class City : MonoBehaviour {
 		else if(cityName == KnownCities.Utrecht)
 		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y-50,80,50),"Utrecht",g_CityName);
 
-
-		
+		//ook lelijke code... dit kan sneller en mooier.
 		if (rc.Tekort != 0) {
 			if (rc.TekortType == Player.Grondstof.Voedsel)
 			GUI.Label (new Rect (boxPosition.x - 40, Screen.height - boxPosition.y + 16, 80, 20), "Voedsel: ", g_CityRequest);
@@ -209,8 +205,6 @@ public class City : MonoBehaviour {
 	//raycast voor klikevent van de steden, controleert of de player genoeg resources heeft en pleegt dan ruilhandel
 	void CastRay()
 	{
-		Debug.Log ("rest");
-
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
 		if (Physics.Raycast(ray, out hit, 100))
