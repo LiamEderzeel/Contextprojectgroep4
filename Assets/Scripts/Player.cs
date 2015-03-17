@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
 			CastRay();
 		}
 	}
-
+	/* //niet langer nodig, wordt opgevangen door het schildje
 	void OnGUI ()
 	{
 		GUIStyle pGui = new GUIStyle();
@@ -86,4 +86,5 @@ public class Player : MonoBehaviour
 			GUI.Label (new Rect (Screen.width / 2, Screen.height / 4, 60, 50), "GAMEOVER", pGui);
 		}
 	}
+	*/
 }

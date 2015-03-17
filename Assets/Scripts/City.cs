@@ -64,7 +64,7 @@ public class City : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0))
 		CastRay();
 		
-		if (cityState == CityState.Idle) { //of cityState == CityState.Idle;
+		if (cityState == CityState.Idle) {
 			counterIdle += Time.deltaTime * 1; //1 per seconde
 
 			if (counterIdle > counterIdleThreshold) {
@@ -202,8 +202,8 @@ public class City : MonoBehaviour {
 
 	}
 
-	//raycast voor klikevent van de steden, controleert of de player genoeg resources heeft en pleegt dan ruilhandel
-	void CastRay()
+	//klikevent van de steden, controleert of de player genoeg resources heeft en pleegt dan ruilhandel
+	void OnMouseDown()
 	{
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
