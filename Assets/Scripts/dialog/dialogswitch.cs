@@ -7,6 +7,7 @@ public class dialogswitch : MonoBehaviour {
 	//dialog actors
 	public Sprite ActorLeft;
 	public Sprite ActorRight;
+	public Sprite Background;
 	//collection of strings that the actors need to speak
 	public string[] ActorText;
 	//1 is high, 0 is low.
@@ -27,6 +28,10 @@ public class dialogswitch : MonoBehaviour {
 		aRight = transform.FindChild ("ActorRight").gameObject;
 		aLeft.GetComponent<SpriteRenderer> ().sprite = ActorLeft;
 		aRight.GetComponent<SpriteRenderer> ().sprite = ActorRight;
+
+		GameObject bg = transform.FindChild ("DialogBackground").gameObject;
+		bg.GetComponent<SpriteRenderer> ().sprite = Background;
+
 		text_line = ActorText [dialogIndex];
 
 		audio.loop = true;
