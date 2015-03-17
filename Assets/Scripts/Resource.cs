@@ -34,7 +34,7 @@ public class Resource : MonoBehaviour {
 		
 		GUIStyle ResourceName = new GUIStyle();
 		ResourceName.alignment = TextAnchor.UpperCenter;
-		ResourceName.normal.textColor = Color.cyan;
+		ResourceName.normal.textColor = Color.black;
 		
 		if(ResourceType == Player.Grondstof.Voedsel)
 			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Voedsel",ResourceName);
