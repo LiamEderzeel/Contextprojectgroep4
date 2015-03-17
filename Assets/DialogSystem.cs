@@ -11,8 +11,12 @@ public class DialogSystem : MonoBehaviour {
 		//inladen van elke 
 		foreach (Transform child in this.gameObject.transform) {
 			Dialogs.Add (child.gameObject);
-			child.gameObject.SetActive(false);
+			//child.gameObject.SetActive(false);
 		}
+
+		//int banana = Random.Range (1, Dialogs.Count);
+		//GameObject dia = (GameObject)Dialogs [banana];
+		//dia.SetActive (true);
 	}
 	
 	// Update is called once per frame

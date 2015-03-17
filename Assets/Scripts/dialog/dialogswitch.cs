@@ -23,10 +23,10 @@ public class dialogswitch : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		aLeft = transform.FindChild ("actorLeft").gameObject;
-		aRight = transform.FindChild ("actorRight").gameObject;
-		aLeft.GetComponent<Image> ().sprite = ActorLeft;
-		aRight.GetComponent<Image> ().sprite = ActorRight;
+		aLeft = transform.FindChild ("ActorLeft").gameObject;
+		aRight = transform.FindChild ("ActorRight").gameObject;
+		aLeft.GetComponent<SpriteRenderer> ().sprite = ActorLeft;
+		aRight.GetComponent<SpriteRenderer> ().sprite = ActorRight;
 		text_line = ActorText [dialogIndex];
 
 		audio.loop = true;
@@ -86,4 +86,8 @@ public class dialogswitch : MonoBehaviour {
 			audio.clip = audioLow;
 	}
 
+	void OnMouseDown()
+	{
+		incrementDialog ();
+	}
 }
