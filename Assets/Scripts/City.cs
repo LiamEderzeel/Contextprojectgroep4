@@ -60,10 +60,6 @@ public class City : MonoBehaviour {
 	/// </summary>
 	void Update ()
 	{
-		//mousedown event
-		if (Input.GetMouseButtonDown(0))
-		CastRay();
-		
 		if (cityState == CityState.Idle) {
 			counterIdle += Time.deltaTime * 1; //1 per seconde
 
