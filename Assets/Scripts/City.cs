@@ -201,33 +201,25 @@ public class City : MonoBehaviour {
 	//klikevent van de steden, controleert of de player genoeg resources heeft en pleegt dan ruilhandel
 	void OnMouseDown()
 	{
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		RaycastHit hit;
-		if (Physics.Raycast(ray, out hit, 100))
-		{
-			City HitCity = hit.collider.GetComponent<City>();
-			if (HitCity == null)
-			return;
-
 			/*dit stuk code hieronder moeten we echt even netjes maken.*/
 			bool ruilen = false;
 			//Substracting the resources when clicked on city with request.
-			if(rc.TekortType == Player.Grondstof.Voedsel && Player.resource_1 > HitCity.rc.Tekort)
+			if(rc.TekortType == Player.Grondstof.Voedsel && Player.resource_1 > rc.Tekort)
 			{
-				Player.resource_1 -= HitCity.rc.Tekort;
-				HitCity.rc.Tekort = 0;
+				Player.resource_1 -= rc.Tekort;
+				rc.Tekort = 0;
 				ruilen = true;
 			}
-			else if(rc.TekortType == Player.Grondstof.Textiel && Player.resource_2 > HitCity.rc.Tekort)
+			else if(rc.TekortType == Player.Grondstof.Textiel && Player.resource_2 > rc.Tekort)
 			{
-				Player.resource_2 -= HitCity.rc.Tekort;
-				HitCity.rc.Tekort = 0;
+				Player.resource_2 -= rc.Tekort;
+				rc.Tekort = 0;
 				ruilen = true;
 			}
-			else if(rc.TekortType == Player.Grondstof.Steenkool && Player.resource_3 > HitCity.rc.Tekort)
+			else if(rc.TekortType == Player.Grondstof.Steenkool && Player.resource_3 > rc.Tekort)
 			{
-				Player.resource_3 -= HitCity.rc.Tekort;
-				HitCity.rc.Tekort = 0;
+				Player.resource_3 -= rc.Tekort;
+				rc.Tekort = 0;
 				ruilen = true;
 			}
 
@@ -236,23 +228,21 @@ public class City : MonoBehaviour {
 				//Adding the resources when clicked on city with too much of a resource.
 				if(rc.OverschotType == Player.Grondstof.Voedsel)
 				{
-					Player.resource_1 += HitCity.rc.Overschot;
-					HitCity.rc.Overschot = 0;
+					Player.resource_1 += rc.Overschot;
+					rc.Overschot = 0;
 				}
 				else if(rc.OverschotType == Player.Grondstof.Textiel)
 				{
-					Player.resource_2 += HitCity.rc.Overschot;
-					HitCity.rc.Overschot = 0;
+					Player.resource_2 += rc.Overschot;
+					rc.Overschot = 0;
 				}
 				else if(rc.OverschotType == Player.Grondstof.Steenkool)
 				{
-					Player.resource_3 += HitCity.rc.Overschot;
-					HitCity.rc.Overschot = 0;
+					Player.resource_3 += rc.Overschot;
+					rc.Overschot = 0;
 				}
 				ruilen = false;
 			}
-
-		}
 	}
 
 
