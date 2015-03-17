@@ -5,12 +5,24 @@ public class Resource : MonoBehaviour {
 	
 
 	public Player.Grondstof ResourceType;
+
+	public AudioClip audioWorking;
+
 	private bool ResourceRequested;
 	private ResourceGenerator rg;
 	// Use this for initialization
 	void Start () {
 		ResourceRequested = false;
 		rg = new ResourceGenerator ();
+
+		if (ResourceType == Player.Grondstof.Voedsel)
+			audioWorking = Resources.Load<AudioClip> ("Sounds/FX_voedsel");
+		else if (ResourceType == Player.Grondstof.Textiel)
+			audioWorking = Resources.Load<AudioClip> ("Sounds/FX_textiel");
+		else if (ResourceType == Player.Grondstof.Steenkool)
+			audioWorking = Resources.Load<AudioClip> ("Sounds/FX_kool");
+
+		audio.clip = audioWorking;
 	}
 	// Update is called once per frame
 	void Update () {
@@ -53,6 +65,7 @@ public class Resource : MonoBehaviour {
 		if (!ResourceRequested) {
 			ResourceRequested = true;
 			rg = new ResourceGenerator ();
+			audio.Play();
 		}
 	}
 }
