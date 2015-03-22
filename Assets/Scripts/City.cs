@@ -84,7 +84,7 @@ public class City : MonoBehaviour {
 			{
 				counterRequesting = 0;
 				counterRequestingThreshold = counterRequestingThresholdNew();
-				if (CityHP - 50 >= 0)
+				if (CityHP - 50 >= 0 && !Player.CityIsRioting)
 				CityHP -= 50;
 			}
 
@@ -92,6 +92,7 @@ public class City : MonoBehaviour {
 			{
 				//dan is er een kans dat er een riot komt.
 				cityState = CityState.Rioting;
+				Player.CityIsRioting = true;
 				spawnRiot();
 
 				//Player.GameOver = true;
