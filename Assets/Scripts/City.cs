@@ -84,8 +84,8 @@ public class City : MonoBehaviour {
 			{
 				counterRequesting = 0;
 				counterRequestingThreshold = counterRequestingThresholdNew();
-				if (CityHP - 5 >= 0)
-				CityHP -= 5;
+				if (CityHP - 50 >= 0)
+				CityHP -= 50;
 			}
 
 			if (CityHP == 0)
@@ -194,7 +194,7 @@ public class City : MonoBehaviour {
 
 		g_CityRequest.normal.textColor = Color.red;
 		if (CityHP != 100)
-		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+72,80,20),"HP: " + CityHP, g_CityRequest);
+		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+128,80,20),"HP: " + CityHP, g_CityRequest);
 
 	}
 

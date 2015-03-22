@@ -19,5 +19,10 @@ public class Riot : MonoBehaviour {
 	void Update () {
 		transform.position = Vector3.Lerp(startPosition, endPosition, pos);
 		pos += speed * Time.deltaTime;
+
+		if (transform.position == endPosition) {
+			//animatie klaar
+			Debug.Log("a riot has reached the main city");
+		}
 	}
 }
