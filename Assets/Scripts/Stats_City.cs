@@ -21,6 +21,7 @@ public class Stats_City : MonoBehaviour {
 		bO = this.gameObject.transform.FindChild ("badgeO").gameObject.GetComponent<SpriteRenderer> ();
 		cT = this.gameObject.transform.FindChild ("counterT").gameObject.GetComponent<doubleDigitCounter> ();
 		cO = this.gameObject.transform.FindChild ("counterO").gameObject.GetComponent<doubleDigitCounter> ();
+
 	}
 	
 	// Update is called once per frame
@@ -30,21 +31,31 @@ public class Stats_City : MonoBehaviour {
 		Sprite sT = Resources.Load<Sprite> ("Sprites/voedsel");
 		Sprite sO = Resources.Load<Sprite> ("Sprites/voedsel");
 
-		if (c.rc.TekortType == Player.Grondstof.Voedsel)
-			sT = Resources.Load<Sprite> ("Sprites/voedsel");
-		else if (c.rc.TekortType == Player.Grondstof.Textiel)
-			sT = Resources.Load<Sprite> ("Sprites/textiel");
-		else if (c.rc.TekortType == Player.Grondstof.Steenkool)
-			sT = Resources.Load<Sprite> ("Sprites/steenkool");
+		if (c.rc.Tekort > 0) {
+			if (c.rc.TekortType == Player.Grondstof.Voedsel)
+				sT = Resources.Load<Sprite> ("Sprites/voedsel");
+			else if (c.rc.TekortType == Player.Grondstof.Textiel)
+				sT = Resources.Load<Sprite> ("Sprites/textiel");
+			else if (c.rc.TekortType == Player.Grondstof.Steenkool)
+				sT = Resources.Load<Sprite> ("Sprites/steenkool");
+			else
+				sT = null;
+		}
+		else
+			sT = null;
 
-		if (c.rc.OverschotType == Player.Grondstof.Voedsel)
-			sO = Resources.Load<Sprite> ("Sprites/voedsel");
-		else if (c.rc.OverschotType == Player.Grondstof.Textiel)
-			sO = Resources.Load<Sprite> ("Sprites/textiel");
-		else if (c.rc.OverschotType == Player.Grondstof.Steenkool)
-			sO = Resources.Load<Sprite> ("Sprites/steenkool");
-
-
+		if (c.rc.Overschot > 0) {
+			if (c.rc.OverschotType == Player.Grondstof.Voedsel)
+				sO = Resources.Load<Sprite> ("Sprites/voedsel");
+			else if (c.rc.OverschotType == Player.Grondstof.Textiel)
+				sO = Resources.Load<Sprite> ("Sprites/textiel");
+			else if (c.rc.OverschotType == Player.Grondstof.Steenkool)
+				sO = Resources.Load<Sprite> ("Sprites/steenkool");
+			else
+				sO = null;
+		} else {
+			sO = null;
+		}
 		bT.sprite = sT;
 		bO.sprite = sO;
 
