@@ -76,10 +76,11 @@ public class dialogswitch : MonoBehaviour {
 			//laden van tekst in een tijdelijke string.
 			text_line = ActorText [dialogIndex];
 
-			setAudioPitch(dialogIndex);
+			setAudioPitch (dialogIndex);
 			audio.Play ();
+		} else if (dialogIndex > ActorText.Length) {
+			Destroy(this.gameObject);
 		}
-
 
 	}
 
