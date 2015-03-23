@@ -29,7 +29,7 @@ public class doubleDigitCounter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//waarde van 2 digits kan max 99 zijn
-		Mathf.Clamp (Value, 0, 99);
+		Value = Mathf.Clamp (Value, 0, 99);
 		//forex 25
 		int intLow  = Value % 10; //5
 		int intHigh = Value / 10; //2
