@@ -57,12 +57,10 @@ public class dialogswitch : MonoBehaviour {
 			} else {
 				text_index = 0;
 				text_scrolling = false;
-
 				//knip audio off
 				audio.Stop ();
 			}
 		}
-
 		GameObject g = GameObject.Find ("dialogText");
 		g.GetComponent<Text>().text = text_temp;
 	}
@@ -75,14 +73,22 @@ public class dialogswitch : MonoBehaviour {
 			dialogIndex++;
 			//laden van tekst in een tijdelijke string.
 			text_line = ActorText [dialogIndex];
-
 			setAudioPitch (dialogIndex);
 			audio.Play ();
-		} else if (dialogIndex > ActorText.Length) {
+		} else if (dialogIndex + 1 >= ActorText.Length) {
+			Debug.Log("einde van dialog - dialogswitch.cs");
 			Destroy(this.gameObject);
 			//in principe verder met de game zelf.
-			if (Player.GameState == Player.gameState.Dialog)
+
+			if (Player.GameState == Player.gameState.Dialog) {
 				Player.GameState = Player.gameState.Ingame;
+			}
+			else if (Player.GameState == Player.gameState.Rioting) {
+				Player.ResetCities();
+				Player.GameState = Player.gameState.Ingame;
+				Player.CityIsRioting = false;
+				GameObject.Find("sRiot").gameObject.SetActive (false);
+			}
 		}
 	}
 

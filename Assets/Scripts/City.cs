@@ -47,10 +47,10 @@ public class City : MonoBehaviour {
 
 	void Start () {
 		CityHP = 100;
+		rc = new ResourceCount ();
 		counterIdleThreshold = counterIdleThresholdNew ();
 		counterRequestingThreshold = counterRequestingThresholdNew ();
 		cityState = CityState.Idle;
-		
 	}
 
 	/// <summary>

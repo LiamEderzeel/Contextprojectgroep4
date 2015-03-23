@@ -5,7 +5,7 @@ public class Riot : MonoBehaviour {
 	private Vector3 endPosition;
 	private Vector3 startPosition;
 	private float pos;
-	private float speed = 0.05f;
+	private float speed = 0.55f; //.05
 
 	// Use this for initialization
 	void Start () {

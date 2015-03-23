@@ -13,8 +13,8 @@ public class DialogSystem : MonoBehaviour {
 			Dialogs.Add (child.gameObject);
 			child.gameObject.SetActive(false);
 		}
-
-		SpawnDialog ();
+		Player.sDialog = this.gameObject;
+		Player.sDialog.SetActive (false);
 	}
 	
 	// Update is called once per frame

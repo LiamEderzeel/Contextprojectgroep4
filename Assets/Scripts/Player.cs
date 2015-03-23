@@ -40,16 +40,10 @@ public class Player : MonoBehaviour
 	void Start ()
 	{
 		//entry point for application
-
-		GameState = gameState.Dialog;
-
+		GameState = gameState.Title;
 		resource_1 = 0;
 		resource_2 = 0;
 		resource_3 = 0;
-
-
-		sDialog = GameObject.Find ("sDialog");
-		sRiot = GameObject.Find ("sRiot");
 	}	
 
 	void Update ()
@@ -75,4 +69,16 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	public static void ResetCities()
+	{
+		foreach (Transform child in GameObject.Find("sMain").gameObject.transform) {
+			City c = child.gameObject.GetComponent<City>();
+			if (c)
+			{
+				c.rc.Tekort = 0;
+				c.rc.Overschot = 0;
+				c.CityHP = 100;
+			}
+		}
+	}
 }
