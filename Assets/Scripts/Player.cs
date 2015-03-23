@@ -11,6 +11,10 @@ public class Player : MonoBehaviour
 	public static bool CityIsRioting = false;
 	public static bool GameOver = false;
 
+	//gameobject collection
+	public static GameObject sDialog;
+	public static GameObject sRiot;
+
 
 	public enum gameState
 	{
@@ -18,6 +22,7 @@ public class Player : MonoBehaviour
 		Instructions,
 		Ingame,
 		Dialog,
+		Rioting,
 		Gameover,
 		Credits
 	};
@@ -41,37 +46,17 @@ public class Player : MonoBehaviour
 		resource_1 = 0;
 		resource_2 = 0;
 		resource_3 = 0;
+
+
+		sDialog = GameObject.Find ("sDialog");
+		sRiot = GameObject.Find ("sRiot");
 	}	
 
-	//raycaster voor resource adding.
-	void CastRay()
-	{
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		RaycastHit hit;
-		if (Physics.Raycast(ray, out hit, 100))
-		{
-			Resource HitGrondstof = hit.collider.GetComponent<Resource>();
-			if (HitGrondstof == null)
-				return;
-
-			//Debug.DrawLine(ray.origin, hit.point);
-			Debug.Log("Hit object: " + hit.collider.name);
-			if (HitGrondstof.ResourceType == Grondstof.Voedsel)
-				resource_1 ++;
-			else if (HitGrondstof.ResourceType == Grondstof.Textiel)
-				resource_2 ++;
-			else if (HitGrondstof.ResourceType == Grondstof.Steenkool)
-				resource_3 ++;
-		}
-	}
 	void Update ()
 	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			//Debug.Log("Pressed left click, casting ray.");
-			//CastRay();
-		}
+
 	}
+
 	 //niet langer nodig, wordt opgevangen door het schildje
 	void OnGUI ()
 	{
