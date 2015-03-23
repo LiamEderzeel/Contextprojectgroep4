@@ -8,8 +8,10 @@ public class Player : MonoBehaviour
 	public static int resource_2; //textiel
 	public static int resource_3; //steenkool
 
+
 	public static bool CityIsRioting = false;
-	public static bool GameOver = false;
+	//public static bool GameOver = false;
+	public static int AvailableEscapes = 3;
 
 	//gameobject collection
 	public static GameObject sDialog;
@@ -63,7 +65,7 @@ public class Player : MonoBehaviour
 		GUI.Label (new Rect (80, 0, 60, 50), "Textiel " + resource_2, pGui);
 		GUI.Label (new Rect (160, 0, 60, 50), "Steenkool " + resource_3, pGui);
 
-		if (GameOver) {
+		if (GameState == gameState.Gameover) {
 			pGui.normal.textColor = Color.red;
 			GUI.Label (new Rect (Screen.width / 2, Screen.height / 4, 60, 50), "GAMEOVER", pGui);
 		}

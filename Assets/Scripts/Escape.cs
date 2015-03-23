@@ -35,6 +35,7 @@ public class Escape : MonoBehaviour {
 		if (!used) {
 			used = true;
 			Dialogsaus.SetActive (true);
+			Player.AvailableEscapes--;
 		}
 	}
 
