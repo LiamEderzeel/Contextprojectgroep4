@@ -60,15 +60,11 @@ public class City : MonoBehaviour {
 	{
 		if (cityState == CityState.Idle && Player.GameState == Player.gameState.Ingame) {
 			counterIdle += Time.deltaTime * 1; //1 per seconde
-
 			if (counterIdle > counterIdleThreshold) {
 				counterIdle = 0;
 				counterIdleThreshold = counterIdleThresholdNew();
-				
-				//do stuff
 				cityState = CityState.Requesting;
 				CityRequest();
-				//melden!
 			}
 		}
 
@@ -89,10 +85,8 @@ public class City : MonoBehaviour {
 			if (CityHP == 0 && !Player.CityIsRioting)
 			{
 				//dan is er een kans dat er een riot komt.
-
 				Player.CityIsRioting = true;
 				spawnRiot();
-				//reset hp.
 			}
 
 			//we hoeven alleen te pollen voor deze waarde, het daadwerkelijke terugtellen gebeurt vanuit de player.
@@ -113,7 +107,9 @@ public class City : MonoBehaviour {
 	}
 
 	#region Requests
-
+	/// <summary>
+	/// Genereert random requestdata voor de stad.
+	/// </summary>
 	void CityRequest()
 	{
 		int r;
@@ -122,8 +118,7 @@ public class City : MonoBehaviour {
 		rc.TekortType = (Player.Grondstof)r;
 		rc.Tekort += AddResourceTekort ();
 		r2 = (int)Random.Range (1, 3);
-
-		//zorgen dat het overschoet niet gelijk kan zijn aan het tekort.
+		//zorgen dat het overschot niet gelijk kan zijn aan het tekort.
 		//dus: zolang r2 en r gelijk zijn, verzin maar iets nieuws voor r2.
 		while (r2 == r) {
 			r2 = (int)Random.Range (1, 3);
@@ -148,7 +143,7 @@ public class City : MonoBehaviour {
 
 	#endregion
 
-	void OnGUI ()
+	/*void OnGUI ()
 	{
 		Vector2 boxPosition = Camera.main.WorldToScreenPoint(this.gameObject.transform.position);
 
@@ -194,7 +189,7 @@ public class City : MonoBehaviour {
 		if (CityHP != 100)
 		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+128,80,20),"HP: " + CityHP, g_CityRequest);
 
-	}
+	}*/
 
 	//klikevent van de steden, controleert of de player genoeg resources heeft en pleegt dan ruilhandel
 	void OnMouseDown()

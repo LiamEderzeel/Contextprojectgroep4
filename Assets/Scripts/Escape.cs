@@ -13,7 +13,6 @@ public class Escape : MonoBehaviour {
 	};
 
 	public escapeType EscapeType;
-
 	public GameObject Dialogsaus;
 
 	// Use this for initialization

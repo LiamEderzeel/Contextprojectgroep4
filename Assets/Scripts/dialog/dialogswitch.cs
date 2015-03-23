@@ -12,8 +12,8 @@ public class dialogswitch : MonoBehaviour {
 	public string[] ActorText;
 	//1 is high, 0 is low.
 	public int[] ActorPitch;
-	private GameObject aLeft;
-	private GameObject aRight;
+	//private GameObject aLeft;
+	//private GameObject aRight;
 
 	//op welke plek de dialog speelt
 	private int dialogIndex = 0;
@@ -24,16 +24,11 @@ public class dialogswitch : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		aLeft = transform.FindChild ("ActorLeft").gameObject;
-		aRight = transform.FindChild ("ActorRight").gameObject;
-		aLeft.GetComponent<SpriteRenderer> ().sprite = ActorLeft;
-		aRight.GetComponent<SpriteRenderer> ().sprite = ActorRight;
-
-		GameObject bg = transform.FindChild ("DialogBackground").gameObject;
-		bg.GetComponent<SpriteRenderer> ().sprite = Background;
+		transform.FindChild ("ActorLeft").gameObject.GetComponent<SpriteRenderer> ().sprite = ActorLeft;
+		transform.FindChild ("ActorRight").gameObject.GetComponent<SpriteRenderer> ().sprite = ActorRight;
+		transform.FindChild ("DialogBackground").gameObject.GetComponent<SpriteRenderer> ().sprite = Background;
 
 		text_line = ActorText [dialogIndex];
-
 		audio.loop = true;
 		setAudioPitch(dialogIndex);
 		audio.Play ();
@@ -57,7 +52,6 @@ public class dialogswitch : MonoBehaviour {
 			} else {
 				text_index = 0;
 				text_scrolling = false;
-				//knip audio off
 				audio.Stop ();
 			}
 		}
@@ -79,7 +73,6 @@ public class dialogswitch : MonoBehaviour {
 			Debug.Log("einde van dialog - dialogswitch.cs");
 			Destroy(this.gameObject);
 			//in principe verder met de game zelf.
-
 			if (Player.GameState == Player.gameState.Dialog) {
 				Player.GameState = Player.gameState.Ingame;
 			}
