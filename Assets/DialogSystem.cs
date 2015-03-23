@@ -11,16 +11,24 @@ public class DialogSystem : MonoBehaviour {
 		//inladen van elke 
 		foreach (Transform child in this.gameObject.transform) {
 			Dialogs.Add (child.gameObject);
-			//child.gameObject.SetActive(false);
+			child.gameObject.SetActive(false);
 		}
 
-		//int banana = Random.Range (1, Dialogs.Count);
-		//GameObject dia = (GameObject)Dialogs [banana];
-		//dia.SetActive (true);
+		SpawnDialog ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (Player.GameState != Player.gameState.Dialog)
+			this.gameObject.SetActive (false);
+		//kill yourself.
+	}
+
+	void SpawnDialog ()
+	{
+		int banana = Random.Range (1, Dialogs.Count);
+		GameObject dia = (GameObject)Dialogs [banana];
+		Player.GameState = Player.gameState.Dialog;
+		dia.SetActive (true);
 	}
 }

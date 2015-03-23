@@ -80,8 +80,9 @@ public class dialogswitch : MonoBehaviour {
 			audio.Play ();
 		} else if (dialogIndex > ActorText.Length) {
 			Destroy(this.gameObject);
+			//in principe verder met de game zelf.
+			Player.GameState = Player.gameState.Ingame;
 		}
-
 	}
 
 	void setAudioPitch(int i)

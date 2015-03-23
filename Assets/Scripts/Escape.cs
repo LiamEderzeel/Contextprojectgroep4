@@ -5,8 +5,20 @@ public class Escape : MonoBehaviour {
 
 	private bool used = false;
 
+	public enum escapeType
+	{
+		Worst,
+		Leger,
+		Propaganda
+	};
+
+	public escapeType EscapeType;
+
+	public GameObject Dialogsaus;
+
 	// Use this for initialization
 	void Start () {
+		Dialogsaus.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -22,7 +34,7 @@ public class Escape : MonoBehaviour {
 	void OnMouseDown(){
 		if (!used) {
 			used = true;
-			//start de juiste dialog op
+			Dialogsaus.SetActive (true);
 		}
 	}
 

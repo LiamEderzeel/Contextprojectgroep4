@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
 	public enum gameState
 	{
-		Tile,
+		Title,
 		Instructions,
 		Ingame,
 		Dialog,
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
 	{
 		//entry point for application
 
-		GameState = gameState.Tile;
+		GameState = gameState.Dialog;
 
 		resource_1 = 0;
 		resource_2 = 0;
