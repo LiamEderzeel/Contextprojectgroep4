@@ -1022,6 +1022,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 222405929}
   - 212: {fileID: 222405928}
+  - 58: {fileID: 222405930}
+  - 114: {fileID: 222405931}
   m_Layer: 0
   m_Name: militair
   m_TagString: Untagged
@@ -1063,6 +1065,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 929477056}
   m_RootOrder: 2
+--- !u!58 &222405930
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222405927}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 5.11999989
+  m_Center: {x: 0, y: 0}
+--- !u!114 &222405931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222405927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e4368261ddd054f97fcd1d4d021ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &238748504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,6 +2545,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 929477056}
+  - 114: {fileID: 929477057}
   m_Layer: 0
   m_Name: sRiot
   m_TagString: Untagged
@@ -2544,6 +2569,17 @@ Transform:
   - {fileID: 1488569199}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &929477057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 929477055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92766dd11922304b96af1e243204cda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &937015823
 GameObject:
   m_ObjectHideFlags: 0
@@ -3313,6 +3349,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1488569199}
   - 212: {fileID: 1488569200}
+  - 58: {fileID: 1488569201}
+  - 114: {fileID: 1488569202}
   m_Layer: 0
   m_Name: propaganda
   m_TagString: Untagged
@@ -3354,6 +3392,28 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 3172913762e1f0048a3a0c31b161a7df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!58 &1488569201
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1488569198}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 5.11999989
+  m_Center: {x: 0, y: 0}
+--- !u!114 &1488569202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1488569198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e4368261ddd054f97fcd1d4d021ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1511963563
 GameObject:
   m_ObjectHideFlags: 0
@@ -4899,6 +4959,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 2142929389}
   - 212: {fileID: 2142929390}
+  - 114: {fileID: 2142929392}
+  - 58: {fileID: 2142929391}
   m_Layer: 0
   m_Name: eenheidsworst
   m_TagString: Untagged
@@ -4940,3 +5002,25 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 72893940816b59844b82ddc639bebb70, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!58 &2142929391
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142929388}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 5.11999989
+  m_Center: {x: 0, y: 0}
+--- !u!114 &2142929392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142929388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e4368261ddd054f97fcd1d4d021ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

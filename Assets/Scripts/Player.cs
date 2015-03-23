@@ -7,7 +7,10 @@ public class Player : MonoBehaviour
 	public static int resource_1; //voedsel
 	public static int resource_2; //textiel
 	public static int resource_3; //steenkool
+
+	public static bool CityIsRioting = false;
 	public static bool GameOver = false;
+
 
 	public enum gameState
 	{

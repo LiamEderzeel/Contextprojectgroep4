@@ -23,6 +23,9 @@ public class Riot : MonoBehaviour {
 		if (transform.position == endPosition) {
 			//animatie klaar
 			Debug.Log("a riot has reached the main city");
+			Player.CityIsRioting = false;
+
+			Destroy(this.gameObject);
 		}
 	}
 }

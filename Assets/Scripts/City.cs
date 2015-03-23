@@ -112,7 +112,7 @@ public class City : MonoBehaviour {
 		//GameObject instance = Instantiate(Resources.Load("Riot")) as GameObject;
 		Vector3 newPosition = this.gameObject.transform.position;
 		Quaternion newRotation = Quaternion.identity;
-		GameObject textObject = (GameObject)Instantiate(Resources.Load("Riot"), newPosition, newRotation);
+//		GameObject textObject = (GameObject)Instantiate(Resources.Load("Riot"), newPosition, newRotation);
 	}
 
 	#region Requests
