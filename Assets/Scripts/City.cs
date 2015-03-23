@@ -23,7 +23,6 @@ public class City : MonoBehaviour {
 	{
 		Idle,
 		Requesting,
-		Rioting
 	}
 	public CityState cityState;
 
@@ -60,7 +59,7 @@ public class City : MonoBehaviour {
 	/// </summary>
 	void Update ()
 	{
-		if (cityState == CityState.Idle) {
+		if (cityState == CityState.Idle && Player.GameState == Player.gameState.Ingame) {
 			counterIdle += Time.deltaTime * 1; //1 per seconde
 
 			if (counterIdle > counterIdleThreshold) {
@@ -74,7 +73,7 @@ public class City : MonoBehaviour {
 			}
 		}
 
-		if (cityState == CityState.Requesting) {
+		if (cityState == CityState.Requesting && Player.GameState == Player.gameState.Ingame) {
 			//tellen en zorgen dat HP terugloopt
 			/*
 			 * vanuit hier ruilhandel plegen, als roep niet beantwoord wordt terugvallen naar state 1
@@ -91,11 +90,10 @@ public class City : MonoBehaviour {
 			if (CityHP == 0)
 			{
 				//dan is er een kans dat er een riot komt.
-				cityState = CityState.Rioting;
+
 				Player.CityIsRioting = true;
 				spawnRiot();
-
-				//Player.GameOver = true;
+				//reset hp.
 			}
 
 			//we hoeven alleen te pollen voor deze waarde, het daadwerkelijke terugtellen gebeurt vanuit de player.
@@ -112,7 +110,7 @@ public class City : MonoBehaviour {
 		//GameObject instance = Instantiate(Resources.Load("Riot")) as GameObject;
 		Vector3 newPosition = this.gameObject.transform.position;
 		Quaternion newRotation = Quaternion.identity;
-//		GameObject textObject = (GameObject)Instantiate(Resources.Load("Riot"), newPosition, newRotation);
+		GameObject textObject = (GameObject)Instantiate(Resources.Load("Riot"), newPosition, newRotation);
 	}
 
 	#region Requests

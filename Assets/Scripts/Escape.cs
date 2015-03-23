@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Escape : MonoBehaviour {
 
-	bool used = false;
+	private bool used = false;
 
 	// Use this for initialization
 	void Start () {
@@ -24,5 +24,10 @@ public class Escape : MonoBehaviour {
 		if (!used) {
 			used = true;
 		}
+	}
+
+	public bool isUsed
+	{
+		get { return used;}
 	}
 }
