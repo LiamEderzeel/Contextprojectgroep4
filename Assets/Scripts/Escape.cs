@@ -7,7 +7,6 @@ public class Escape : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -23,6 +22,7 @@ public class Escape : MonoBehaviour {
 	void OnMouseDown(){
 		if (!used) {
 			used = true;
+			//start de juiste dialog op
 		}
 	}
 
