@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 	//gameobject collection
 	public static GameObject sDialog;
 	public static GameObject sRiot;
-
+	public static GameObject sGameOver;
 
 	public enum gameState
 	{

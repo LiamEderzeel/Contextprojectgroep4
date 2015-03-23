@@ -91,11 +91,7 @@ public class City : MonoBehaviour {
 				//dan is er een kans dat er een riot komt.
 
 				Player.CityIsRioting = true;
-				if (Player.AvailableEscapes > 0)
-					spawnRiot();
-				else
-					Player.GameState = Player.gameState.Gameover;
-
+				spawnRiot();
 				//reset hp.
 			}
 

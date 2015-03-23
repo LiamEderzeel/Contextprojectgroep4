@@ -20,10 +20,17 @@ public class Riot : MonoBehaviour {
 		pos += speed * Time.deltaTime;
 
 		if (this.gameObject.transform.position == endPosition) {
-			Player.GameState = Player.gameState.Rioting;
-			Player.sRiot.SetActive(true);
-			Destroy(this.gameObject);
-
+			if (Player.AvailableEscapes > 0)
+			{
+				Player.GameState = Player.gameState.Rioting;
+				Player.sRiot.SetActive(true);
+				Destroy(this.gameObject);
+			}
+			else
+			{
+				Player.GameState = Player.gameState.Gameover;
+				Player.sGameOver.SetActive(true);
+			}
 		}
 	}
 }
