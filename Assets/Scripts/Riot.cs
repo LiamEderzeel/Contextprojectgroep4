@@ -18,5 +18,12 @@ public class Riot : MonoBehaviour {
 	void Update () {
 		transform.position = Vector3.Lerp(startPosition, endPosition, pos);
 		pos += speed * Time.deltaTime;
+
+		if (this.gameObject.transform.position == endPosition) {
+			Player.GameState = Player.gameState.Rioting;
+			Player.sRiot.SetActive(true);
+			Destroy(this.gameObject);
+
+		}
 	}
 }

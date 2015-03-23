@@ -15,7 +15,6 @@ public class Title : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-		Debug.Log ("klikkieklikkie");
 		Player.GameState = Player.gameState.Instructions;
 		this.gameObject.SetActive (false);
 	}
