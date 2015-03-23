@@ -7,7 +7,6 @@ public class City : MonoBehaviour {
 	#region Properties
 
 	public ResourceCount rc;
-	public bool riot = false;
 
 	//namen en identifiers voor de steden, als twee stedendezelfde naam hebben is het niet zeker welke van de twee de code zal kiezen
 	public enum KnownCities 
@@ -87,7 +86,7 @@ public class City : MonoBehaviour {
 				CityHP -= 50;
 			}
 
-			if (CityHP == 0)
+			if (CityHP == 0 && !Player.CityIsRioting)
 			{
 				//dan is er een kans dat er een riot komt.
 

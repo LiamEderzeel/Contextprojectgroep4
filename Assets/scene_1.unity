@@ -176,7 +176,7 @@ Transform:
   m_Children:
   - {fileID: 1130775503}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!61 &37306166
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -751,7 +751,7 @@ Transform:
   m_Children:
   - {fileID: 47602519}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &150068309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1798,7 +1798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb87094c5d53a466490cba815379916e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riot: 0
   cityName: 1
   cityState: 0
   CityHP: 100
@@ -2538,7 +2537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb87094c5d53a466490cba815379916e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riot: 0
   cityName: 2
   cityState: 0
   CityHP: 100
@@ -3352,7 +3350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb87094c5d53a466490cba815379916e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riot: 0
   cityName: 0
   cityState: 0
   CityHP: 100
