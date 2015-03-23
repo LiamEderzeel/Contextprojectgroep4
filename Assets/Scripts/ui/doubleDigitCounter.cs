@@ -5,6 +5,7 @@ public class doubleDigitCounter : MonoBehaviour {
 
 	public int Value;
 	public string DigitFolder;
+	public bool HideZero = false;
 
 	//private
 
@@ -34,5 +35,11 @@ public class doubleDigitCounter : MonoBehaviour {
 		int intHigh = Value / 10; //2
 		numLow.GetComponent<SpriteRenderer> ().sprite = imageCollection [intLow];
 		numHigh.GetComponent<SpriteRenderer> ().sprite = imageCollection [intHigh];
+
+		if (HideZero && intLow == 0 && intHigh == 0) {
+			numLow.GetComponent<SpriteRenderer> ().sprite = null;
+			numHigh.GetComponent<SpriteRenderer> ().sprite = null;
+		}
+
 	}
 }

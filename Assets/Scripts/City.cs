@@ -7,7 +7,6 @@ public class City : MonoBehaviour {
 	#region Properties
 
 	public ResourceCount rc;
-	public bool riot = false;
 
 	//namen en identifiers voor de steden, als twee stedendezelfde naam hebben is het niet zeker welke van de twee de code zal kiezen
 	public enum KnownCities 
@@ -23,7 +22,6 @@ public class City : MonoBehaviour {
 	{
 		Idle,
 		Requesting,
-		Rioting
 	}
 	public CityState cityState;
 
@@ -60,7 +58,7 @@ public class City : MonoBehaviour {
 	/// </summary>
 	void Update ()
 	{
-		if (cityState == CityState.Idle) {
+		if (cityState == CityState.Idle && Player.GameState == Player.gameState.Ingame) {
 			counterIdle += Time.deltaTime * 1; //1 per seconde
 
 			if (counterIdle > counterIdleThreshold) {
@@ -74,7 +72,7 @@ public class City : MonoBehaviour {
 			}
 		}
 
-		if (cityState == CityState.Requesting) {
+		if (cityState == CityState.Requesting && Player.GameState == Player.gameState.Ingame) {
 			//tellen en zorgen dat HP terugloopt
 			/*
 			 * vanuit hier ruilhandel plegen, als roep niet beantwoord wordt terugvallen naar state 1
@@ -84,17 +82,17 @@ public class City : MonoBehaviour {
 			{
 				counterRequesting = 0;
 				counterRequestingThreshold = counterRequestingThresholdNew();
-				if (CityHP - 5 >= 0)
-				CityHP -= 5;
+				if (CityHP - 50 >= 0 && !Player.CityIsRioting)
+				CityHP -= 50;
 			}
 
-			if (CityHP == 0)
+			if (CityHP == 0 && !Player.CityIsRioting)
 			{
 				//dan is er een kans dat er een riot komt.
-				cityState = CityState.Rioting;
-				spawnRiot();
 
-				//Player.GameOver = true;
+				Player.CityIsRioting = true;
+				spawnRiot();
+				//reset hp.
 			}
 
 			//we hoeven alleen te pollen voor deze waarde, het daadwerkelijke terugtellen gebeurt vanuit de player.
@@ -194,7 +192,7 @@ public class City : MonoBehaviour {
 
 		g_CityRequest.normal.textColor = Color.red;
 		if (CityHP != 100)
-		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+72,80,20),"HP: " + CityHP, g_CityRequest);
+		GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+128,80,20),"HP: " + CityHP, g_CityRequest);
 
 	}
 

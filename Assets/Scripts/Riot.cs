@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class Riot : MonoBehaviour {
-
 //	private Vector3 endPosition;
 //	private Vector3 startPosition;
 //	private float pos;

@@ -18,6 +18,25 @@ TextureImporter:
     21300026: anim_molen_13
     21300028: anim_molen_14
     21300030: anim_molen_15
+    21300032: anim_molen_16
+    21300034: anim_molen_17
+    21300036: anim_molen_18
+    21300038: anim_molen_19
+    21300040: anim_molen_20
+    21300042: anim_molen_21
+    21300044: anim_molen_22
+    21300046: anim_molen_23
+    21300048: anim_molen_24
+    21300050: anim_molen_25
+    21300052: anim_molen_26
+    21300054: anim_molen_27
+    21300056: anim_molen_28
+    21300058: anim_molen_29
+    21300060: anim_molen_30
+    21300062: anim_molen_31
+    21300064: anim_molen_32
+    21300066: anim_molen_33
+    21300068: anim_molen_34
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -40,7 +59,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
+    filterMode: 2
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -63,7 +82,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1536
+        y: 2560
         width: 512
         height: 512
       alignment: 0
@@ -73,7 +92,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 1536
+        y: 2560
         width: 512
         height: 512
       alignment: 0
@@ -83,7 +102,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1024
-        y: 1536
+        y: 2560
         width: 512
         height: 512
       alignment: 0
@@ -93,7 +112,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1536
-        y: 1536
+        y: 2560
         width: 512
         height: 512
       alignment: 0
@@ -102,8 +121,8 @@ TextureImporter:
     - name: anim_molen_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1024
+        x: 2048
+        y: 2560
         width: 512
         height: 512
       alignment: 0
@@ -112,8 +131,8 @@ TextureImporter:
     - name: anim_molen_5
       rect:
         serializedVersion: 2
-        x: 512
-        y: 1024
+        x: 2560
+        y: 2560
         width: 512
         height: 512
       alignment: 0
@@ -122,8 +141,8 @@ TextureImporter:
     - name: anim_molen_6
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1024
+        x: 0
+        y: 2048
         width: 512
         height: 512
       alignment: 0
@@ -132,8 +151,8 @@ TextureImporter:
     - name: anim_molen_7
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 1024
+        x: 512
+        y: 2048
         width: 512
         height: 512
       alignment: 0
@@ -142,8 +161,8 @@ TextureImporter:
     - name: anim_molen_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 512
+        x: 1024
+        y: 2048
         width: 512
         height: 512
       alignment: 0
@@ -152,8 +171,8 @@ TextureImporter:
     - name: anim_molen_9
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
+        x: 1536
+        y: 2048
         width: 512
         height: 512
       alignment: 0
@@ -162,8 +181,8 @@ TextureImporter:
     - name: anim_molen_10
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 512
+        x: 2048
+        y: 2048
         width: 512
         height: 512
       alignment: 0
@@ -172,8 +191,8 @@ TextureImporter:
     - name: anim_molen_11
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 512
+        x: 2560
+        y: 2048
         width: 512
         height: 512
       alignment: 0
@@ -183,7 +202,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 1536
         width: 512
         height: 512
       alignment: 0
@@ -193,7 +212,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 0
+        y: 1536
         width: 512
         height: 512
       alignment: 0
@@ -203,7 +222,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1024
-        y: 0
+        y: 1536
         width: 512
         height: 512
       alignment: 0
@@ -213,6 +232,196 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_17
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_19
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_21
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_22
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_23
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_26
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_27
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_28
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_29
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_31
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_32
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_33
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anim_molen_34
+      rect:
+        serializedVersion: 2
+        x: 2048
         y: 0
         width: 512
         height: 512
