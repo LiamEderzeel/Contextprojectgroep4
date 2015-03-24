@@ -18,8 +18,8 @@ public class month_counter : MonoBehaviour {
 	void Start () {
 		s = this.gameObject.GetComponent<SpriteRenderer> ();
 		//plaatjes inladen voor het font
-		for (int i=0; i < imageCollection.Length; i++)
-			imageCollection [i] = Resources.Load<Sprite> ("Sprites/ui/font_months/" + i);
+		for (int i=1; i < imageCollection.Length; i++)
+			imageCollection [i-1] = Resources.Load<Sprite> ("Sprites/ui/font_months/" + i);
 	}
 	
 	// Update is called once per frame
