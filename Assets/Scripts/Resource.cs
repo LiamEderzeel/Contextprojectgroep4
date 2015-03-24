@@ -8,13 +8,11 @@ public class Resource : MonoBehaviour {
 
 	public AudioClip audioWorking;
 
+	private GameObject cartObject;
 	private bool ResourceRequested;
-	private ResourceGenerator rg;
 	// Use this for initialization
 	void Start () {
 		ResourceRequested = false;
-		rg = new ResourceGenerator ();
-
 		if (ResourceType == Player.Grondstof.Voedsel)
 			audioWorking = Resources.Load<AudioClip> ("Sounds/FX_voedsel");
 		else if (ResourceType == Player.Grondstof.Textiel)
@@ -26,20 +24,45 @@ public class Resource : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		if (!rg.Done && ResourceRequested) {
-			rg.Tick ();
-		}
-		else if (rg.Done && ResourceRequested) {
-			ResourceRequested = false;
-			if (ResourceType == Player.Grondstof.Voedsel)
-				Player.resource_1 += rg.Amount;
-			else if (ResourceType == Player.Grondstof.Textiel)
-				Player.resource_2 += rg.Amount;
-			else if (ResourceType == Player.Grondstof.Steenkool)
-				Player.resource_3 += rg.Amount;
-		}
 	}
-	
+
+	public void spawnResource()
+	{
+		int Amount = Random.Range (1, 10);
+		ResourceRequested = false;
+		if (ResourceType == Player.Grondstof.Voedsel)
+			Player.resource_1 += Amount;
+		else if (ResourceType == Player.Grondstof.Textiel)
+			Player.resource_2 += Amount;
+		else if (ResourceType == Player.Grondstof.Steenkool)
+			Player.resource_3 += Amount;
+	}
+
+	void spawnCart () {
+
+		//GameObject instance = Instantiate(Resources.Load("Riot")) as GameObject;
+		Vector3 newPosition = this.gameObject.transform.position;
+		Quaternion newRotation = Quaternion.identity;
+		cartObject = (GameObject)Instantiate (Resources.Load ("Cart"), newPosition, newRotation);
+		cartObject.GetComponent<Cart> ().attachedResource = this; //lazy as fuck jeweetzelf.
+		cartObject.GetComponent<Cart> ().Waypoints = GetWaypoints ();
+		cartObject.GetComponent<Cart> ().StartCart ();
+	}
+
+	public ArrayList GetWaypoints()
+	{
+		GameObject wc = transform.FindChild ("WaypointCollection").gameObject;
+		ArrayList Waypoints = new ArrayList();
+		
+		foreach (Transform child in wc.gameObject.transform) {
+			Waypoints.Add(child.position);
+		}
+		Waypoints.Insert(0, this.gameObject.transform.position); //Stad is begin.
+		Waypoints.Add(GameObject.Find("Player").transform.position); //Player is eind.
+		return Waypoints;
+	}
+
+	/*
 	void OnGUI ()
 	{
 		Vector2 boxPosition = Camera.main.WorldToScreenPoint(this.gameObject.transform.position);
@@ -59,17 +82,18 @@ public class Resource : MonoBehaviour {
 			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+50, 80, 50), "Percent: "+rg.PercentageDone, ResourceName);
 		}
 	}
-	
+	*/
+
 	void OnMouseDown() {
 		//kick timer aan
 		if (!ResourceRequested && Player.GameState == Player.gameState.Ingame) {
 			ResourceRequested = true;
-			rg = new ResourceGenerator ();
 			audio.Play();
+			spawnCart();
 		}
 	}
 }
-
+/*
 public class ResourceGenerator {
 	
 	float count = 0;
@@ -113,3 +137,4 @@ public class ResourceGenerator {
 		}
 	}
 }
+*/
