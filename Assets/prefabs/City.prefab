@@ -461,6 +461,7 @@ MonoBehaviour:
   Value: 0
   DigitFolder: 
   HideZero: 1
+  fontcolor: {r: .328690886, g: 1, b: 0, a: 1}
 --- !u!114 &11408718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -475,6 +476,7 @@ MonoBehaviour:
   Value: 0
   DigitFolder: 
   HideZero: 1
+  fontcolor: {r: 255, g: 0, b: 0, a: 1}
 --- !u!114 &11408720
 MonoBehaviour:
   m_ObjectHideFlags: 1

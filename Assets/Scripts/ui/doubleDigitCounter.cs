@@ -6,6 +6,7 @@ public class doubleDigitCounter : MonoBehaviour {
 	public int Value;
 	public string DigitFolder;
 	public bool HideZero = false;
+	public Color fontcolor = new Color (255, 0, 0);
 
 	//private
 
@@ -39,6 +40,9 @@ public class doubleDigitCounter : MonoBehaviour {
 
 		numLow.sprite = imageCollection [intLow];
 		numHigh.sprite = imageCollection [intHigh];
+
+		numLow.color = fontcolor;
+		numHigh.color = fontcolor;
 
 		if (HideZero && intLow == 0 && intHigh == 0) {
 			numLow.GetComponent<SpriteRenderer> ().sprite = null;
