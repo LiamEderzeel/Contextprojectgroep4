@@ -17,15 +17,16 @@ public class doubleDigitCounter : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//gameobjects van de nummers zoeken zodat we de sprites kunnen veranderen
-		numLow = this.gameObject.transform.FindChild("numLow").gameObject.GetComponent<SpriteRenderer> ();
-		numHigh = this.gameObject.transform.FindChild("numHigh").gameObject.GetComponent<SpriteRenderer> ();
+		numLow = transform.FindChild("numLow").gameObject.GetComponent<SpriteRenderer> ();
+		numHigh = transform.FindChild("numHigh").gameObject.GetComponent<SpriteRenderer> ();
 
 		if (DigitFolder == "" || DigitFolder == null)
 			DigitFolder = "Sprites/ui/font_counter/";
 
 		//plaatjes inladen voor het font
+
 		for (int i=0; i < 10; i++)
-			imageCollection [i] = Resources.Load<Sprite> ("Sprites/ui/font_counter/" + i);
+			imageCollection [i] = Resources.Load<Sprite> (DigitFolder + i);
 	}
 	
 	// Update is called once per frame
