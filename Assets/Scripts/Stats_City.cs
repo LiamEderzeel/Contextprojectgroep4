@@ -18,6 +18,7 @@ public class Stats_City : MonoBehaviour {
 		bO = this.gameObject.transform.FindChild ("badgeO").gameObject.GetComponent<SpriteRenderer> ();
 		cT = this.gameObject.transform.FindChild ("counterT").gameObject.GetComponent<doubleDigitCounter> ();
 		cO = this.gameObject.transform.FindChild ("counterO").gameObject.GetComponent<doubleDigitCounter> ();
+
 		if (!AttachedCity)
 			AttachedCity = this.gameObject.transform.parent.gameObject.GetComponent<City> ();
 	}
