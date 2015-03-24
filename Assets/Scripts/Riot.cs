@@ -8,17 +8,18 @@ public class Riot : MonoBehaviour {
 	private Vector3 currentWaypoint;
 	private int currentIndex;
 
-	public GameObject Waypoint;
-
-	public Vector3[] waypoints = new Vector3[2];
+	public ArrayList Waypoints;
     public float moveSpeed = 10.0f;
 	public float minDistance = 2.0f;
 
 	void Start () {
-		currentWaypoint = waypoints[0];
+	}
+
+	public void StartRiot()
+	{
+		if (currentWaypoint != null)
+			currentWaypoint = (Vector3)Waypoints [0];
 		currentIndex = 0;
-		waypoints[0] = Waypoint.transform.position;
-		waypoints[1] = GameObject.Find ("Player").transform.position;
 	}
 
 	void Update () {
@@ -26,15 +27,28 @@ public class Riot : MonoBehaviour {
 
 		if (Vector3.Distance (currentWaypoint, transform.position) < minDistance) {
 			currentIndex++;
-			if (currentIndex == waypoints.Length) {
+			if (currentIndex == Waypoints.Count) {
+				if (Player.AvailableEscapes > 0)
+				{
+					Player.GameState = Player.gameState.Rioting;
+					Player.sRiot.SetActive(true);
+				}
+				else
+				{
+					Player.GameState = Player.gameState.Gameover;
+					Player.PlaySound ();
+					Player.sGameOver.SetActive(true);
+				}
 				Destroy (this.gameObject);
-			} else {
-				currentWaypoint = waypoints [currentIndex];
+			}
+			else {
+				currentWaypoint = (Vector3) Waypoints [currentIndex];
 			}
 		}
 	}
 
 	void MoveTowardWaypoint () {
+
 		Vector3 direction = currentWaypoint - transform.position;
 		Vector3 moveVector = direction.normalized * moveSpeed * Time.deltaTime;
 		transform.position += moveVector;

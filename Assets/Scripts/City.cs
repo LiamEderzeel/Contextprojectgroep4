@@ -103,7 +103,9 @@ public class City : MonoBehaviour {
 		//GameObject instance = Instantiate(Resources.Load("Riot")) as GameObject;
 		Vector3 newPosition = this.gameObject.transform.position;
 		Quaternion newRotation = Quaternion.identity;
-		GameObject textObject = (GameObject)Instantiate(Resources.Load("Riot"), newPosition, newRotation);
+		GameObject riotObject = (GameObject)Instantiate(Resources.Load("Riot"), newPosition, newRotation);
+		riotObject.GetComponent<Riot> ().Waypoints = GetWaypoints ();
+		riotObject.GetComponent<Riot> ().StartRiot ();
 	}
 
 	#region Requests
@@ -227,6 +229,19 @@ public class City : MonoBehaviour {
 				ruilen = false;
 			}
 		}
+	}
+
+	public ArrayList GetWaypoints()
+	{
+		GameObject wc = transform.FindChild ("WaypointCollection").gameObject;
+		ArrayList Waypoints = new ArrayList();
+
+		foreach (Transform child in wc.gameObject.transform) {
+			Waypoints.Add(child.position);
+		}
+		Waypoints.Insert(0, this.gameObject.transform.position); //Stad is begin.
+		Waypoints.Add(GameObject.Find("Player").transform.position); //Player is eind.
+		return Waypoints;
 	}
 }
 
