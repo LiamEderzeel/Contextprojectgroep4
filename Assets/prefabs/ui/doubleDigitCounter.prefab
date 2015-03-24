@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Value: 0
   DigitFolder: 
+  HideZero: 0
 --- !u!212 &21246404
 SpriteRenderer:
   m_ObjectHideFlags: 1
