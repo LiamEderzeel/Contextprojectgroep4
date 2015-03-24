@@ -31,6 +31,7 @@ public class Riot : MonoBehaviour {
 				Player.GameState = Player.gameState.Gameover;
 				Player.PlaySound ();
 				Player.sGameOver.SetActive(true);
+				Destroy(this.gameObject);
 			}
 		}
 	}
