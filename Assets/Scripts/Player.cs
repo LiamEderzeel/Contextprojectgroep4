@@ -81,10 +81,12 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Functie voor het aanroepen voor achtergrondmuziek, reageert op de gamestate.
+	/// </summary>
 	public static void PlaySound()
 	{
 		if (GameState == gameState.Title) {
-			Debug.Log("title");
 			audio.Stop();
 			audio.loop = false;
 			audio.clip = muTitle;

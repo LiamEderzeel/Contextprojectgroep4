@@ -11,19 +11,21 @@ public class doubleDigitCounter : MonoBehaviour {
 
 	Sprite[] imageCollection = new Sprite[10];
 
-	GameObject numLow;
-	GameObject numHigh;
-
+	SpriteRenderer numLow;
+	SpriteRenderer numHigh;
 
 	// Use this for initialization
 	void Start () {
 		//gameobjects van de nummers zoeken zodat we de sprites kunnen veranderen
-		numLow = this.gameObject.transform.FindChild("numLow").gameObject;
-		numHigh = this.gameObject.transform.FindChild("numHigh").gameObject;
+		numLow = this.gameObject.transform.FindChild("numLow").gameObject.GetComponent<SpriteRenderer> ();
+		numHigh = this.gameObject.transform.FindChild("numHigh").gameObject.GetComponent<SpriteRenderer> ();
+
+		if (DigitFolder == "" || DigitFolder == null)
+			DigitFolder = "Sprites/ui/font_counter/";
 
 		//plaatjes inladen voor het font
-		for (int i=0; i < imageCollection.Length; i++)
-			imageCollection [i] = Resources.Load<Sprite> ("Sprites/ui/font_hud/" + i);
+		for (int i=0; i < 10; i++)
+			imageCollection [i] = Resources.Load<Sprite> ("Sprites/ui/font_counter/" + i);
 	}
 	
 	// Update is called once per frame
@@ -33,8 +35,9 @@ public class doubleDigitCounter : MonoBehaviour {
 		//forex 25
 		int intLow  = Value % 10; //5
 		int intHigh = Value / 10; //2
-		numLow.GetComponent<SpriteRenderer> ().sprite = imageCollection [intLow];
-		numHigh.GetComponent<SpriteRenderer> ().sprite = imageCollection [intHigh];
+
+		numLow.sprite = imageCollection [intLow];
+		numHigh.sprite = imageCollection [intHigh];
 
 		if (HideZero && intLow == 0 && intHigh == 0) {
 			numLow.GetComponent<SpriteRenderer> ().sprite = null;
