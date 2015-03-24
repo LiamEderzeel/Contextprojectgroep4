@@ -4310,6 +4310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92766dd11922304b96af1e243204cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rabbleSound: {fileID: 8300000, guid: 06d7f74e0f536314ab068ede101a82f5, type: 3}
 --- !u!82 &929477058
 AudioSource:
   m_ObjectHideFlags: 0

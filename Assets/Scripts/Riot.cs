@@ -31,6 +31,7 @@ public class Riot : MonoBehaviour {
 				if (Player.AvailableEscapes > 0)
 				{
 					Player.GameState = Player.gameState.Rioting;
+					Player.PlaySound ();
 					Player.sRiot.SetActive(true);
 				}
 				else
