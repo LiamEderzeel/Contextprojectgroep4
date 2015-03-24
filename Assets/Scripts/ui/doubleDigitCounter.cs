@@ -28,6 +28,7 @@ public class doubleDigitCounter : MonoBehaviour {
 
 		for (int i=0; i < 10; i++)
 			imageCollection [i] = Resources.Load<Sprite> (DigitFolder + i);
+
 	}
 	
 	// Update is called once per frame
