@@ -62,7 +62,7 @@ public class Resource : MonoBehaviour {
 	
 	void OnMouseDown() {
 		//kick timer aan
-		if (!ResourceRequested) {
+		if (!ResourceRequested && Player.GameState == Player.gameState.Ingame) {
 			ResourceRequested = true;
 			rg = new ResourceGenerator ();
 			audio.Play();

@@ -78,8 +78,8 @@ public class City : MonoBehaviour {
 			{
 				counterRequesting = 0;
 				counterRequestingThreshold = counterRequestingThresholdNew();
-				if (CityHP - 5 >= 0 && !Player.CityIsRioting)
-				CityHP -= 5;
+				if (CityHP - 50 >= 0 && !Player.CityIsRioting)
+				CityHP -= 50;
 			}
 
 			if (CityHP == 0 && !Player.CityIsRioting)
@@ -130,14 +130,14 @@ public class City : MonoBehaviour {
 	public ResourceCount GenerateResource()
 	{
 		ResourceCount rc = new ResourceCount ();
-		int rr = Random.Range (0, 3);
+		int rr = Random.Range (1, 3);
 		rc.Tekort = rr;
 		return rc;
 	}
 
 	public int AddResourceTekort()
 	{
-		int rr = Random.Range (0, 5);
+		int rr = Random.Range (1, 5);
 		return rr;
 	}
 
@@ -194,51 +194,40 @@ public class City : MonoBehaviour {
 	//klikevent van de steden, controleert of de player genoeg resources heeft en pleegt dan ruilhandel
 	void OnMouseDown()
 	{
+		if (Player.GameState == Player.gameState.Ingame) {
 			/*dit stuk code hieronder moeten we echt even netjes maken.*/
 			bool ruilen = false;
 			//Substracting the resources when clicked on city with request.
-			if(rc.TekortType == Player.Grondstof.Voedsel && Player.resource_1 > rc.Tekort)
-			{
+			if (rc.TekortType == Player.Grondstof.Voedsel && Player.resource_1 > rc.Tekort) {
 				Player.resource_1 -= rc.Tekort;
 				rc.Tekort = 0;
 				ruilen = true;
-			}
-			else if(rc.TekortType == Player.Grondstof.Textiel && Player.resource_2 > rc.Tekort)
-			{
+			} else if (rc.TekortType == Player.Grondstof.Textiel && Player.resource_2 > rc.Tekort) {
 				Player.resource_2 -= rc.Tekort;
 				rc.Tekort = 0;
 				ruilen = true;
-			}
-			else if(rc.TekortType == Player.Grondstof.Steenkool && Player.resource_3 > rc.Tekort)
-			{
+			} else if (rc.TekortType == Player.Grondstof.Steenkool && Player.resource_3 > rc.Tekort) {
 				Player.resource_3 -= rc.Tekort;
 				rc.Tekort = 0;
 				ruilen = true;
 			}
 
-			if (ruilen)
-			{
+			if (ruilen) {
 				//Adding the resources when clicked on city with too much of a resource.
-				if(rc.OverschotType == Player.Grondstof.Voedsel)
-				{
+				if (rc.OverschotType == Player.Grondstof.Voedsel) {
 					Player.resource_1 += rc.Overschot;
 					rc.Overschot = 0;
-				}
-				else if(rc.OverschotType == Player.Grondstof.Textiel)
-				{
+				} else if (rc.OverschotType == Player.Grondstof.Textiel) {
 					Player.resource_2 += rc.Overschot;
 					rc.Overschot = 0;
-				}
-				else if(rc.OverschotType == Player.Grondstof.Steenkool)
-				{
+				} else if (rc.OverschotType == Player.Grondstof.Steenkool) {
 					Player.resource_3 += rc.Overschot;
 					rc.Overschot = 0;
 				}
 				ruilen = false;
 			}
+		}
 	}
-
-
 }
 
 public struct ResourceCount
