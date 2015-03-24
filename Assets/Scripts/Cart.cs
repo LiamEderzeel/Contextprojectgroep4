@@ -15,6 +15,9 @@ public class Cart : MonoBehaviour {
 	public Resource attachedResource;
 
 	void Start () {
+		if (Player.dlc) {
+			this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/cartdlc");
+		}
 	}
 	
 	public void StartCart()

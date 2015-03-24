@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
 
 	private static AudioSource audio;
 
+	public static bool dlc = true;
+
 	public enum gameState
 	{
 		Title,

@@ -5,6 +5,8 @@ public class Title : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (!Player.dlc)
+			transform.Find ("goty").gameObject.SetActive (false);
 		Player.PlaySound ();
 	}
 	
