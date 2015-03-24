@@ -16,7 +16,7 @@ public class Resource : MonoBehaviour {
 		rg = new ResourceGenerator ();
 
 		if (ResourceType == Player.Grondstof.Voedsel)
-			audioWorking = Resources.Load<AudioClip> ("Sounds/FX_voedsel");
+			audioWorking = Resources.Load<AudioClip> ("Sounds/FX_voedselggggggg");
 		else if (ResourceType == Player.Grondstof.Textiel)
 			audioWorking = Resources.Load<AudioClip> ("Sounds/FX_textiel");
 		else if (ResourceType == Player.Grondstof.Steenkool)

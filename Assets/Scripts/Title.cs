@@ -5,7 +5,7 @@ public class Title : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		Player.PlaySound ();
 	}
 	
 	// Update is called once per frame
@@ -16,6 +16,7 @@ public class Title : MonoBehaviour {
 	void OnMouseDown()
 	{
 		Player.GameState = Player.gameState.Instructions;
+		Player.PlaySound ();
 		this.gameObject.SetActive (false);
 	}
 }
