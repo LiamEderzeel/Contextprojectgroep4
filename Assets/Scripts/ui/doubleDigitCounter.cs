@@ -22,7 +22,7 @@ public class doubleDigitCounter : MonoBehaviour {
 		numHigh = this.gameObject.transform.FindChild("numHigh").gameObject;
 
 		//plaatjes inladen voor het font
-		for (int i=0; i < 10; i++)
+		for (int i=0; i < imageCollection.Length; i++)
 			imageCollection [i] = Resources.Load<Sprite> ("Sprites/ui/font_hud/" + i);
 	}
 	

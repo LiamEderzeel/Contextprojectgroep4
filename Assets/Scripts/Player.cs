@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 	public static GameObject sDialog;
 	public static GameObject sRiot;
 	public static GameObject sGameOver;
+	public static GameObject sGewonnen;
 
 	//achtergrondmuziek
 	public static AudioClip muTitle;
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour
 		Dialog,
 		Rioting,
 		Gameover,
+		Gewonnen,
 		Credits
 	};
 

@@ -10,8 +10,16 @@ public class month_counter : MonoBehaviour {
 
 	private bool timerRunning = false;
 
+	Sprite[] imageCollection = new Sprite[12];
+
+	SpriteRenderer s;
+
 	// Use this for initialization
 	void Start () {
+		s = this.gameObject.GetComponent<SpriteRenderer> ();
+		//plaatjes inladen voor het font
+		for (int i=0; i < imageCollection.Length; i++)
+			imageCollection [i] = Resources.Load<Sprite> ("Sprites/ui/font_months/" + i);
 	}
 	
 	// Update is called once per frame
@@ -24,12 +32,16 @@ public class month_counter : MonoBehaviour {
 			}
 			if (Month > 11) {
 				Debug.Log ("gewonnen");
+				Player.GameState = Player.gameState.Gewonnen;
+				Player.sGewonnen.SetActive(true);
 			}
-			else
+			/*else
 			{
 				Debug.Log (Month);
 			}
+			*/
 		}
 
+		s.sprite = imageCollection [Month];
 	}
 }
