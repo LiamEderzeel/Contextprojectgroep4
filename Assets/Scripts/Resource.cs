@@ -90,6 +90,8 @@ public class Resource : MonoBehaviour {
 			ResourceRequested = true;
 			audio.Play();
 			spawnCart();
+
+			//Player.DobbelForDialog();
 		}
 	}
 }

@@ -27,8 +27,12 @@ public class DialogSystem : MonoBehaviour {
 
 	public void SpawnDialog ()
 	{
-		int banana = Random.Range (1, Dialogs.Count);
-		GameObject dia = (GameObject)Dialogs [banana];
+		Dialogs.Clear ();
+		foreach (Transform child in this.gameObject.transform) {
+			Dialogs.Add (child.gameObject);
+		}
+		int i = Random.Range (1, Dialogs.Count);
+		GameObject dia = (GameObject)Dialogs [i];
 		Player.GameState = Player.gameState.Dialog;
 		dia.SetActive (true);
 	}

@@ -108,7 +108,7 @@ public class Player : MonoBehaviour
 		}
 	}
 
-	public void DobbelForDialog()
+	public static void DobbelForDialog()
 	{
 		int r = Random.Range (1, 5);
 		if (r == 2) {

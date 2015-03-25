@@ -227,6 +227,7 @@ public class City : MonoBehaviour {
 					rc.Overschot = 0;
 				}
 				ruilen = false;
+				Player.DobbelForDialog();
 			}
 		}
 	}
