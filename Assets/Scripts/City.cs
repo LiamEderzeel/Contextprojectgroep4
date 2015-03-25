@@ -43,10 +43,17 @@ public class City : MonoBehaviour {
 	}
 	public int CityHP;
 
+	AudioClip fxTrade;
+	AudioClip fxNo;
+
 	#endregion
 
 	void Start () {
 		CityHP = 100;
+
+		fxTrade = Resources.Load<AudioClip> ("Sounds/FX_");
+		fxNo    = Resources.Load<AudioClip> ("Sounds/FX_");
+
 		rc = new ResourceCount ();
 		counterIdleThreshold = counterIdleThresholdNew ();
 		counterRequestingThreshold = counterRequestingThresholdNew ();
@@ -227,7 +234,16 @@ public class City : MonoBehaviour {
 					rc.Overschot = 0;
 				}
 				ruilen = false;
+				fxTrade = Resources.Load<AudioClip> ("Sounds/FX_");
+				audio.clip = fxTrade;
+				audio.Play();
 				Player.DobbelForDialog();
+			}
+			else
+			{
+				//niet ruilen, niet genoeg resources.
+				audio.clip = fxNo;
+				audio.Play();
 			}
 		}
 	}
