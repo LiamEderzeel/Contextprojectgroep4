@@ -28,7 +28,7 @@ public class Resource : MonoBehaviour {
 
 	public void spawnResource()
 	{
-		int Amount = Random.Range (1, 10);
+		int Amount = Random.Range (1, 3);
 		ResourceRequested = false;
 		if (ResourceType == Player.Grondstof.Voedsel)
 			Player.resource_1 += Amount;
@@ -62,28 +62,6 @@ public class Resource : MonoBehaviour {
 		return Waypoints;
 	}
 
-	/*
-	void OnGUI ()
-	{
-		Vector2 boxPosition = Camera.main.WorldToScreenPoint(this.gameObject.transform.position);
-		
-		GUIStyle ResourceName = new GUIStyle();
-		ResourceName.alignment = TextAnchor.UpperCenter;
-		ResourceName.normal.textColor = Color.black;
-		
-		if(ResourceType == Player.Grondstof.Voedsel)
-			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Voedsel",ResourceName);
-		else if(ResourceType == Player.Grondstof.Textiel)
-			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Textiel",ResourceName);
-		else if(ResourceType == Player.Grondstof.Steenkool)
-			GUI.Label (new Rect(boxPosition.x - 40,Screen.height - boxPosition.y-50,80,50),"Steenkool",ResourceName);
-		
-		if (ResourceRequested) {
-			GUI.Label (new Rect(boxPosition.x - 40, Screen.height - boxPosition.y+50, 80, 50), "Percent: "+rg.PercentageDone, ResourceName);
-		}
-	}
-	*/
-
 	void OnMouseDown() {
 		//kick timer aan
 		if (!ResourceRequested && Player.GameState == Player.gameState.Ingame) {
@@ -95,48 +73,3 @@ public class Resource : MonoBehaviour {
 		}
 	}
 }
-/*
-public class ResourceGenerator {
-	
-	float count = 0;
-	float count_t = 1;
-	
-	public ResourceGenerator()
-	{
-		_amount = Random.Range (1, 10);
-		_done = false;
-	}
-	
-	public void Tick()
-	{
-		count += Time.deltaTime * 1;
-		if (count >= count_t)
-			_done = true;
-	}
-	
-	public int PercentageDone
-	{
-		get{
-			int p = (int)((count/count_t)*100);
-			return p;
-		}
-	}
-	
-	//Protected waarde om te controleren of de generator klaar is
-	private bool _done;
-	public bool Done
-	{
-		get {
-			return _done;
-		}
-	}
-	
-	//Protected hoeveelheid die hij geeft als de generator klaar is
-	private int _amount;
-	public int Amount {
-		get {
-			return _amount;
-		}
-	}
-}
-*/
