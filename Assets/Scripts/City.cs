@@ -45,6 +45,7 @@ public class City : MonoBehaviour {
 
 	AudioClip fxTrade;
 	AudioClip fxNo;
+	AudioClip fxRiot;
 
 	#endregion
 
@@ -53,6 +54,7 @@ public class City : MonoBehaviour {
 
 		fxTrade = Resources.Load<AudioClip> ("Sounds/FX_genoeg");
 		fxNo    = Resources.Load<AudioClip> ("Sounds/FX_niet_genoeg");
+		fxRiot  = Resources.Load<AudioClip> ("Sounds/FX_opstand");
 
 		rc = new ResourceCount ();
 		counterIdleThreshold = counterIdleThresholdNew ();
@@ -113,6 +115,8 @@ public class City : MonoBehaviour {
 		GameObject riotObject = (GameObject)Instantiate(Resources.Load("Riot"), newPosition, newRotation);
 		riotObject.GetComponent<Riot> ().Waypoints = GetWaypoints ();
 		riotObject.GetComponent<Riot> ().StartRiot ();
+		audio.clip = fxRiot;
+		audio.Play ();
 	}
 
 	#region Requests
@@ -203,7 +207,9 @@ public class City : MonoBehaviour {
 	//klikevent van de steden, controleert of de player genoeg resources heeft en pleegt dan ruilhandel
 	void OnMouseDown()
 	{
+
 		if (Player.GameState == Player.gameState.Ingame) {
+			this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (0.75f, 0.5f, 0.5f);
 			/*dit stuk code hieronder moeten we echt even netjes maken.*/
 			bool ruilen = false;
 			//Substracting the resources when clicked on city with request.
@@ -246,6 +252,10 @@ public class City : MonoBehaviour {
 				audio.Play();
 			}
 		}
+	}
+	void OnMouseUp()
+	{
+		this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f);
 	}
 
 	public ArrayList GetWaypoints()

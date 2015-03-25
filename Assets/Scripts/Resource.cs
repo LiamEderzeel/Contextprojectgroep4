@@ -65,11 +65,16 @@ public class Resource : MonoBehaviour {
 	void OnMouseDown() {
 		//kick timer aan
 		if (!ResourceRequested && Player.GameState == Player.gameState.Ingame) {
+			this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (0.75f, 0.5f, 0.5f);
 			ResourceRequested = true;
 			audio.Play();
 			spawnCart();
 
 			//Player.DobbelForDialog();
 		}
+	}
+	void OnMouseUp()
+	{
+		this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f);
 	}
 }
