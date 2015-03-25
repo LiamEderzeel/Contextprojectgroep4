@@ -9,7 +9,7 @@ public class Cart : MonoBehaviour {
 	private int currentIndex;
 	
 	public ArrayList Waypoints;
-	public float moveSpeed = 10.0f;
+	public float moveSpeed = 5.0f;
 	public float minDistance = 2.0f;
 
 	public Resource attachedResource;

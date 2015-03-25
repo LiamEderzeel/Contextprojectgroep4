@@ -108,9 +108,10 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	//ok waarom de fuck staat deze functie in de player ipv in de city?
 	public static void DobbelForDialog()
 	{
-		int r = Random.Range (1, 5);
+		int r = Random.Range (1, 10);
 		if (r == 2) {
 			Player.GameState = gameState.Dialog;
 			sDialog.SetActive(true);
