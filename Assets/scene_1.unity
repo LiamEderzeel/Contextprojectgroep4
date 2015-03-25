@@ -4187,7 +4187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &883362345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5865,7 +5865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1296216495
 Transform:
   m_ObjectHideFlags: 0
@@ -7069,6 +7069,16 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorRight
+      value: 
+      objectReference: {fileID: 21300000, guid: 70917c97552e94b4d917ecb546a96646,
+        type: 3}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorLeft
+      value: 
+      objectReference: {fileID: 21300000, guid: 14b0bb9ff84a49d42bab136de60f1ab2,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 652f12a552072d54f8143adc7430d983, type: 2}
   m_RootGameObject: {fileID: 1768792456}
@@ -7547,8 +7557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e3e3b6b4eaa3c42ad8e1760ed35148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActorLeft: {fileID: 21300000, guid: 85b774751844a344daf048ad5344b676, type: 3}
-  ActorRight: {fileID: 21300000, guid: 1f921c475c92753459db585ff1a9db37, type: 3}
+  ActorLeft: {fileID: 21300000, guid: 14b0bb9ff84a49d42bab136de60f1ab2, type: 3}
+  ActorRight: {fileID: 21300000, guid: 70917c97552e94b4d917ecb546a96646, type: 3}
   Background: {fileID: 21300000, guid: a0a1d26cf6746774cb3ee541c8b625fa, type: 3}
   ActorText:
   - test1
