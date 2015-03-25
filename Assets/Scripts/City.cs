@@ -80,7 +80,7 @@ public class City : MonoBehaviour {
 			/*
 			 * vanuit hier ruilhandel plegen, als roep niet beantwoord wordt terugvallen naar state 1
 			 * */
-			counterRequesting += Time.deltaTime * 1; //1 per seconde
+			counterRequesting += Time.deltaTime * 3; //3 per seconde
 			if (counterRequesting > counterRequestingThreshold)
 			{
 				counterRequesting = 0;
@@ -233,6 +233,7 @@ public class City : MonoBehaviour {
 					Player.resource_3 += rc.Overschot;
 					rc.Overschot = 0;
 				}
+				rc = new ResourceCount(); //zodat stad geen resource tekort en overschottype heeft
 				ruilen = false;
 				audio.clip = fxTrade;
 				audio.Play();
@@ -251,7 +252,6 @@ public class City : MonoBehaviour {
 	{
 		GameObject wc = transform.FindChild ("WaypointCollection").gameObject;
 		ArrayList Waypoints = new ArrayList();
-
 		foreach (Transform child in wc.gameObject.transform) {
 			Waypoints.Add(child.position);
 		}
