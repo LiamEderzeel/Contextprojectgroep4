@@ -35,6 +35,7 @@ public class Cart : MonoBehaviour {
 			currentIndex++;
 			if (currentIndex == Waypoints.Count) {
 				attachedResource.spawnResource();
+				AudioSource.PlayClipAtPoint(Resources.Load<AudioClip> ("Sounds/FX_collect"), new Vector3(0,0,0));
 				Destroy (this.gameObject);
 			}
 			else {
