@@ -107,4 +107,14 @@ public class Player : MonoBehaviour
 			audio.Play();
 		}
 	}
+
+	public void DobbelForDialog()
+	{
+		int r = Random.Range (1, 5);
+		if (r == 2) {
+			Player.GameState = gameState.Dialog;
+			sDialog.SetActive(true);
+			sDialog.GetComponent<DialogSystem>().SpawnDialog();
+		}
+	}
 }

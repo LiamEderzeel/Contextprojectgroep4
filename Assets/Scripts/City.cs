@@ -78,8 +78,8 @@ public class City : MonoBehaviour {
 			{
 				counterRequesting = 0;
 				counterRequestingThreshold = counterRequestingThresholdNew();
-				if (CityHP - 50 >= 0 && !Player.CityIsRioting)
-				CityHP -= 50;
+				if (CityHP - 5 >= 0 && !Player.CityIsRioting)
+				CityHP -= 5;
 			}
 
 			if (CityHP == 0 && !Player.CityIsRioting)

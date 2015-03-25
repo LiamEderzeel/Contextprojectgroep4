@@ -75,6 +75,7 @@ public class dialogswitch : MonoBehaviour {
 			//in principe verder met de game zelf.
 			if (Player.GameState == Player.gameState.Dialog) {
 				Player.GameState = Player.gameState.Ingame;
+				Player.sDialog.SetActive(false);
 			}
 			else if (Player.GameState == Player.gameState.Rioting) {
 				Player.ResetCities();

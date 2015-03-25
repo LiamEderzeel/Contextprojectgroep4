@@ -19,12 +19,13 @@ public class DialogSystem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Player.GameState != Player.gameState.Dialog)
+		/*if (Player.GameState != Player.gameState.Dialog)
 			this.gameObject.SetActive (false);
 		//kill yourself.
+		*/
 	}
 
-	void SpawnDialog ()
+	public void SpawnDialog ()
 	{
 		int banana = Random.Range (1, Dialogs.Count);
 		GameObject dia = (GameObject)Dialogs [banana];
