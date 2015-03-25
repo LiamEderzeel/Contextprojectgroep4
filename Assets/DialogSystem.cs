@@ -31,9 +31,24 @@ public class DialogSystem : MonoBehaviour {
 		foreach (Transform child in this.gameObject.transform) {
 			Dialogs.Add (child.gameObject);
 		}
-		int i = Random.Range (1, Dialogs.Count);
-		GameObject dia = (GameObject)Dialogs [i];
-		Player.GameState = Player.gameState.Dialog;
-		dia.SetActive (true);
+		if (Dialogs.Count > 0)
+			//soms kan het zijn dat je ineens alle dialogen opgemaakt hebt, dan mag je geen nullreference krijgen!
+		{
+			int i = Random.Range (1, Dialogs.Count);
+			GameObject dia = (GameObject)Dialogs [i];
+			Player.GameState = Player.gameState.Dialog;
+			dia.SetActive (true);
+		} else {
+			//lui
+			if (Player.GameState == Player.gameState.Dialog) {
+				Player.GameState = Player.gameState.Ingame;
+				Player.sDialog.SetActive(false);
+			}
+			else if (Player.GameState == Player.gameState.Rioting) {
+				Player.GameState = Player.gameState.Ingame;
+				Player.CityIsRioting = false;
+				Player.sDialog.SetActive(false);
+			}
+		}
 	}
 }

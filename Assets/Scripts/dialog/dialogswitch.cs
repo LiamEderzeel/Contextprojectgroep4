@@ -48,7 +48,7 @@ public class dialogswitch : MonoBehaviour {
 		if (text_scrolling) {
 			if (text_index <= text_line.Length) {
 				text_temp = text_line.Substring (0, (int)text_index);
-				text_index ++;
+				text_index += 0.5f;
 			} else {
 				text_index = 0;
 				text_scrolling = false;
@@ -81,7 +81,7 @@ public class dialogswitch : MonoBehaviour {
 				Player.ResetCities();
 				Player.GameState = Player.gameState.Ingame;
 				Player.CityIsRioting = false;
-				GameObject.Find("sRiot").gameObject.SetActive (false);
+				Player.sRiot.SetActive (false);
 			}
 		}
 	}

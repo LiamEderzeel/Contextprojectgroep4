@@ -51,8 +51,8 @@ public class City : MonoBehaviour {
 	void Start () {
 		CityHP = 100;
 
-		fxTrade = Resources.Load<AudioClip> ("Sounds/FX_");
-		fxNo    = Resources.Load<AudioClip> ("Sounds/FX_");
+		fxTrade = Resources.Load<AudioClip> ("Sounds/FX_genoeg");
+		fxNo    = Resources.Load<AudioClip> ("Sounds/FX_niet_genoeg");
 
 		rc = new ResourceCount ();
 		counterIdleThreshold = counterIdleThresholdNew ();
@@ -234,7 +234,6 @@ public class City : MonoBehaviour {
 					rc.Overschot = 0;
 				}
 				ruilen = false;
-				fxTrade = Resources.Load<AudioClip> ("Sounds/FX_");
 				audio.clip = fxTrade;
 				audio.Play();
 				Player.DobbelForDialog();
