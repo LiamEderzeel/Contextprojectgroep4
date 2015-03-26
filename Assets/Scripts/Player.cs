@@ -52,9 +52,9 @@ public class Player : MonoBehaviour
 	{
 		//entry point for application
 		GameState = gameState.Title;
-		resource_1 = 10;
-		resource_2 = 10;
-		resource_3 = 10;
+		resource_1 = 5;
+		resource_2 = 5;
+		resource_3 = 5;
 
 		audio = this.gameObject.GetComponent<AudioSource> ();
 		audio.volume = 1f;

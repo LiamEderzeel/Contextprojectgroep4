@@ -28,7 +28,7 @@ public class Resource : MonoBehaviour {
 
 	public void spawnResource()
 	{
-		int Amount = Random.Range (1, 3);
+		int Amount = Random.Range (1, 2);
 		ResourceRequested = false;
 		if (ResourceType == Player.Grondstof.Voedsel)
 			Player.resource_1 += Amount;
