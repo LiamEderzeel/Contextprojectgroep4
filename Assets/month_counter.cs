@@ -3,7 +3,7 @@ using System.Collections;
 
 public class month_counter : MonoBehaviour {
 
-	private int Month = 0;
+	private int Month = 1;
 	private int SecondsPerMonth = 15;
 
 	private float c = 0;
@@ -18,7 +18,7 @@ public class month_counter : MonoBehaviour {
 	void Start () {
 		s = this.gameObject.GetComponent<SpriteRenderer> ();
 		//plaatjes inladen voor het font
-		for (int i=1; i < imageCollection.Length; i++)
+		for (int i=1; i < imageCollection.Length+1; i++)
 			imageCollection [i-1] = Resources.Load<Sprite> ("Sprites/ui/font_months/" + i);
 	}
 	
@@ -34,6 +34,7 @@ public class month_counter : MonoBehaviour {
 				Debug.Log ("gewonnen");
 				Player.GameState = Player.gameState.Gewonnen;
 				Player.sGewonnen.SetActive(true);
+				Player.PlaySound();
 			}
 		}
 
