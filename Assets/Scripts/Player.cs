@@ -62,8 +62,8 @@ public class Player : MonoBehaviour
 		muTitle = Resources.Load<AudioClip>("Sounds/MU_startscherm");
 		muIngame = Resources.Load<AudioClip>("Sounds/MU_ingame");
 		muGameover = Resources.Load<AudioClip>("Sounds/MU_game_over_lose");
-		muGewonnen = Resources.Load<AudioClip> ("Sounds/MU_game_over/");
-	}	
+		muGewonnen = Resources.Load<AudioClip> ("Sounds/MU_game_over");
+	}
 
 	void Update ()
 	{
