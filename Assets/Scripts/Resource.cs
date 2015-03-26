@@ -72,9 +72,13 @@ public class Resource : MonoBehaviour {
 
 			//Player.DobbelForDialog();
 		}
+		if (ResourceRequested) {
+			this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 0.5f);
+		}
 	}
 	void OnMouseUp()
 	{
-		this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f);
+		if (!ResourceRequested)
+			this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f);
 	}
 }
