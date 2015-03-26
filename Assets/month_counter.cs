@@ -35,13 +35,11 @@ public class month_counter : MonoBehaviour {
 				Player.GameState = Player.gameState.Gewonnen;
 				Player.sGewonnen.SetActive(true);
 			}
-			/*else
-			{
-				Debug.Log (Month);
-			}
-			*/
+
+			Debug.Log (Month);
 		}
 
-		s.sprite = imageCollection [Month];
+		if (Month < 12)
+			s.sprite = imageCollection [Month];
 	}
 }
