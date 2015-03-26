@@ -9,7 +9,7 @@ public class Cart : MonoBehaviour {
 	private int currentIndex;
 	
 	public ArrayList Waypoints;
-	public float moveSpeed = 5.0f;
+	public float moveSpeed = 10.0f;
 	public float minDistance = 2.0f;
 
 	public Resource attachedResource;
@@ -45,9 +45,8 @@ public class Cart : MonoBehaviour {
 	}
 	
 	void MoveTowardWaypoint () {
-		
 		Vector3 direction = currentWaypoint - transform.position;
-		Vector3 moveVector = direction.normalized * moveSpeed * Time.deltaTime;
-		transform.position += moveVector;
+		Vector3 moveVector = direction.normalized * (Time.deltaTime * moveSpeed);
+		transform.position += (moveVector);
 	}
 }

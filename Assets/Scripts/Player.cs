@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
 	private static AudioSource audio;
 
-	public static bool dlc = true;
+	public static bool dlc = false;
 
 	public enum gameState
 	{
@@ -52,9 +52,9 @@ public class Player : MonoBehaviour
 	{
 		//entry point for application
 		GameState = gameState.Title;
-		resource_1 = 0;
-		resource_2 = 0;
-		resource_3 = 0;
+		resource_1 = 10;
+		resource_2 = 10;
+		resource_3 = 10;
 
 		audio = this.gameObject.GetComponent<AudioSource> ();
 		audio.volume = 1f;

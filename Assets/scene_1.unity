@@ -1445,7 +1445,7 @@ MonoBehaviour:
   ActorRight: {fileID: 21300000, guid: e400fd5291361d6448407038ff4692a2, type: 3}
   Background: {fileID: 21300000, guid: a0a1d26cf6746774cb3ee541c8b625fa, type: 3}
   ActorText:
-  - "Ik ging laatst naar een soldatenkamp. Ik probeerde met een van hun te\r\npraten,
+  - "Ik ging laatst naar een soldatenkamp. Ik probeerde met een van hen te\r\npraten,
     maar dat was echt onmogelijk."
   - Hoezo dan?
   - "Er zitten daar zoveel buitenlanders dat er wel twintig talen worden\r\ngesproken!"
@@ -2858,7 +2858,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[0]
-      value: "Ik ging laatst naar een soldatenkamp. Ik probeerde met een van hun te\r\npraten,
+      value: "Ik ging laatst naar een soldatenkamp. Ik probeerde met een van hen te\r\npraten,
         maar dat was echt onmogelijk."
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
@@ -11541,7 +11541,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .5
   m_Pitch: 1
   Loop: 0
   Mute: 0
