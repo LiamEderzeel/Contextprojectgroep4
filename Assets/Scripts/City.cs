@@ -30,7 +30,7 @@ public class City : MonoBehaviour {
 	float counterIdleThreshold;
 	float counterIdleThresholdNew()
 	{
-		return Random.Range (5, 15);
+		return Random.Range (5, 10);
 	}
 
 	//Als de stad iets nodig heeft
