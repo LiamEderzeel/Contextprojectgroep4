@@ -634,7 +634,7 @@ SpriteRenderer:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 137860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 83582540}
@@ -652,7 +652,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 83582539}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -669,7 +669,7 @@ BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6132480, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 83582539}
   m_Enabled: 1
   m_Material: {fileID: 0}
@@ -681,7 +681,7 @@ AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 8232480, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 83582539}
   m_Enabled: 1
   serializedVersion: 3
@@ -740,7 +740,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 83582539}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -832,7 +832,7 @@ Transform:
   m_GameObject: {fileID: 101811925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.75, y: 4.75, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 801726614}
   m_RootOrder: 0
@@ -987,7 +987,7 @@ Transform:
   m_GameObject: {fileID: 144495048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.75, y: 4.75, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 661771505}
   m_RootOrder: 0
@@ -1456,7 +1456,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 137856, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 157845379}
@@ -1474,7 +1474,7 @@ RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 22437862, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 157845378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11437860, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 157845378}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1515,7 +1515,7 @@ CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 22237862, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 157845378}
 --- !u!1 &188791200
 GameObject:
@@ -1913,7 +1913,7 @@ Transform:
   m_GameObject: {fileID: 245935802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.75, y: 4.75, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 572793968}
   m_RootOrder: 0
@@ -2390,7 +2390,7 @@ Canvas:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 137858, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 302471768}
@@ -2408,7 +2408,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11437862, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 302471765}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2436,14 +2436,14 @@ CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 22237864, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 302471765}
 --- !u!224 &302471768
 RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 22437864, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 302471765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2966,7 +2966,7 @@ Transform:
   m_GameObject: {fileID: 430641866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.75, y: 4.75, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1261858244}
   m_RootOrder: 0
@@ -3069,6 +3069,93 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 52
+--- !u!1001 &453279979
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1044704608}
+    m_Modifications:
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[2]
+      value: "Wat?! Een worst voor 5 cent?! Is dat \xFCberhaupt te eten?!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[0]
+      value: "Er is schaarste in Nederland! Toch laat de regering jullie niet in de\r\nsteek!
+        Vanaf nu is er voor iedereen Eenheidsworst voor een lage prijs!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[1]
+      value: "Wat?! Een worst voor 5 cent?! Is dat \xFCberhaupt te eten?!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorLeft
+      value: 
+      objectReference: {fileID: 21300000, guid: 14b0bb9ff84a49d42bab136de60f1ab2,
+        type: 3}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorRight
+      value: 
+      objectReference: {fileID: 21300000, guid: 61167ef714593ae40aba81a2c98281af,
+        type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+  m_RootGameObject: {fileID: 83582539}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &480041989
 Prefab:
   m_ObjectHideFlags: 0
@@ -3751,7 +3838,7 @@ Transform:
   m_GameObject: {fileID: 565532930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.75, y: 4.75, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1595418011}
   m_RootOrder: 0
@@ -4390,7 +4477,7 @@ Transform:
   m_GameObject: {fileID: 661020278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.75, y: 4.75, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 155024476}
   m_RootOrder: 0
@@ -4920,7 +5007,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 152194, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 738617716}
@@ -4936,11 +5023,11 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 452194, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 738617715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.75, y: 4.75, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 83582540}
   m_RootOrder: 0
@@ -4949,7 +5036,7 @@ SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 21252194, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 738617715}
   m_Enabled: 1
   m_CastShadows: 0
@@ -5454,9 +5541,15 @@ MonoBehaviour:
   ActorRight: {fileID: 21300000, guid: fc036b590b507404c96d28f006e1b337, type: 3}
   Background: {fileID: 21300000, guid: a0a1d26cf6746774cb3ee541c8b625fa, type: 3}
   ActorText:
-  - test1
-  - test2
-  ActorPitch: 0000000000000000
+  - Al deze vervelende Burgers weigeren mijn stad te verlaten! Deze onrust kunnen
+    wij op dit moment in Nederland niet gebruiken. Voordat de burgers gewelddadig
+    worden moeten we ze met harde hand stoppen.
+  - Het leger is al aan het begin van deze oorlog gemobiliseerd en duidelijk is het
+    nu hoog tijd om het in te zetten. Wie niet horen wil moet voelen.
+  - Hoe boos we ook zijn, een confrontatie met het leger willen we liever vermijden,
+    laten we maar weer terug gaan naar onze huizen en hopen dat deze schaarste snel
+    voorbij is.
+  ActorPitch: 000000000000000000000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
   audioHigh: {fileID: 8300000, guid: 4a10695af3e361c4cb8a484b815358b2, type: 3}
 --- !u!1 &810547531
@@ -6518,7 +6611,7 @@ Transform:
   m_GameObject: {fileID: 999792792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.75, y: 4.75, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1768792457}
   m_RootOrder: 0
@@ -7530,7 +7623,7 @@ CanvasRenderer:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 137854, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 1203359661}
@@ -7548,7 +7641,7 @@ RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 22437860, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 1203359660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -7567,7 +7660,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11437858, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 1203359660}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7589,7 +7682,7 @@ Canvas:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 22337864, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 1203359660}
   m_Enabled: 1
   serializedVersion: 2
@@ -7772,101 +7865,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1966016323}
   m_RootOrder: 2
---- !u!1001 &1248068798
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1044704608}
-    m_Modifications:
-    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: ActorText.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: ActorPitch.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: ActorLeft
-      value: 
-      objectReference: {fileID: 21300000, guid: 14b0bb9ff84a49d42bab136de60f1ab2,
-        type: 3}
-    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: ActorText.Array.data[0]
-      value: "Er is schaarste in Nederland! Toch laat de regering jullie niet in de\r\nsteek!
-        Vanaf nu is er voor iedereen Eenheidsworst voor een lage prijs!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: ActorText.Array.data[1]
-      value: "Wat?! Een worst voor 5 cent?! Is dat \xFCberhaupt te eten?!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: ActorRight
-      value: 
-      objectReference: {fileID: 21300000, guid: 61167ef714593ae40aba81a2c98281af,
-        type: 3}
-    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: ActorPitch.Array.data[1]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: ActorPitch.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: ActorText.Array.data[2]
-      value: "Wat?! Een worst voor 5 cent?! Is dat \xFCberhaupt te eten?!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: ActorText.Array.data[3]
-      value: "Wat?! Een worst voor 5 cent?! Is dat \xFCberhaupt te eten?!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: ActorPitch.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-      propertyPath: ActorPitch.Array.data[3]
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-  m_RootGameObject: {fileID: 83582539}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1254912056
 GameObject:
   m_ObjectHideFlags: 0
@@ -8145,7 +8143,7 @@ Transform:
   m_GameObject: {fileID: 1287986211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.75, y: 4.75, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2088896654}
   m_RootOrder: 0
@@ -8865,9 +8863,17 @@ MonoBehaviour:
   ActorRight: {fileID: 21300000, guid: fc036b590b507404c96d28f006e1b337, type: 3}
   Background: {fileID: 21300000, guid: a0a1d26cf6746774cb3ee541c8b625fa, type: 3}
   ActorText:
-  - test1
-  - test2
-  ActorPitch: 0000000000000000
+  - Landgenoten, het is hoog tijd dat jullie zien dat onze eigen regering niet de
+    vijand is.
+  - Wij doen er alles aan om ons land in leven te houden, maar dankzij de echte vijanden,
+    die elkaar in loopgraven bevechten buiten onze grenzen, is dit erg zwaar.
+  - Wij vragen jullie dus om begrip, solidariteit en hulp, zodat Nederland van grondstoffen
+    kan worden voorzien. Verwoest je eigen land niet verder, maar steun het!
+  - Deze man heeft het bij het rechte eind, we moeten ons land niet verder kapot maken
+    met opstanden en geweld, wat we nu nodig hebben is solidariteit voor Nederland!
+  - Vrienden, keer terug naar jullie huizen en doe wat je kunt om ons vaderland in
+    leven te houden.
+  ActorPitch: 0000000000000000000000000000000000000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
   audioHigh: {fileID: 8300000, guid: 4a10695af3e361c4cb8a484b815358b2, type: 3}
 --- !u!1 &1360324275
@@ -9589,6 +9595,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 929477056}
     m_Modifications:
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9639,6 +9653,35 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 14b0bb9ff84a49d42bab136de60f1ab2,
         type: 3}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[2]
+      value: Hoe boos we ook zijn, een confrontatie met het leger willen we liever
+        vermijden, laten we maar weer terug gaan naar onze huizen en hopen dat deze
+        schaarste snel voorbij is.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[0]
+      value: Al deze vervelende Burgers weigeren mijn stad te verlaten! Deze onrust
+        kunnen wij op dit moment in Nederland niet gebruiken. Voordat de burgers gewelddadig
+        worden moeten we ze met harde hand stoppen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[1]
+      value: Het leger is al aan het begin van deze oorlog gemobiliseerd en duidelijk
+        is het nu hoog tijd om het in te zetten. Wie niet horen wil moet voelen.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 652f12a552072d54f8143adc7430d983, type: 2}
   m_RootGameObject: {fileID: 801726613}
@@ -9883,7 +9926,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 137862, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1617314131}
@@ -9899,7 +9942,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 437862, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 1617314130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -30, y: 2, z: 0}
@@ -9912,7 +9955,7 @@ SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 21237862, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 1617314130}
   m_Enabled: 1
   m_CastShadows: 0
@@ -10052,6 +10095,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 929477056}
     m_Modifications:
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10102,6 +10153,61 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 14b0bb9ff84a49d42bab136de60f1ab2,
         type: 3}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[2]
+      value: Laten wij dus hollandse alledaagse zaken zoals bijvoorbeeld onze biscuits
+        en rookworsten bij deze benoemen tot volksbescuit en eenheidsworst.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[3]
+      value: 'Misschien dat het volk van Nederland dan weer eenheid voelt en tot rust
+        komt. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[4]
+      value: "Wat is dit? Eenheidsworst en volksbescuit? De namen zijn vreemd, maar
+        het herinnnert ons er wel aan dat we allemaal uitmaken van \xE9\xE9n volk
+        en we allemaal in hetzelfde schuitje zitten."
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[5]
+      value: 'Laten we naar huis terugkeren en deze producten kopen, zodat wij de
+        boodschap van eenheid ook aan onze gezinnen door kunnen geven. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[4]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[5]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[0]
+      value: Wat ons vaderland nu echt nodig heeft is solidariteit en eenheid en het
+        is mij duidelijk dat we dat nu dus niet hebben.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[1]
+      value: Misschien dat als onze lieve burgers deze woorden vaker terugzien in
+        hun dagelijkse bestaan ze deze ook meer na gaan leven.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 652f12a552072d54f8143adc7430d983, type: 2}
   m_RootGameObject: {fileID: 1768792456}
@@ -10915,9 +11021,19 @@ MonoBehaviour:
   ActorRight: {fileID: 21300000, guid: fc036b590b507404c96d28f006e1b337, type: 3}
   Background: {fileID: 21300000, guid: a0a1d26cf6746774cb3ee541c8b625fa, type: 3}
   ActorText:
-  - test1
-  - test2
-  ActorPitch: 0000000000000000
+  - Wat ons vaderland nu echt nodig heeft is solidariteit en eenheid en het is mij
+    duidelijk dat we dat nu dus niet hebben.
+  - Misschien dat als onze lieve burgers deze woorden vaker terugzien in hun dagelijkse
+    bestaan ze deze ook meer na gaan leven.
+  - Laten wij dus hollandse alledaagse zaken zoals bijvoorbeeld onze biscuits en rookworsten
+    bij deze benoemen tot volksbescuit en eenheidsworst.
+  - 'Misschien dat het volk van Nederland dan weer eenheid voelt en tot rust komt. '
+  - "Wat is dit? Eenheidsworst en volksbescuit? De namen zijn vreemd, maar het herinnnert
+    ons er wel aan dat we allemaal uitmaken van \xE9\xE9n volk en we allemaal in hetzelfde
+    schuitje zitten."
+  - 'Laten we naar huis terugkeren en deze producten kopen, zodat wij de boodschap
+    van eenheid ook aan onze gezinnen door kunnen geven. '
+  ActorPitch: 000000000000000000000000000000000000000000000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
   audioHigh: {fileID: 8300000, guid: 4a10695af3e361c4cb8a484b815358b2, type: 3}
 --- !u!1 &1784476215
@@ -11289,7 +11405,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 137864, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1864759039}
@@ -11305,7 +11421,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 437864, guid: 652f12a552072d54f8143adc7430d983, type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 1864759038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 30, y: 2, z: 0}
@@ -11318,7 +11434,7 @@ SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 21237864, guid: 652f12a552072d54f8143adc7430d983,
     type: 2}
-  m_PrefabInternal: {fileID: 1248068798}
+  m_PrefabInternal: {fileID: 453279979}
   m_GameObject: {fileID: 1864759038}
   m_Enabled: 1
   m_CastShadows: 0
@@ -11441,7 +11557,7 @@ Transform:
   m_GameObject: {fileID: 1906139102}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.75, y: 4.75, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1298533210}
   m_RootOrder: 0
@@ -11657,7 +11773,7 @@ Transform:
   m_GameObject: {fileID: 1937393230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.75, y: 4.75, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1718059386}
   m_RootOrder: 0
@@ -12097,6 +12213,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 929477056}
     m_Modifications:
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 437860, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12147,6 +12271,54 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 14b0bb9ff84a49d42bab136de60f1ab2,
         type: 3}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[2]
+      value: Wij vragen jullie dus om begrip, solidariteit en hulp, zodat Nederland
+        van grondstoffen kan worden voorzien. Verwoest je eigen land niet verder,
+        maar steun het!
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[3]
+      value: Deze man heeft het bij het rechte eind, we moeten ons land niet verder
+        kapot maken met opstanden en geweld, wat we nu nodig hebben is solidariteit
+        voor Nederland!
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[4]
+      value: Vrienden, keer terug naar jullie huizen en doe wat je kunt om ons vaderland
+        in leven te houden.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[4]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[0]
+      value: Landgenoten, het is hoog tijd dat jullie zien dat onze eigen regering
+        niet de vijand is.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorText.Array.data[1]
+      value: Wij doen er alles aan om ons land in leven te houden, maar dankzij de
+        echte vijanden, die elkaar in loopgraven bevechten buiten onze grenzen, is
+        dit erg zwaar.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
+      propertyPath: ActorPitch.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 652f12a552072d54f8143adc7430d983, type: 2}
   m_RootGameObject: {fileID: 1357989695}
@@ -13206,7 +13378,7 @@ Transform:
   m_GameObject: {fileID: 2100417535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.75, y: 4.75, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1357989696}
   m_RootOrder: 0
