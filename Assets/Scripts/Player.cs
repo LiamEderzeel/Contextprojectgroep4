@@ -61,8 +61,8 @@ public class Player : MonoBehaviour
 
 		muTitle = Resources.Load<AudioClip>("Sounds/MU_startscherm");
 		muIngame = Resources.Load<AudioClip>("Sounds/MU_ingame");
-		muGameover = Resources.Load<AudioClip>("Sounds/MU_game_over");
-		//muGewonnen = Resources.Load<AudioClip> ("Sounds/mu_gewonnen/");
+		muGameover = Resources.Load<AudioClip>("Sounds/MU_game_over_lose");
+		muGewonnen = Resources.Load<AudioClip> ("Sounds/MU_game_over/");
 	}	
 
 	void Update ()
@@ -89,16 +89,20 @@ public class Player : MonoBehaviour
 	public static void PlaySound()
 	{
 		if (GameState == gameState.Title) {
-			audio.Stop();
+			audio.Stop ();
 			audio.loop = false;
 			audio.clip = muTitle;
-			audio.Play();
-		}
-		else if (GameState == gameState.Gameover) {
-			audio.Stop();
-			audio.loop = true;
+			audio.Play ();
+		} else if (GameState == gameState.Gameover) {
+			audio.Stop ();
+			audio.loop = false;
 			audio.clip = muGameover;
-			audio.Play();
+			audio.Play ();
+		} else if (GameState == gameState.Gewonnen) {
+			audio.Stop ();
+			audio.loop = false;
+			audio.clip = muGewonnen;
+			audio.Play ();
 		}
 		else {
 			audio.Stop();
