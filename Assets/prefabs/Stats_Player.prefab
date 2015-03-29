@@ -216,7 +216,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.8999996, y: 10.1999998, z: 0}
+  m_LocalPosition: {x: 16.3244457, y: 33.8430328, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 475602}
@@ -405,6 +405,7 @@ MonoBehaviour:
   Value: 0
   DigitFolder: 
   HideZero: 0
+  fontcolor: {r: .784313738, g: .327707678, b: 0, a: 1}
 --- !u!114 &11476760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -419,6 +420,7 @@ MonoBehaviour:
   Value: 0
   DigitFolder: 
   HideZero: 0
+  fontcolor: {r: .784313738, g: .327707678, b: 0, a: 1}
 --- !u!114 &11476762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -433,6 +435,7 @@ MonoBehaviour:
   Value: 0
   DigitFolder: 
   HideZero: 0
+  fontcolor: {r: .784313738, g: .327707678, b: 0, a: 1}
 --- !u!212 &21275596
 SpriteRenderer:
   m_ObjectHideFlags: 1
