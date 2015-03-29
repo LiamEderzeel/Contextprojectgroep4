@@ -6315,9 +6315,9 @@ MonoBehaviour:
   ActorText:
   - Al deze vervelende Burgers weigeren mijn stad te verlaten! Deze onrust kunnen
     wij op dit moment in Nederland niet gebruiken. Voordat de burgers gewelddadig
-    worden moeten we ze met harde hand stoppen.
-  - Het leger is al aan het begin van deze oorlog gemobiliseerd en duidelijk is het
-    nu hoog tijd om het in te zetten. Wie niet horen wil moet voelen.
+    worden, moeten we ze met harde hand stoppen.
+  - Het leger is al aan het begin van deze oorlog gemobiliseerd. Het is duidelijk
+    dat het nu hoog tijd is om het in te zetten. Wie niet horen wil moet voelen.
   - Hoe boos we ook zijn, een confrontatie met het leger willen we liever vermijden,
     laten we maar weer terug gaan naar onze huizen en hopen dat deze schaarste snel
     voorbij is.
@@ -9943,7 +9943,7 @@ MonoBehaviour:
   - Deze man heeft het bij het rechte eind, we moeten ons land niet verder kapot maken
     met opstanden en geweld, wat we nu nodig hebben is solidariteit voor Nederland!
   - Vrienden, keer terug naar jullie huizen en doe wat je kunt om ons vaderland in
-    leven te houden.
+    leven te houden!
   ActorPitch: 0000000000000000000000000000000000000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
   audioHigh: {fileID: 8300000, guid: 4a10695af3e361c4cb8a484b815358b2, type: 3}
@@ -10968,12 +10968,12 @@ Prefab:
       propertyPath: ActorText.Array.data[0]
       value: Al deze vervelende Burgers weigeren mijn stad te verlaten! Deze onrust
         kunnen wij op dit moment in Nederland niet gebruiken. Voordat de burgers gewelddadig
-        worden moeten we ze met harde hand stoppen.
+        worden, moeten we ze met harde hand stoppen.
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[1]
-      value: Het leger is al aan het begin van deze oorlog gemobiliseerd en duidelijk
-        is het nu hoog tijd om het in te zetten. Wie niet horen wil moet voelen.
+      value: Het leger is al aan het begin van deze oorlog gemobiliseerd. Het is duidelijk
+        dat het nu hoog tijd is om het in te zetten. Wie niet horen wil moet voelen.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 652f12a552072d54f8143adc7430d983, type: 2}
@@ -11475,24 +11475,24 @@ Prefab:
         type: 3}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[2]
-      value: Laten wij dus hollandse alledaagse zaken zoals bijvoorbeeld onze biscuits
+      value: Laten wij dus Hollandse alledaagse levensmiddelen zoals onze biscuits
         en rookworsten bij deze benoemen tot volksbescuit en eenheidsworst.
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[3]
-      value: 'Misschien dat het volk van Nederland dan weer eenheid voelt en tot rust
-        komt. '
+      value: Misschien dat het volk van Nederland dan weer eenheid voelt en tot rust
+        komt.
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[4]
-      value: "Wat is dit? Eenheidsworst en volksbescuit? De namen zijn vreemd, maar
-        het herinnnert ons er wel aan dat we allemaal uitmaken van \xE9\xE9n volk
-        en we allemaal in hetzelfde schuitje zitten."
+      value: "Wat is dit? Eenheidsworst en volksbiscuit? De namen zijn vreemd, maar
+        het herinnnert ons er wel aan dat we allemaal uitmaken van \xE9\xE9n volk.
+        We zitten allemaal in hetzelfde schuitje."
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[5]
-      value: 'Laten we naar huis terugkeren en deze producten kopen, zodat wij de
-        boodschap van eenheid ook aan onze gezinnen door kunnen geven. '
+      value: Laten we naar huis terugkeren en deze producten kopen, zodat wij de boodschap
+        van eenheid ook aan onze gezinnen door kunnen geven.
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorPitch.Array.data[2]
@@ -11512,13 +11512,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[0]
-      value: Wat ons vaderland nu echt nodig heeft is solidariteit en eenheid en het
+      value: Wat ons vaderland nu echt nodig heeft, is solidariteit en eenheid. Het
         is mij duidelijk dat we dat nu dus niet hebben.
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[1]
-      value: Misschien dat als onze lieve burgers deze woorden vaker terugzien in
-        hun dagelijkse bestaan ze deze ook meer na gaan leven.
+      value: Misschien als onze lieve burgers deze woorden vaker terugzien in hun
+        dagelijkse bestaan, dat ze deze ook meer na gaan leven.
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorPitch.Array.data[0]
@@ -12492,18 +12492,18 @@ MonoBehaviour:
   ActorRight: {fileID: 21300000, guid: fc036b590b507404c96d28f006e1b337, type: 3}
   Background: {fileID: 21300000, guid: a0a1d26cf6746774cb3ee541c8b625fa, type: 3}
   ActorText:
-  - Wat ons vaderland nu echt nodig heeft is solidariteit en eenheid en het is mij
+  - Wat ons vaderland nu echt nodig heeft, is solidariteit en eenheid. Het is mij
     duidelijk dat we dat nu dus niet hebben.
-  - Misschien dat als onze lieve burgers deze woorden vaker terugzien in hun dagelijkse
-    bestaan ze deze ook meer na gaan leven.
-  - Laten wij dus hollandse alledaagse zaken zoals bijvoorbeeld onze biscuits en rookworsten
+  - Misschien als onze lieve burgers deze woorden vaker terugzien in hun dagelijkse
+    bestaan, dat ze deze ook meer na gaan leven.
+  - Laten wij dus Hollandse alledaagse levensmiddelen zoals onze biscuits en rookworsten
     bij deze benoemen tot volksbescuit en eenheidsworst.
-  - 'Misschien dat het volk van Nederland dan weer eenheid voelt en tot rust komt. '
-  - "Wat is dit? Eenheidsworst en volksbescuit? De namen zijn vreemd, maar het herinnnert
-    ons er wel aan dat we allemaal uitmaken van \xE9\xE9n volk en we allemaal in hetzelfde
-    schuitje zitten."
-  - 'Laten we naar huis terugkeren en deze producten kopen, zodat wij de boodschap
-    van eenheid ook aan onze gezinnen door kunnen geven. '
+  - Misschien dat het volk van Nederland dan weer eenheid voelt en tot rust komt.
+  - "Wat is dit? Eenheidsworst en volksbiscuit? De namen zijn vreemd, maar het herinnnert
+    ons er wel aan dat we allemaal uitmaken van \xE9\xE9n volk. We zitten allemaal
+    in hetzelfde schuitje."
+  - Laten we naar huis terugkeren en deze producten kopen, zodat wij de boodschap
+    van eenheid ook aan onze gezinnen door kunnen geven.
   ActorPitch: 000000000000000000000000000000000000000000000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
   audioHigh: {fileID: 8300000, guid: 4a10695af3e361c4cb8a484b815358b2, type: 3}
@@ -13967,7 +13967,7 @@ Prefab:
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[4]
       value: Vrienden, keer terug naar jullie huizen en doe wat je kunt om ons vaderland
-        in leven te houden.
+        in leven te houden!
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorPitch.Array.data[2]
