@@ -21,12 +21,17 @@ public class dialogswitch : MonoBehaviour {
 	public AudioClip audioLow;
 	public AudioClip audioHigh;
 
+	private Image mouseicon;
+
 	// Use this for initialization
 	void Start ()
 	{
 		transform.FindChild ("ActorLeft").gameObject.GetComponent<SpriteRenderer> ().sprite = ActorLeft;
 		transform.FindChild ("ActorRight").gameObject.GetComponent<SpriteRenderer> ().sprite = ActorRight;
 		transform.FindChild ("DialogBackground").gameObject.GetComponent<SpriteRenderer> ().sprite = Background;
+
+		mouseicon = transform.FindChild ("CanvasDialog").transform.FindChild("mouseicon").GetComponent<Image>();
+		mouseicon.color = new Color (1f, 1f, 1f, 0.25f);
 
 		text_line = ActorText [dialogIndex];
 		audio.loop = true;
@@ -52,6 +57,7 @@ public class dialogswitch : MonoBehaviour {
 			} else {
 				text_index = 0;
 				text_scrolling = false;
+				mouseicon.color = new Color (1f, 1f, 1f, 1f);
 				audio.Stop ();
 			}
 		}
@@ -64,6 +70,8 @@ public class dialogswitch : MonoBehaviour {
 	{
 		if (!text_scrolling && dialogIndex + 1 < ActorText.Length) {
 			text_scrolling = true;
+			mouseicon.color = new Color (1f, 1f, 1f, 0.25f);
+
 			dialogIndex++;
 			//laden van tekst in een tijdelijke string.
 			text_line = ActorText [dialogIndex];
