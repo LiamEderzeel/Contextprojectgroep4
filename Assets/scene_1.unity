@@ -184,8 +184,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[1]
-      value: "Tussen Nederland en Belgi\xEB is een elektrisch prikkeldraad gespannen\r\nom
-        smokkel tegen te gaan! We kunnen er dus niet doorheen."
+      value: "Tussen Nederland en Belgi\xEB is een elektrisch prikkeldraad gespannen
+        om smokkel tegen te gaan! We kunnen er dus niet doorheen."
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorRight
@@ -834,8 +834,8 @@ MonoBehaviour:
   ActorRight: {fileID: 21300000, guid: 61167ef714593ae40aba81a2c98281af, type: 3}
   Background: {fileID: 21300000, guid: a0a1d26cf6746774cb3ee541c8b625fa, type: 3}
   ActorText:
-  - "Er is schaarste in Nederland! Toch laat de regering jullie niet in de\r\nsteek!
-    Vanaf nu is er voor iedereen Eenheidsworst voor een lage prijs!"
+  - Er is schaarste in Nederland! Toch laat de regering jullie niet in de steek! Vanaf
+    nu is er voor iedereen Eenheidsworst voor een lage prijs!
   - "Wat?! Een worst voor 5 cent?! Is dat \xFCberhaupt te eten?!"
   ActorPitch: 0000000001000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
@@ -1548,10 +1548,10 @@ MonoBehaviour:
   ActorRight: {fileID: 21300000, guid: e400fd5291361d6448407038ff4692a2, type: 3}
   Background: {fileID: 21300000, guid: fe0a8b5b56f4c064da8c86f702bc592a, type: 3}
   ActorText:
-  - "Ik ging laatst naar een soldatenkamp. Ik probeerde met een van hen te\r\npraten,
-    maar dat was echt onmogelijk."
+  - Ik ging laatst naar een soldatenkamp. Ik probeerde met een van hen te praten,
+    maar dat was echt onmogelijk.
   - Hoezo dan?
-  - "Er zitten daar zoveel buitenlanders dat er wel twintig talen worden\r\ngesproken!"
+  - Er zitten daar zoveel buitenlanders dat er wel twintig talen gesproken worden!
   ActorPitch: 010000000100000001000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
   audioHigh: {fileID: 8300000, guid: 4a10695af3e361c4cb8a484b815358b2, type: 3}
@@ -2333,8 +2333,8 @@ Prefab:
         type: 3}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[0]
-      value: "Neutraal blijven, tot daar aan toe! Maar als we daar niet door kunnen\r\neten,
-        dan worden we boos!"
+      value: Neutraal blijven, tot daar aan toe! Maar als we daardoor niet kunnen
+        eten, dan worden we boos!
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[1]
@@ -3112,8 +3112,8 @@ Prefab:
         type: 3}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[0]
-      value: "Ik ging laatst naar een soldatenkamp. Ik probeerde met een van hen te\r\npraten,
-        maar dat was echt onmogelijk."
+      value: Ik ging laatst naar een soldatenkamp. Ik probeerde met een van hen te
+        praten, maar dat was echt onmogelijk.
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[1]
@@ -3134,7 +3134,8 @@ Prefab:
         type: 3}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[2]
-      value: "Er zitten daar zoveel buitenlanders dat er wel twintig talen worden\r\ngesproken!"
+      value: Er zitten daar zoveel buitenlanders dat er wel twintig talen gesproken
+        worden!
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorPitch.Array.data[2]
@@ -3444,8 +3445,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[0]
-      value: "Er is schaarste in Nederland! Toch laat de regering jullie niet in de\r\nsteek!
-        Vanaf nu is er voor iedereen Eenheidsworst voor een lage prijs!"
+      value: Er is schaarste in Nederland! Toch laat de regering jullie niet in de
+        steek! Vanaf nu is er voor iedereen Eenheidsworst voor een lage prijs!
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[1]
@@ -3632,8 +3633,8 @@ Prefab:
         type: 3}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[0]
-      value: "Alle buitenlandse soldaten dienen hun wapens af te staan en zich te\r\nbegeven
-        naar het dichtstbijzijnde soldatenkamp! Hier worden jullie voorzien van\r\nvoedsel!"
+      value: Alle buitenlandse soldaten dienen hun wapens af te staan en zich te begeven
+        naar het dichtstbijzijnde soldatenkamp! Hier worden jullie voorzien van voedsel!
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[1]
@@ -4419,8 +4420,8 @@ MonoBehaviour:
   ActorRight: {fileID: 21300000, guid: 70917c97552e94b4d917ecb546a96646, type: 3}
   Background: {fileID: 21300000, guid: a0a1d26cf6746774cb3ee541c8b625fa, type: 3}
   ActorText:
-  - "Vanaf nu hebben alle mannen kiesrecht. Iedereen mag op iemand\r\nstemmen voor
-    de verkiezingen van de Tweede kamer."
+  - Vanaf nu hebben alle mannen kiesrecht. Iedereen mag op iemand stemmen voor de
+    verkiezingen van de Tweede Kamer.
   - Alle mannen?! En de vrouwen dan?! Krijgen wij geen stemrecht?!
   ActorPitch: 0000000001000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
@@ -5146,8 +5147,8 @@ MonoBehaviour:
   ActorRight: {fileID: 0}
   Background: {fileID: 21300000, guid: fe0a8b5b56f4c064da8c86f702bc592a, type: 3}
   ActorText:
-  - "Alle buitenlandse soldaten dienen hun wapens af te staan en zich te\r\nbegeven
-    naar het dichtstbijzijnde soldatenkamp! Hier worden jullie voorzien van\r\nvoedsel!"
+  - Alle buitenlandse soldaten dienen hun wapens af te staan en zich te begeven naar
+    het dichtstbijzijnde soldatenkamp! Hier worden jullie voorzien van voedsel!
   ActorPitch: 00000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
   audioHigh: {fileID: 8300000, guid: 4a10695af3e361c4cb8a484b815358b2, type: 3}
@@ -5349,8 +5350,8 @@ MonoBehaviour:
   Background: {fileID: 21300000, guid: fe0a8b5b56f4c064da8c86f702bc592a, type: 3}
   ActorText:
   - Mama, welke landen voeren allemaal oorlog?
-  - "In het totaal voeren 33 landen oorlog met elkaar! Onder andere\r\nBelgi\xEB,
-    Duitsland, Frankrijk, China, Japan en Rusland!"
+  - "In totaal voeren wel 33 landen oorlog met elkaar! Onder andere Belgi\xEB, Duitsland,
+    Frankrijk, China, Japan en Rusland!"
   ActorPitch: 0100000001000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
   audioHigh: {fileID: 8300000, guid: 4a10695af3e361c4cb8a484b815358b2, type: 3}
@@ -5937,8 +5938,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[0]
-      value: "Geen koekjes voor bij de thee? Neem dan volksbiscuit van uw\r\nbakker
-        mee!"
+      value: Geen koekjes voor bij de thee? Neem dan volksbiscuit van uw bakker mee!
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[1]
@@ -6029,7 +6029,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[1]
-      value: "In het totaal voeren 33 landen oorlog met elkaar! Onder andere\r\nBelgi\xEB,
+      value: "In totaal voeren wel 33 landen oorlog met elkaar! Onder andere Belgi\xEB,
         Duitsland, Frankrijk, China, Japan en Rusland!"
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
@@ -8439,8 +8439,8 @@ Prefab:
         type: 3}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[0]
-      value: "Vanaf nu hebben alle mannen kiesrecht. Iedereen mag op iemand\r\nstemmen
-        voor de verkiezingen van de Tweede kamer."
+      value: Vanaf nu hebben alle mannen kiesrecht. Iedereen mag op iemand stemmen
+        voor de verkiezingen van de Tweede Kamer.
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[1]
@@ -8986,8 +8986,8 @@ MonoBehaviour:
   Background: {fileID: 21300000, guid: e2ec591efe0240d4dbd2e591a02aefe5, type: 3}
   ActorText:
   - "Waarom kunnen we niet op bezoek bij Tante Mies in Belgi\xEB?"
-  - "Tussen Nederland en Belgi\xEB is een elektrisch prikkeldraad gespannen\r\nom
-    smokkel tegen te gaan! We kunnen er dus niet doorheen."
+  - "Tussen Nederland en Belgi\xEB is een elektrisch prikkeldraad gespannen om smokkel
+    tegen te gaan! We kunnen er dus niet doorheen."
   ActorPitch: 0100000000000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
   audioHigh: {fileID: 8300000, guid: 4a10695af3e361c4cb8a484b815358b2, type: 3}
@@ -9305,7 +9305,7 @@ MonoBehaviour:
   ActorRight: {fileID: 21300000, guid: 70917c97552e94b4d917ecb546a96646, type: 3}
   Background: {fileID: 21300000, guid: a0a1d26cf6746774cb3ee541c8b625fa, type: 3}
   ActorText:
-  - "Geen koekjes voor bij de thee? Neem dan volksbiscuit van uw\r\nbakker mee!"
+  - Geen koekjes voor bij de thee? Neem dan volksbiscuit van uw bakker mee!
   - Lang niet zo lekker als die van Verkade, maar het is beter dan niks!
   ActorPitch: 0000000001000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
@@ -11152,8 +11152,8 @@ MonoBehaviour:
   ActorRight: {fileID: 21300000, guid: 70917c97552e94b4d917ecb546a96646, type: 3}
   Background: {fileID: 21300000, guid: e2ec591efe0240d4dbd2e591a02aefe5, type: 3}
   ActorText:
-  - "Neutraal blijven, tot daar aan toe! Maar als we daar niet door kunnen\r\neten,
-    dan worden we boos!"
+  - Neutraal blijven, tot daar aan toe! Maar als we daardoor niet kunnen eten, dan
+    worden we boos!
   - Wat hebben jullie liever?! Honger, of sterven in een loopgraaf?!
   ActorPitch: 0000000001000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
@@ -12143,7 +12143,7 @@ MonoBehaviour:
   Background: {fileID: 21300000, guid: a0a1d26cf6746774cb3ee541c8b625fa, type: 3}
   ActorText:
   - We willen geen koninkrijk meer zijn! De koningin moet weg!
-  - "Onzin! We hebben nu geen tijd voor dit soort onzin! Nederland blijft\r\neen koninkrijk!"
+  - Onzin! We hebben nu geen tijd voor dit soort ongein! Nederland blijft een koninkrijk!
   ActorPitch: 0000000000000000
   audioLow: {fileID: 8300000, guid: 700983be3fcd91140af4ea54eb6f0b02, type: 3}
   audioHigh: {fileID: 8300000, guid: 4a10695af3e361c4cb8a484b815358b2, type: 3}
@@ -13726,8 +13726,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorText.Array.data[1]
-      value: "Onzin! We hebben nu geen tijd voor dit soort onzin! Nederland blijft\r\neen
-        koninkrijk!"
+      value: Onzin! We hebben nu geen tijd voor dit soort ongein! Nederland blijft
+        een koninkrijk!
       objectReference: {fileID: 0}
     - target: {fileID: 11432480, guid: 652f12a552072d54f8143adc7430d983, type: 2}
       propertyPath: ActorPitch.Array.data[1]
