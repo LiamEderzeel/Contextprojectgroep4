@@ -20,5 +20,6 @@ public class Title : MonoBehaviour {
 		Player.GameState = Player.gameState.Instructions;
 		Player.PlaySound ();
 		this.gameObject.SetActive (false);
+		Player.sInstructions.SetActive (true);
 	}
 }

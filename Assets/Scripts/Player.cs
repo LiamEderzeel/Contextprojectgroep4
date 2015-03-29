@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 	public static int AvailableEscapes = 3;
 
 	//gameobject collection
+	public static GameObject sInstructions;
 	public static GameObject sDialog;
 	public static GameObject sRiot;
 	public static GameObject sGameOver;
