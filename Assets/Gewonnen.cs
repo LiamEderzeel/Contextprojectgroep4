@@ -13,4 +13,9 @@ public class Gewonnen : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	void OnMouseDown()
+	{
+		Application.LoadLevel ("scene_1"); 
+	}
 }

@@ -505,7 +505,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.6000004, y: 3.5, z: 0}
+  m_LocalPosition: {x: -17.5, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 425400}
@@ -632,7 +632,7 @@ MonoBehaviour:
   Value: 0
   DigitFolder: 
   HideZero: 1
-  fontcolor: {r: .328690886, g: 1, b: 0, a: 1}
+  fontcolor: {r: .164989948, g: .501960814, b: 0, a: 1}
 --- !u!114 &11408718
 MonoBehaviour:
   m_ObjectHideFlags: 1
