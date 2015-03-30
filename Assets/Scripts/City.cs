@@ -213,15 +213,15 @@ public class City : MonoBehaviour {
 			/*dit stuk code hieronder moeten we echt even netjes maken.*/
 			bool ruilen = false;
 			//Substracting the resources when clicked on city with request.
-			if (rc.TekortType == Player.Grondstof.Voedsel && Player.resource_1 > rc.Tekort) {
+			if (rc.TekortType == Player.Grondstof.Voedsel && Player.resource_1 >= rc.Tekort) {
 				Player.resource_1 -= rc.Tekort;
 				rc.Tekort = 0;
 				ruilen = true;
-			} else if (rc.TekortType == Player.Grondstof.Textiel && Player.resource_2 > rc.Tekort) {
+			} else if (rc.TekortType == Player.Grondstof.Textiel && Player.resource_2 >= rc.Tekort) {
 				Player.resource_2 -= rc.Tekort;
 				rc.Tekort = 0;
 				ruilen = true;
-			} else if (rc.TekortType == Player.Grondstof.Steenkool && Player.resource_3 > rc.Tekort) {
+			} else if (rc.TekortType == Player.Grondstof.Steenkool && Player.resource_3 >= rc.Tekort) {
 				Player.resource_3 -= rc.Tekort;
 				rc.Tekort = 0;
 				ruilen = true;
