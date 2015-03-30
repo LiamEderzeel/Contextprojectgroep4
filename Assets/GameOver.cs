@@ -16,6 +16,6 @@ public class GameOver : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-		Application.LoadLevel ("scene_1"); 
+		Application.LoadLevel ("scene_1");
 	}
 }

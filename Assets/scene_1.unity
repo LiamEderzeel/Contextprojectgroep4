@@ -5132,7 +5132,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 602312648}
   - 212: {fileID: 602312649}
-  - 61: {fileID: 602312650}
   m_Layer: 0
   m_Name: gewonnen
   m_TagString: Untagged
@@ -5174,17 +5173,6 @@ SpriteRenderer:
   m_SortingOrder: 75
   m_Sprite: {fileID: 21300000, guid: ac3b0dd9ce742f74eb29eeafaf41b847, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!61 &602312650
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 602312647}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 25.6000004, y: 14.3999996}
-  m_Center: {x: 0, y: 0}
 --- !u!1 &625042176
 GameObject:
   m_ObjectHideFlags: 0
@@ -7188,6 +7176,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 883362346}
   - 114: {fileID: 883362345}
+  - 61: {fileID: 883362347}
   m_Layer: 0
   m_Name: sGewonnen
   m_TagString: Untagged
@@ -7213,12 +7202,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 883362344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 602312648}
   m_Father: {fileID: 0}
   m_RootOrder: 10
+--- !u!61 &883362347
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 883362344}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 90, y: 50}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &884344038
 GameObject:
   m_ObjectHideFlags: 0
@@ -9903,6 +9903,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1296216495}
   - 114: {fileID: 1296216496}
+  - 61: {fileID: 1296216497}
   m_Layer: 0
   m_Name: sGameOver
   m_TagString: Untagged
@@ -9917,7 +9918,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1296216494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 593504241}
@@ -9934,6 +9935,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3250ff6d72b22bb43b15b9d747a1b4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1296216497
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296216494}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 90, y: 50}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &1298533209
 GameObject:
   m_ObjectHideFlags: 0
