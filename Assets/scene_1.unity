@@ -8632,15 +8632,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11492108, guid: 14e96ac29f4924a449889724321feed2, type: 2}
       propertyPath: fontcolor.r
-      value: .650980413
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11492108, guid: 14e96ac29f4924a449889724321feed2, type: 2}
       propertyPath: fontcolor.g
-      value: .650980413
+      value: .686274529
       objectReference: {fileID: 0}
     - target: {fileID: 11492108, guid: 14e96ac29f4924a449889724321feed2, type: 2}
       propertyPath: fontcolor.b
-      value: .650980413
+      value: .0038231588
       objectReference: {fileID: 0}
     - target: {fileID: 11492108, guid: 14e96ac29f4924a449889724321feed2, type: 2}
       propertyPath: HideZero
@@ -14786,7 +14786,7 @@ MonoBehaviour:
   Value: 0
   DigitFolder: 
   HideZero: 1
-  fontcolor: {r: .650980413, g: .650980413, b: .650980413, a: 1}
+  fontcolor: {r: 0, g: .686274529, b: .0038231588, a: 1}
 --- !u!1 &1966016322
 GameObject:
   m_ObjectHideFlags: 0
