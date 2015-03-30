@@ -5043,6 +5043,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 593504241}
   - 212: {fileID: 593504240}
+  - 61: {fileID: 593504242}
   m_Layer: 0
   m_Name: gameover
   m_TagString: Untagged
@@ -5084,6 +5085,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296216495}
   m_RootOrder: 0
+--- !u!61 &593504242
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 593504239}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 25.6000004, y: 14.3999996}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &599211834
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,6 +5132,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 602312648}
   - 212: {fileID: 602312649}
+  - 61: {fileID: 602312650}
   m_Layer: 0
   m_Name: gewonnen
   m_TagString: Untagged
@@ -5161,6 +5174,17 @@ SpriteRenderer:
   m_SortingOrder: 75
   m_Sprite: {fileID: 21300000, guid: ac3b0dd9ce742f74eb29eeafaf41b847, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!61 &602312650
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 602312647}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 25.6000004, y: 14.3999996}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &625042176
 GameObject:
   m_ObjectHideFlags: 0
