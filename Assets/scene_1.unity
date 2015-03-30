@@ -8620,7 +8620,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11492108, guid: 14e96ac29f4924a449889724321feed2, type: 2}
       propertyPath: HideZero
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14e96ac29f4924a449889724321feed2, type: 2}
@@ -14761,7 +14761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Value: 0
   DigitFolder: 
-  HideZero: 0
+  HideZero: 1
   fontcolor: {r: .650980413, g: .650980413, b: .650980413, a: 1}
 --- !u!1 &1966016322
 GameObject:
