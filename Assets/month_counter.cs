@@ -3,7 +3,7 @@ using System.Collections;
 
 public class month_counter : MonoBehaviour {
 
-	private int Month = 11;
+	private int Month = 1;
 	private int SecondsPerMonth = 15;
 
 	private float c = 0;
